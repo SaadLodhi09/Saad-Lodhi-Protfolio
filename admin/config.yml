@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Portfolio Content"
+    files:
+      - file: "content/data.json"
+        label: "Everything (Photos, Bio, Work, Socials)"
+        name: "data"
+        fields:
+          - { label: "Hero Photo (top of homepage)", name: "hero_photo", widget: "image", required: false }
+          - { label: "About Section Photo", name: "about_photo", widget: "image", required: false }
+          - { label: "Bio Paragraph 1", name: "bio1", widget: "text" }
+          - { label: "Bio Paragraph 2", name: "bio2", widget: "text" }
+          - { label: "Bio Paragraph 3", name: "bio3", widget: "text" }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Fiverr URL", name: "fiverr", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+              - { label: "WhatsApp Link (wa.me/...)", name: "whatsapp", widget: "string", required: false }
+              - { label: "Email Address", name: "email", widget: "string", required: false }
+          - label: "Portfolio Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{title}} — {{category}}"
+            fields:
+              - { label: "Project Title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Posters", value: "posters" }
+                  - { label: "Social Media", value: "social" }
+                  - { label: "Pitch Decks", value: "decks" }
+                  - { label: "Film", value: "film" }
+              - { label: "Project Image", name: "image", widget: "image" }
+              - { label: "Show in top slideshow?", name: "featured", widget: "boolean", default: false }

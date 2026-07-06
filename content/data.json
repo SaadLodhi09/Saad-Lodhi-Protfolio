@@ -1,0 +1,25 @@
+{
+  "hero_photo": "",
+  "about_photo": "",
+  "bio1": "I'm a graphic designer with 5+ years of experience across poster design, social media content, digital art, and event branding. I've spent that time freelancing on Fiverr, working with clients who needed their brand to look sharper and get noticed faster.",
+  "bio2": "My approach is simple: every piece should have a clear focal point, confident typography, and a mood that fits exactly where it's going to live — whether that's a phone feed, a boardroom screen, or a cinema wall.",
+  "bio3": "I'm now taking on new freelance projects directly. If you need posters, campaign creatives, or a deck that makes people lean in, let's talk.",
+  "social": {
+    "fiverr": "https://www.fiverr.com/your-username",
+    "instagram": "https://instagram.com/your-handle",
+    "linkedin": "https://linkedin.com/in/your-profile",
+    "facebook": "https://facebook.com/your-page",
+    "whatsapp": "https://wa.me/92xxxxxxxxxx",
+    "email": "mailto:you@example.com"
+  },
+  "projects": [
+    { "title": "Midnight Run", "category": "film", "image": "", "featured": true },
+    { "title": "Launch Day", "category": "posters", "image": "", "featured": true },
+    { "title": "Aurora Skincare", "category": "social", "image": "", "featured": true },
+    { "title": "Northline Capital", "category": "decks", "image": "", "featured": true },
+    { "title": "Solstice Fest", "category": "posters", "image": "", "featured": false },
+    { "title": "Nova Coffee Co.", "category": "social", "image": "", "featured": false },
+    { "title": "Glass Horizon", "category": "film", "image": "", "featured": false },
+    { "title": "Vantage Seed Round", "category": "decks", "image": "", "featured": false }
+  ]
+}
