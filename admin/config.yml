@@ -34,6 +34,8 @@ collections:
             summary: "{{title}} — {{category}}"
             fields:
               - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Subtitle (short line under the title)", name: "subtitle", widget: "string", required: false }
+              - { label: "Details (smaller description text)", name: "details", widget: "text", required: false }
               - label: "Category"
                 name: "category"
                 widget: "select"

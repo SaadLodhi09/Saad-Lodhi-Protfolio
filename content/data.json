@@ -1,7 +1,7 @@
 {
-  "hero_photo": "/assets/uploads/sl.gfx-dp-blue.jpg",
-  "about_photo": "/assets/uploads/sl.gfx-dp-blue.jpg",
-  "bio1": "I'm a graphic designer with 5+ years of experience across poster design, social media content, pitch deck, brand identity, digital art, and event branding. I've spent that time freelancing on Fiverr, working with clients who needed their brand to look sharper and get noticed faster.",
+  "hero_photo": "",
+  "about_photo": "",
+  "bio1": "I'm a graphic designer with 5+ years of experience across poster design, social media content, digital art, and event branding. I've spent that time freelancing on Fiverr, working with clients who needed their brand to look sharper and get noticed faster.",
   "bio2": "My approach is simple: every piece should have a clear focal point, confident typography, and a mood that fits exactly where it's going to live — whether that's a phone feed, a boardroom screen, or a cinema wall.",
   "bio3": "I'm now taking on new freelance projects directly. If you need posters, campaign creatives, or a deck that makes people lean in, let's talk.",
   "social": {
@@ -13,53 +13,13 @@
     "email": "mailto:you@example.com"
   },
   "projects": [
-    {
-      "title": "Sackman (Horror)",
-      "category": "film",
-      "image": "/assets/uploads/sackman-horror-movie-5.jpg",
-      "featured": true
-    },
-    {
-      "title": "Launch Day",
-      "category": "posters",
-      "image": "/assets/uploads/soccer-jersey-2.png",
-      "featured": true
-    },
-    {
-      "title": "facewash",
-      "category": "social",
-      "image": "/assets/uploads/black-facewash-product-design.jpg",
-      "featured": true
-    },
-    {
-      "title": "Northline Capital",
-      "category": "decks",
-      "image": "/assets/uploads/meet-vibe-devops-engineering.png",
-      "featured": true
-    },
-    {
-      "title": "black-luchador",
-      "category": "posters",
-      "image": "/assets/uploads/black-luchador-2.png",
-      "featured": false
-    },
-    {
-      "title": "flora elysia",
-      "category": "social",
-      "image": "/assets/uploads/flora-4.jpg",
-      "featured": false
-    },
-    {
-      "title": "a-mind-in-chaos-horror",
-      "category": "film",
-      "image": "/assets/uploads/a-mind-in-chaos-horror-6.png",
-      "featured": false
-    },
-    {
-      "title": "Vantage Seed Round",
-      "category": "decks",
-      "image": "/assets/uploads/winning-at-agentic-ai.png",
-      "featured": false
-    }
+    { "title": "Midnight Run", "subtitle": "Key art for an independent thriller release.", "details": "Full poster set including teaser, theatrical, and social crop versions.", "category": "film", "image": "", "featured": true },
+    { "title": "Launch Day", "subtitle": "Product reveal event, campaign key visual.", "details": "Designed for both print (A4/A3) and digital placement across formats.", "category": "posters", "image": "", "featured": true },
+    { "title": "Aurora Skincare", "subtitle": "A 6-part feed series for a product launch.", "details": "Consistent visual system across the full series for feed and story formats.", "category": "social", "image": "", "featured": true },
+    { "title": "Northline Capital", "subtitle": "Investor deck for a seed-stage raise.", "details": "22-slide narrative deck covering market, product, and financials.", "category": "decks", "image": "", "featured": true },
+    { "title": "Solstice Fest", "subtitle": "Festival poster and signage set.", "details": "Print-ready design across posters, wayfinding, and merch.", "category": "posters", "image": "", "featured": false },
+    { "title": "Nova Coffee Co.", "subtitle": "Social launch campaign.", "details": "Feed and story creatives built around a warm, tactile brand palette.", "category": "social", "image": "", "featured": false },
+    { "title": "Glass Horizon", "subtitle": "Sci-fi feature key art.", "details": "Concept-driven poster exploring light and scale for a festival submission.", "category": "film", "image": "", "featured": false },
+    { "title": "Vantage Seed Round", "subtitle": "Fundraising deck for an early-stage startup.", "details": "18-slide deck built for a fast-moving round with a tight narrative arc.", "category": "decks", "image": "", "featured": false }
   ]
 }

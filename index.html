@@ -169,14 +169,16 @@
   @media(min-width:1024px){ .skills-grid{grid-template-columns:repeat(3,1fr); gap:22px;} .ticket h3{font-size:26px;} }
 
   /* ---------- SLIDESHOW ---------- */
-  .slideshow{position:relative; width:100%; border-radius:20px; overflow:hidden; border:1px solid var(--line); margin-bottom:50px;}
-  .slides{display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1); width:100%;}
-  .slide{min-width:100%; position:relative; aspect-ratio:4/5; display:flex; align-items:flex-end;}
-  .slide .art{position:absolute; inset:0; z-index:0;}
-  .slide .fade{position:absolute; inset:0; background:linear-gradient(0deg, rgba(10,10,16,0.94), rgba(10,10,16,0.15) 60%); z-index:1;}
-  .slide .info{position:relative; z-index:2; padding:20px 20px 56px; width:100%;}
-  .slide .tag{font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orchid-soft); margin-bottom:8px; display:block;}
-  .slide h3{font-size:clamp(24px,6vw,40px);}
+  .slideshow{position:relative; width:100%; border-radius:20px; overflow:hidden; border:1px solid var(--line); margin-bottom:50px; background:linear-gradient(160deg,var(--panel),var(--panel-2));}
+  .slides{display:flex; transition:transform .6s cubic-bezier(.65,0,.35,1); width:100%; align-items:stretch;}
+  .slide{min-width:100%; display:flex; flex-direction:column;}
+  .slide-media{position:relative; width:100%; aspect-ratio:210/297; overflow:hidden; flex-shrink:0; background:var(--void);}
+  .slide-media .art{position:absolute; inset:0; background-size:cover; background-position:center;}
+  .slide-content{padding:22px 22px 64px; display:flex; flex-direction:column; justify-content:center;}
+  .slide-content .tag{font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--orchid-soft); margin-bottom:10px; display:block;}
+  .slide-content h3{font-size:clamp(24px,6vw,34px); margin-bottom:10px;}
+  .slide-content .subtitle{font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:var(--text); line-height:1.5; margin-bottom:10px;}
+  .slide-content .details{font-family:'Manrope',sans-serif; font-size:12.5px; font-weight:300; color:var(--muted); line-height:1.65;}
   .slide-nav{position:absolute; bottom:14px; right:14px; z-index:3; display:flex; gap:8px;}
   .slide-nav button{width:32px; height:32px; border-radius:50%; border:1px solid rgba(255,255,255,0.25); background:rgba(10,10,16,0.5); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px);}
   .slide-nav button:hover{background:var(--orchid); border-color:var(--orchid);}
@@ -184,11 +186,16 @@
   .slide-dots i{width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.3); cursor:pointer;}
   .slide-dots i.active{background:var(--pink); width:20px; border-radius:4px;}
   @media(min-width:768px){
-    .slide{aspect-ratio:16/8;}
-    .slide .info{padding:36px 130px 44px 40px;}
-    .slide-nav{bottom:20px; right:22px;} .slide-nav button{width:38px;height:38px;}
-    .slide-dots{bottom:26px; left:38px;}
+    .slide{flex-direction:row;}
+    .slide-media{width:40%; aspect-ratio:210/297;}
+    .slide-content{flex:1; padding:50px 60px 70px;}
+    .slide-content h3{font-size:clamp(28px,3.4vw,40px);}
+    .slide-content .subtitle{font-size:17px;}
+    .slide-content .details{font-size:13.5px; max-width:440px;}
+    .slide-nav{bottom:24px; right:26px;} .slide-nav button{width:38px;height:38px;}
+    .slide-dots{bottom:30px; left:26px;}
   }
+
 
   .filters{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:26px;}
   .filter-btn{font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.05em; padding:8px 14px; border-radius:999px; border:1px solid var(--line); color:var(--muted); cursor:pointer; background:transparent;}
@@ -339,10 +346,22 @@
 
     <div class="slideshow reveal">
       <div class="slides" id="slides">
-        <div class="slide"><div class="art" style="background:linear-gradient(135deg,#3a1a5c,#0a0a10 70%);"></div><div class="fade"></div><div class="info"><span class="tag">Film Poster</span><h3>Midnight Run</h3></div></div>
-        <div class="slide"><div class="art" style="background:linear-gradient(135deg,#7a1f8f,#1a0a2c 70%);"></div><div class="fade"></div><div class="info"><span class="tag">Event Poster</span><h3>Launch Day</h3></div></div>
-        <div class="slide"><div class="art" style="background:linear-gradient(135deg,#c34dff,#1a0a2c 75%);"></div><div class="fade"></div><div class="info"><span class="tag">Social Campaign</span><h3>Aurora Skincare</h3></div></div>
-        <div class="slide"><div class="art" style="background:linear-gradient(135deg,#5b2a9c,#0a0a10 70%);"></div><div class="fade"></div><div class="info"><span class="tag">Pitch Deck</span><h3>Northline Capital</h3></div></div>
+        <div class="slide">
+          <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#3a1a5c,#0a0a10 70%);"></div></div>
+          <div class="slide-content"><span class="tag">Film Poster</span><h3>Midnight Run</h3><p class="subtitle">Key art for an independent thriller release.</p><p class="details">Full poster set including teaser, theatrical, and social crop versions, built around a single striking hero image and restrained type treatment.</p></div>
+        </div>
+        <div class="slide">
+          <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#7a1f8f,#1a0a2c 70%);"></div></div>
+          <div class="slide-content"><span class="tag">Event Poster</span><h3>Launch Day</h3><p class="subtitle">Product reveal event, campaign key visual.</p><p class="details">Designed for both print (A4/A3) and digital placement, with a modular layout that adapted cleanly to Instagram, story, and banner formats.</p></div>
+        </div>
+        <div class="slide">
+          <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#c34dff,#1a0a2c 75%);"></div></div>
+          <div class="slide-content"><span class="tag">Social Campaign</span><h3>Aurora Skincare</h3><p class="subtitle">A 6-part feed series for a product launch.</p><p class="details">Consistent visual system across the full series, balancing brand color language with clear product focus for feed and story formats.</p></div>
+        </div>
+        <div class="slide">
+          <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#5b2a9c,#0a0a10 70%);"></div></div>
+          <div class="slide-content"><span class="tag">Pitch Deck</span><h3>Northline Capital</h3><p class="subtitle">Investor deck for a seed-stage raise.</p><p class="details">22-slide narrative deck covering market, product, and financials, designed to hold attention in a live pitch as well as a cold send.</p></div>
+        </div>
       </div>
       <div class="slide-dots" id="dots"></div>
       <div class="slide-nav"><button id="prevBtn" aria-label="Previous slide">‹</button><button id="nextBtn" aria-label="Next slide">›</button></div>
@@ -384,7 +403,7 @@
       <div class="stats-row">
         <div class="stat"><div class="num">5+</div><div class="lbl">YEARS EXPERIENCE</div></div>
         <div class="stat"><div class="num">6</div><div class="lbl">CORE SPECIALTIES</div></div>
-        <div class="stat"><div class="num">Fiverr</div><div class="lbl">FREELANCE PLATFORM</div></div>
+        <div class="stat"><div class="num">150+</div><div class="lbl">PROFESSIONAL CLIENTS</div></div>
       </div>
     </div>
   </div>
@@ -510,9 +529,11 @@
         var slidesEl = document.getElementById('slides');
         slidesEl.innerHTML = featured.map(function(p){
           return '<div class="slide">' +
-            '<div class="art" style="background:url(\'' + p.image + '\') center/cover;"></div>' +
-            '<div class="fade"></div>' +
-            '<div class="info"><span class="tag">' + (catLabel[p.category]||'') + '</span><h3>' + p.title + '</h3></div>' +
+            '<div class="slide-media"><div class="art" style="background:url(\'' + p.image + '\') center/cover;"></div></div>' +
+            '<div class="slide-content"><span class="tag">' + (catLabel[p.category]||'') + '</span><h3>' + p.title + '</h3>' +
+            (p.subtitle ? '<p class="subtitle">' + p.subtitle + '</p>' : '') +
+            (p.details ? '<p class="details">' + p.details + '</p>' : '') +
+            '</div>' +
           '</div>';
         }).join('');
         var dotsEl = document.getElementById('dots');
