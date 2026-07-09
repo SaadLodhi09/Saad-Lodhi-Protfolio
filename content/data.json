@@ -8,19 +8,35 @@
   "bio3": "I'm taking on new freelance projects directly. If you need identity, posters, campaign creatives, or a deck that makes people lean in, let's talk.",
   "pitch_decks": [
     {
-      "image": "/assets/uploads/meet-vibe-devops-engineering.png",
+      "image": "/assets/uploads/43.png",
       "title": "Premium Technology Art"
+    },
+    {
+      "image": "/assets/uploads/day-4.png"
+    },
+    {
+      "image": "/assets/uploads/438.png"
+    },
+    {
+      "image": "/assets/uploads/a-practitioner-s-roadmap.png"
     }
   ],
-  "hero_photo": "/assets/uploads/file_00000000f12072078dc8aba30ff9d375~2-1-.png",
+  "hero_photo": "/assets/uploads/layer-1-1-.png",
   "social": {
-    "fiverr": "https://www.fiverr.com/s/NNv4e7R",
-    "instagram": "https://www.instagram.com/sl.gfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "linkedin": "https://www.linkedin.com/in/saad-lodhi-6a701224b/",
+    "fiverr_icon": "/assets/uploads/fi.png",
+    "instagram_icon": "/assets/uploads/ins.png",
     "facebook": "https://www.facebook.com/profile.php?id=100085949528596",
+    "whatsapp_icon": "/assets/uploads/wa.png",
+    "upwork": "https://www.upwork.com/freelancers/~01f2cad8c77c7a736d?mp_source=share",
+    "upwork_icon": "/assets/uploads/up.png",
+    "fiverr": "https://www.fiverr.com/s/NNv4e7R",
     "whatsapp": "https://wa.me/923075412767",
+    "facebook_icon": "/assets/uploads/fb.png",
+    "instagram": "https://www.instagram.com/sl.gfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "linkedin_icon": "/assets/uploads/link.png",
+    "email_icon": "/assets/uploads/mail.png",
     "email": "saadlodhi2023@gmail.com",
-    "upwork": "https://www.upwork.com/freelancers/~01f2cad8c77c7a736d?mp_source=share"
+    "linkedin": "https://www.linkedin.com/in/saad-lodhi-6a701224b/"
   },
   "projects": [
     {
@@ -29,7 +45,7 @@
       "image": "/assets/uploads/epilytix-moodboard.png",
       "featured": true,
       "subtitle": "Premium Brand Ecosystem & Visual Strategy",
-      "details": "The Mission:\nAs the co-founder and lead designer of Epilytix, I needed to build a brand identity that felt tech-forward but distinctly human. The goal was to break away from standard, cold corporate tech aesthetics and craft a vibrant, premium ecosystem that signals innovation, fluid problem-solving, and authority in the software space.\n\nThe Execution:\nThe identity centers on the \"epx\" monogram, using continuous, fluid lines to represent integration and seamless data flow. I curated a bold, high-contrast color palette, blending electric magenta and deep tech-purples against stark monochrome tones, to ensure high visual impact across digital interfaces and physical apparel. By stress-testing the mark across diverse mockups, from minimal stationery to clean mobile app icons and embroidered merchandise, I created an adaptable design system that positions Epilytix as an agile, cutting-edge software powerhouse."
+      "details": "As the co-founder and lead designer of Epilytix, I needed to build a brand identity that felt tech-forward but distinctly human. The goal was to break away from standard, cold corporate tech aesthetics and craft a vibrant, premium ecosystem that signals innovation, fluid problem-solving, and authority in the software space.\n\nCentered on the fluid \"epx\" monogram to symbolize seamless data flow, this versatile brand identity was stress-tested across diverse physical and digital mockups. The resulting adaptable design system perfectly positions Epilytix as an agile, cutting-edge software powerhouse."
     },
     {
       "title": "Mind in Chaos",
@@ -37,7 +53,7 @@
       "image": "/assets/uploads/a-mind-in-chaos-horror-6.png",
       "featured": true,
       "subtitle": "Cinematic Horror Key Art & Theatrical Poster Design",
-      "details": "The Mission:\nHorror key art thrives on psychological tension, so my goal was to visually map the concept of a fractured sanity. I wanted to design a premium, industry-standard theatrical poster that establishes a chilling narrative contrast between the physical world and a looming, predatory subconscious nightmare.\n\nThe Execution:\nI engineered a classic, top-heavy vertical hierarchy, positioning a hyper-detailed, Nosferatu-inspired creature as the dominant psychological shadow looming over the characters. To visually isolate the subjects from the cold, blue-toned background environment, I flooded the midground mansion and characters with an ominous, low-angle crimson red glow. The design is anchored by a heavily textured, distressed crimson typography treatment that bleeds into the foreground reflections, giving the entire composition a visceral, high-end indie-horror aesthetic."
+      "details": "My goal was to map fractured sanity onto a premium horror poster by contrasting the physical world with a predatory subconscious nightmare. I engineered a top-heavy vertical hierarchy, positioning a Nosferatu-inspired creature as a dominant psychological shadow over the characters. By flooding the midground with an ominous crimson glow and utilizing a distressed, heavily textured title treatment, the final composition delivers a visceral, high-end indie-horror aesthetic."
     },
     {
       "title": "The Horizon Hunter",
@@ -45,7 +61,7 @@
       "image": "/assets/uploads/nissan-gtr-2.jpg",
       "featured": true,
       "subtitle": "Cinematic Product Key Art & Conceptual Automotive Poster",
-      "details": "The Mission:\nMy goal was to break away from static, traditional car shots and transform the Nissan GT-R into a theatrical experience. I wanted to tell a story of raw speed and legacy by engineering a dynamic, multi-tiered visual narrative.\n\nThe Execution:\nI stacked the vehicle's best design elements into a high-impact vertical composition, blending its aggressive stance with a macro close-up of its bodywork. To give it an untamed, aggressive edge, I utilized a hyper-saturated, molten orange palette wrapped in heavy environmental smoke and golden backlighting. Grounding the car on a dark, wet asphalt texture allowed me to build high-contrast reflections, creating a premium, heavy, and cinematic feel."
+      "details": "To transform the Nissan GT-R into a theatrical experience, I built a dynamic vertical composition that stacks the vehicle's best design elements to tell a story of raw speed. Using a hyper-saturated, molten orange palette wrapped in heavy environmental smoke and golden backlighting, I gave the piece an aggressive, untamed edge. Grounding the car on a dark, wet asphalt texture allowed me to build high-contrast reflections, creating an incredibly premium and cinematic feel."
     },
     {
       "title": "Isabeau Key Art",
@@ -53,7 +69,7 @@
       "image": "/assets/uploads/isabeau-danjou-2.jpg",
       "featured": true,
       "subtitle": "Dark Fantasy by Butterfly Entertainment",
-      "details": "The Mission:\nWith this poster, I wanted to capture the sweeping, epic scale of a high-end dark fantasy narrative. My goal was to create a dense, character-driven key art design that immediately builds an atmospheric world full of mystery, magic, and impending conflict, making it feel like promotional material for a premium streaming series or film.\n\nThe Execution:\nI designed a layered triangular composition, anchoring the poster with a prominent, piercing-eyed protagonist in the foreground to create an immediate emotional connection. To build out the narrative depth, I balanced the midground with ominous, symbolic wildlife—a golden-eyed wolf and a red-eyed steed—while stacking the background with hooded figures and a soaring raven. I utilized a desaturated, misty forest color palette heavily leaning into cold blues and deep grays, which makes the subtle eye glows and the intricate, chiseled stone typography pop with a timeless, high-fantasy aesthetic."
+      "details": "To capture the epic scale of a high-end dark fantasy, I designed a character-driven key art piece featuring a layered triangular composition. The layout anchors on a piercing-eyed protagonist in the foreground, using symbolic wildlife, hooded figures, and a soaring raven to build narrative depth. Utilizing a desaturated, misty palette of cold blues and deep grays, the moody atmosphere makes the subtle eye glows and intricate, chiseled stone typography pop with a premium, high-fantasy aesthetic."
     },
     {
       "title": "Black Luchador",
@@ -99,7 +115,7 @@
     },
     {
       "name": "Canva",
-      "icon": "/assets/uploads/images.jpg"
+      "icon": "/assets/uploads/group-1.png"
     }
   ]
 }
