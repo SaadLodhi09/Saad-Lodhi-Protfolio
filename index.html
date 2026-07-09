@@ -230,15 +230,13 @@
     .poster-card .meta h4{font-size:19px;}
   }
 
-  /* ---------- PITCH DECK SHOWCASE ---------- */
-  .pitch-scroll{display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:14px; -webkit-overflow-scrolling:touch;}
-  .pitch-scroll::-webkit-scrollbar{height:6px;}
-  .pitch-scroll::-webkit-scrollbar-thumb{background:var(--line); border-radius:4px;}
-  .pitch-item{flex:0 0 auto; height:260px; scroll-snap-align:start; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:var(--panel); display:flex; align-items:center; justify-content:center;}
-  .pitch-item img{height:100%; width:auto; object-fit:contain; display:block;}
-  .pitch-placeholder{color:var(--muted); font-family:'Space Mono',monospace; font-size:11px; text-align:center; padding:20px; max-width:220px; line-height:1.6;}
+  /* ---------- PITCH DECK SHOWCASE (slideshow) ---------- */
+  .pitch-slides{display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1); width:100%;}
+  .pitch-slide{min-width:100%; display:flex; align-items:center; justify-content:center; height:300px; padding:0 6px;}
+  .pitch-slide img{max-height:100%; max-width:100%; object-fit:contain; border-radius:12px; display:block;}
+  .pitch-placeholder{color:var(--muted); font-family:'Space Mono',monospace; font-size:11px; text-align:center; padding:20px; max-width:260px; line-height:1.6;}
   @media(min-width:768px){
-    .pitch-item{height:420px;}
+    .pitch-slide{height:480px;}
   }
 
   /* ---------- ABOUT ---------- */
@@ -446,10 +444,17 @@
     <div class="section-head reveal">
       <span class="eyebrow" id="pitchEyebrow">Case Studies</span>
       <h2 id="pitchHeading">Pitch Deck<br><span class="grad-text">Showcase.</span></h2>
-      <p id="pitchSub">A closer look at deck slides — swipe through on mobile or use the scrollbar.</p>
+      <p id="pitchSub">A closer look at deck slides — swipe or use the arrows.</p>
     </div>
-    <div class="pitch-scroll reveal" id="pitchScroll">
-      <div class="pitch-item"><div class="pitch-placeholder">Upload your pitch deck slides through /admin → Pitch Deck Showcase — they'll appear here in a horizontal scroll, any size (1080×1920 or 16:9) fits.</div></div>
+    <div class="slideshow reveal" id="pitchSlideshow">
+      <button id="pitchPrevBtn" class="slide-arrow slide-arrow-left" aria-label="Previous slide">‹</button>
+      <div class="slides-viewport" id="pitchSlidesViewport">
+        <div class="pitch-slides" id="pitchSlides">
+          <div class="pitch-slide"><div class="pitch-placeholder">Upload your pitch deck slides through /admin → Pitch Deck Showcase — they'll appear here, any size (1080×1920 or 16:9) fits.</div></div>
+        </div>
+      </div>
+      <button id="pitchNextBtn" class="slide-arrow slide-arrow-right" aria-label="Next slide">›</button>
+      <div class="slide-dots" id="pitchDots"></div>
     </div>
   </div>
 </section>
@@ -588,6 +593,43 @@
     autoSlide = setInterval(function(){ goTo(current+1); }, 5000);
   }, {passive:true});
 
+  // Pitch Deck slideshow (separate carousel, own state)
+  var pitchSlidesEl = document.getElementById('pitchSlides');
+  var pitchSlideItems = pitchSlidesEl.children;
+  var pitchDotsEl = document.getElementById('pitchDots');
+  var pitchCurrent = 0;
+  function buildPitchDots(){
+    pitchDotsEl.innerHTML = '';
+    for(var i=0;i<pitchSlideItems.length;i++){
+      var d = document.createElement('i');
+      if(i===0) d.classList.add('active');
+      (function(idx){ d.addEventListener('click', function(){ pitchGoTo(idx); }); })(i);
+      pitchDotsEl.appendChild(d);
+    }
+  }
+  buildPitchDots();
+  function pitchUpdate(){
+    pitchSlidesEl.style.transform = 'translateX(-' + (pitchCurrent*100) + '%)';
+    Array.prototype.forEach.call(pitchDotsEl.children, function(d,i){ d.classList.toggle('active', i===pitchCurrent); });
+  }
+  function pitchGoTo(i){ if(!pitchSlideItems.length) return; pitchCurrent = (i+pitchSlideItems.length)%pitchSlideItems.length; pitchUpdate(); }
+  document.getElementById('pitchNextBtn').addEventListener('click', function(){ pitchGoTo(pitchCurrent+1); });
+  document.getElementById('pitchPrevBtn').addEventListener('click', function(){ pitchGoTo(pitchCurrent-1); });
+  var pitchAutoSlide = setInterval(function(){ pitchGoTo(pitchCurrent+1); }, 5000);
+  var pitchSlideshowContainer = document.getElementById('pitchSlideshow');
+  pitchSlideshowContainer.addEventListener('mouseenter', function(){ clearInterval(pitchAutoSlide); });
+  pitchSlideshowContainer.addEventListener('mouseleave', function(){ pitchAutoSlide = setInterval(function(){ pitchGoTo(pitchCurrent+1); }, 5000); });
+
+  var pitchTouchStartX = 0, pitchTouchEndX = 0;
+  var pitchSlidesViewport = document.getElementById('pitchSlidesViewport');
+  pitchSlidesViewport.addEventListener('touchstart', function(e){ pitchTouchStartX = e.changedTouches[0].screenX; clearInterval(pitchAutoSlide); }, {passive:true});
+  pitchSlidesViewport.addEventListener('touchend', function(e){
+    pitchTouchEndX = e.changedTouches[0].screenX;
+    var diff = pitchTouchStartX - pitchTouchEndX;
+    if(Math.abs(diff) > 40){ if(diff > 0){ pitchGoTo(pitchCurrent+1); } else { pitchGoTo(pitchCurrent-1); } }
+    pitchAutoSlide = setInterval(function(){ pitchGoTo(pitchCurrent+1); }, 5000);
+  }, {passive:true});
+
   var filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -704,10 +746,13 @@
 
     if(data.pitch_decks && data.pitch_decks.length && data.pitch_decks.some(function(p){ return p.image; })){
       var deckImgs = data.pitch_decks.filter(function(p){ return p.image; });
-      var pitchScrollEl = document.getElementById('pitchScroll');
-      pitchScrollEl.innerHTML = deckImgs.map(function(p){
-        return '<div class="pitch-item"><img src="' + p.image + '" alt="' + (p.title||'') + '"></div>';
+      pitchSlidesEl.innerHTML = deckImgs.map(function(p){
+        return '<div class="pitch-slide"><img src="' + p.image + '" alt="' + (p.title||'') + '"></div>';
       }).join('');
+      pitchSlideItems = pitchSlidesEl.children;
+      pitchCurrent = 0;
+      buildPitchDots();
+      pitchUpdate();
     }
 
     if(data.projects && data.projects.length && data.projects.some(function(p){ return p.image; })){
