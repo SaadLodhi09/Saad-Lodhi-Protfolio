@@ -134,19 +134,23 @@
   @keyframes scrollDown{0%{opacity:0; transform:translateY(-6px);}50%{opacity:1;}100%{opacity:0; transform:translateY(10px);}}
 
   /* ---------- MARQUEE (clipped, cannot overflow) ---------- */
-  .marquee-section{width:100%; overflow:hidden; padding:30px 0 34px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,0.015);}
-  .marquee-label{text-align:center; margin-bottom:18px;}
-  .marquee-track{display:flex; gap:44px; align-items:center; white-space:nowrap; width:max-content; animation:marquee 20s linear infinite;}
+  .marquee-section{width:100%; overflow:hidden; padding:80px 0 90px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,0.015);}
+  .marquee-label{text-align:center; margin:0 auto 40px; max-width:640px;}
+  .marquee-label .eyebrow{justify-content:center;}
+  .marquee-label h2{text-align:center;}
+  .marquee-label p{text-align:center;}
+  .marquee-box{overflow:hidden; border:1px solid var(--line); border-radius:20px; background:rgba(255,255,255,0.02); padding:34px 0; mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);}
+  .marquee-track{display:flex; gap:44px; align-items:center; white-space:nowrap; width:max-content; animation:marquee 40s linear infinite; will-change:transform;}
   .tool-chip{display:flex; align-items:center; justify-content:center; flex-shrink:0;}
-  .tool-icon{width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Manrope',sans-serif; font-weight:800; font-size:12px; color:#fff; flex-shrink:0; filter:drop-shadow(0 6px 14px rgba(0,0,0,0.4));}
+  .tool-icon{width:58px; height:58px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-family:'Manrope',sans-serif; font-weight:800; font-size:18px; color:#fff; flex-shrink:0; filter:drop-shadow(0 6px 14px rgba(0,0,0,0.4));}
   .tool-icon.ps{background:linear-gradient(135deg,#1e88e5,#0d3f73);}
   .tool-icon.ai{background:linear-gradient(135deg,#ff9a3c,#c9560a);}
   .tool-icon.cv{background:linear-gradient(135deg,#7ee8d8,#1aa39a);}
   .tool-icon.fg{background:linear-gradient(135deg,#9b4dff,#c34dff);}
-  @keyframes marquee{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+  @keyframes marquee{from{transform:translate3d(0,0,0);} to{transform:translate3d(-50%,0,0);}}
   @media(min-width:768px){
     .marquee-track{gap:64px;}
-    .tool-icon{width:42px; height:42px; font-size:14px;}
+    .tool-icon{width:74px; height:74px; font-size:22px; border-radius:16px;}
   }
 
   /* ---------- SECTION HEADS ---------- */
@@ -279,9 +283,10 @@
     <div class="nav-links" id="navLinks">
       <span class="nav-pill" id="navPill"></span>
       <a href="#home" data-nav="home">Home</a>
+      <a href="#tools" data-nav="tools">Tools</a>
+      <a href="#skills" data-nav="skills">Skills</a>
       <a href="#work" data-nav="work">Work</a>
       <a href="#pitchdeck" data-nav="pitchdeck">Pitch Deck</a>
-      <a href="#skills" data-nav="skills">Skills</a>
       <a href="#about" data-nav="about">About</a>
       <a href="#contact" data-nav="contact">Contact</a>
     </div>
@@ -291,9 +296,10 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home">Home</a>
+  <a href="#tools">Tools</a>
+  <a href="#skills">Skills</a>
   <a href="#work">Work</a>
   <a href="#pitchdeck">Pitch Deck</a>
-  <a href="#skills">Skills</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </div>
@@ -322,10 +328,15 @@
   <div class="scroll-cue"><span>SCROLL</span><div class="line"></div></div>
 </section>
 
-<div class="marquee-section">
-  <div class="wrap marquee-label">
-    <span class="eyebrow" id="toolsLabel">Tools I Reach For</span>
+<section id="tools" class="marquee-section">
+  <div class="wrap">
+    <div class="section-head marquee-label reveal">
+      <h2 id="toolsHeading">MY <span class="grad-text">TOOLS</span></h2>
+      <p id="toolsSub">Tools I use to bring your vision to life.</p>
+    </div>
   </div>
+  <div class="wrap">
+  <div class="marquee-box">
   <div class="marquee-track" id="marquee">
     <div class="tool-chip"><div class="tool-icon ps">Ps</div></div>
     <div class="tool-chip"><div class="tool-icon ai">Ai</div></div>
@@ -339,8 +350,22 @@
     <div class="tool-chip"><div class="tool-icon ai">Ai</div></div>
     <div class="tool-chip"><div class="tool-icon cv">Cv</div></div>
     <div class="tool-chip"><div class="tool-icon fg">Fg</div></div>
+    <div class="tool-chip"><div class="tool-icon ps">Ps</div></div>
+    <div class="tool-chip"><div class="tool-icon ai">Ai</div></div>
+    <div class="tool-chip"><div class="tool-icon cv">Cv</div></div>
+    <div class="tool-chip"><div class="tool-icon fg">Fg</div></div>
+    <div class="tool-chip"><div class="tool-icon ps">Ps</div></div>
+    <div class="tool-chip"><div class="tool-icon ai">Ai</div></div>
+    <div class="tool-chip"><div class="tool-icon cv">Cv</div></div>
+    <div class="tool-chip"><div class="tool-icon fg">Fg</div></div>
+    <div class="tool-chip"><div class="tool-icon ps">Ps</div></div>
+    <div class="tool-chip"><div class="tool-icon ai">Ai</div></div>
+    <div class="tool-chip"><div class="tool-icon cv">Cv</div></div>
+    <div class="tool-chip"><div class="tool-icon fg">Fg</div></div>
   </div>
-</div>
+  </div>
+  </div>
+</section>
 
 <section id="skills" class="padded">
   <div class="wrap">
@@ -492,7 +517,7 @@
   var navLinks = document.getElementById('navLinks');
   var navPill = document.getElementById('navPill');
   var navAnchors = navLinks ? navLinks.querySelectorAll('a[data-nav]') : [];
-  var sectionIds = ['home','work','pitchdeck','skills','about','contact'];
+  var sectionIds = ['home','tools','skills','work','pitchdeck','about','contact'];
   var sections = sectionIds.map(function(id){ return document.getElementById(id); }).filter(Boolean);
 
   function movePillTo(link){
@@ -595,7 +620,8 @@
       applyText('heroBadge', t.hero_badge);
       applyText('heroEyebrow', t.hero_eyebrow);
       applyText('heroSub', t.hero_sub);
-      applyText('toolsLabel', t.tools_label, '.marquee-label');
+      applyText('toolsHeading', t.tools_heading);
+      applyText('toolsSub', t.tools_sub);
       applyText('skillsEyebrow', t.skills_eyebrow);
       applyText('skillsHeading', t.skills_heading);
       applyText('skillsSub', t.skills_sub);
@@ -645,10 +671,15 @@
     if(data.tools && data.tools.length && data.tools.some(function(t){ return t.icon; })){
       var withIcons = data.tools.filter(function(t){ return t.icon; });
       var marqueeEl = document.getElementById('marquee');
-      var setHtml = withIcons.map(function(t){
+      var oneSet = withIcons.map(function(t){
         return '<div class="tool-chip"><div class="tool-icon" style="background:none;"><img src="' + t.icon + '" style="width:100%;height:100%;object-fit:contain;" alt="' + (t.name||'') + '"></div></div>';
       }).join('');
-      marqueeEl.innerHTML = setHtml + setHtml; // duplicate for seamless loop
+      // repeat the set enough times so the strip is always comfortably wider than any screen,
+      // then duplicate that whole block once more for a perfectly seamless, gap-free loop
+      var repeats = Math.max(6, Math.ceil(24 / withIcons.length));
+      var halfHtml = '';
+      for(var r=0; r<repeats; r++){ halfHtml += oneSet; }
+      marqueeEl.innerHTML = halfHtml + halfHtml;
     }
 
     if(data.skills && data.skills.length){
