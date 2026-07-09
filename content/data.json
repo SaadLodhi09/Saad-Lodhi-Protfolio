@@ -1,16 +1,17 @@
 {
-  "hero_photo": "/assets/uploads/sl.gfx-dp-blue.jpg",
-  "about_photo": "/assets/uploads/sl.gfx-dp-blue.jpg",
+  "hero_photo": "/assets/uploads/file_00000000f12072078dc8aba30ff9d375~2-1-.png",
+  "about_photo": "/assets/uploads/file_00000000f12072078dc8aba30ff9d375~2.png",
   "bio1": "I'm a graphic designer with 5+ years of experience across poster design, social media content, pitch deck, brand identity, digital art, and event branding. I've spent that time freelancing on Fiverr, working with clients who needed their brand to look sharper and get noticed faster.",
-  "bio2": "My approach is simple: every piece should have a clear focal point, confident typography, and a mood that fits exactly where it's going to live — whether that's a phone feed, a boardroom screen, or a cinema wall.",
-  "bio3": "I'm now taking on new freelance projects directly. If you need posters, campaign creatives, or a deck that makes people lean in, let's talk.",
+  "bio2": "My approach is simple: every piece should have a clear focal point, confident typography, and a mood that fits exactly where it's going to live, whether that's a phone feed, a boardroom screen, or a cinema wall.",
+  "bio3": "I'm taking on new freelance projects directly. If you need identity, posters, campaign creatives, or a deck that makes people lean in, let's talk.",
   "social": {
     "fiverr": "https://www.fiverr.com/s/NNv4e7R",
-    "instagram": "instagram.com/sl.gfx/",
-    "linkedin": "linkedin.com/in/saad-lodhi-6a701224b",
+    "instagram": "https://www.instagram.com/sl.gfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "linkedin": "https://www.linkedin.com/in/saad-lodhi-6a701224b/",
     "facebook": "https://www.facebook.com/profile.php?id=100085949528596",
-    "whatsapp": "https://wa.me/92xxxxxxxxxx",
-    "email": "mailto:you@example.com"
+    "whatsapp": "https://wa.me/923075412767",
+    "email": "mailto:you@example.com",
+    "upwork": "https://www.upwork.com/freelancers/~01f2cad8c77c7a736d?mp_source=share"
   },
   "projects": [
     {
@@ -60,6 +61,11 @@
       "category": "decks",
       "image": "/assets/uploads/winning-at-agentic-ai.png",
       "featured": false
+    }
+  ],
+  "pitch_decks": [
+    {
+      "image": "/assets/uploads/meet-vibe-devops-engineering.png"
     }
   ]
 }
