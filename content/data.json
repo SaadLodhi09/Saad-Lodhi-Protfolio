@@ -8,17 +8,17 @@
   "bio3": "I'm taking on new freelance projects directly. If you need identity, posters, campaign creatives, or a deck that makes people lean in, let's talk.",
   "pitch_decks": [
     {
-      "image": "/assets/uploads/43.png",
+      "image": "/assets/uploads/hg.jpg",
       "title": "Premium Technology Art"
     },
     {
-      "image": "/assets/uploads/day-4.png"
+      "image": "/assets/uploads/day-4.jpg"
     },
     {
-      "image": "/assets/uploads/438.png"
+      "image": "/assets/uploads/438.jpg"
     },
     {
-      "image": "/assets/uploads/a-practitioner-s-roadmap.png"
+      "image": "/assets/uploads/a-practitioner-s-roadmap.jpg"
     }
   ],
   "hero_photo": "/assets/uploads/layer-1-1-.png",
@@ -42,7 +42,7 @@
     {
       "title": "Epilytix Brand Identity",
       "category": "social",
-      "image": "/assets/uploads/epilytix-moodboard.png",
+      "image": "/assets/uploads/hb.jpg",
       "featured": true,
       "subtitle": "Premium Brand Ecosystem & Visual Strategy",
       "details": "As the co-founder and lead designer of Epilytix, I needed to build a brand identity that felt tech-forward but distinctly human. The goal was to break away from standard, cold corporate tech aesthetics and craft a vibrant, premium ecosystem that signals innovation, fluid problem-solving, and authority in the software space.\n\nCentered on the fluid \"epx\" monogram to symbolize seamless data flow, this versatile brand identity was stress-tested across diverse physical and digital mockups. The resulting adaptable design system perfectly positions Epilytix as an agile, cutting-edge software powerhouse."
@@ -50,7 +50,7 @@
     {
       "title": "Isabeau Key Art",
       "category": "film",
-      "image": "/assets/uploads/isabeau-danjou-2.jpg",
+      "image": "/assets/uploads/bn.jpg",
       "featured": true,
       "subtitle": "Dark Fantasy by Butterfly Entertainment",
       "details": "To capture the epic scale of a high-end dark fantasy, I designed a character-driven key art piece featuring a layered triangular composition. The layout anchors on a piercing-eyed protagonist in the foreground, using symbolic wildlife, hooded figures, and a soaring raven to build narrative depth. Utilizing a desaturated, misty palette of cold blues and deep grays, the moody atmosphere makes the subtle eye glows and intricate, chiseled stone typography pop with a premium, high-fantasy aesthetic."
@@ -58,7 +58,7 @@
     {
       "title": "Mind in Chaos",
       "category": "film",
-      "image": "/assets/uploads/a-mind-in-chaos-horror-6.png",
+      "image": "/assets/uploads/1.jpg",
       "featured": true,
       "subtitle": "Cinematic Horror Key Art & Theatrical Poster Design",
       "details": "My goal was to map fractured sanity onto a premium horror poster by contrasting the physical world with a predatory subconscious nightmare. I engineered a top-heavy vertical hierarchy, positioning a Nosferatu-inspired creature as a dominant psychological shadow over the characters. By flooding the midground with an ominous crimson glow and utilizing a distressed, heavily textured title treatment, the final composition delivers a visceral, high-end indie-horror aesthetic."
@@ -66,7 +66,7 @@
     {
       "title": "The Horizon Hunter",
       "category": "posters",
-      "image": "/assets/uploads/nissan-gtr-2.jpg",
+      "image": "/assets/uploads/22.jpg",
       "featured": true,
       "subtitle": "Cinematic Product Key Art & Conceptual Automotive Poster",
       "details": "To transform the Nissan GT-R into a theatrical experience, I built a dynamic vertical composition that stacks the vehicle's best design elements to tell a story of raw speed. Using a hyper-saturated, molten orange palette wrapped in heavy environmental smoke and golden backlighting, I gave the piece an aggressive, untamed edge. Grounding the car on a dark, wet asphalt texture allowed me to build high-contrast reflections, creating an incredibly premium and cinematic feel."
@@ -74,21 +74,21 @@
     {
       "title": "Black Luchador",
       "category": "posters",
-      "image": "/assets/uploads/black-luchador-2.png",
+      "image": "/assets/uploads/fd.jpg",
       "featured": false,
       "subtitle": "Sports Entertainment & Promo Design"
     },
     {
       "title": "Messi Fan Art",
       "category": "posters",
-      "image": "/assets/uploads/messi-poster.jpg",
+      "image": "/assets/uploads/messi.jpg",
       "featured": false,
       "subtitle": "Cinematic Sports Key Art"
     },
     {
       "title": "Flora Elysia",
       "category": "social",
-      "image": "/assets/uploads/flora-4.jpg",
+      "image": "/assets/uploads/hd.jpg",
       "featured": false,
       "subtitle": "Female Perfume Advertisement"
     },
@@ -101,7 +101,7 @@
     },
     {
       "featured": false,
-      "image": "/assets/uploads/the-star-of-santa-4.jpg",
+      "image": "/assets/uploads/tg.jpg",
       "category": "film",
       "title": "Star of Santa",
       "subtitle": "Festive Theatrical Design"
@@ -114,13 +114,13 @@
     },
     {
       "featured": false,
-      "image": "/assets/uploads/beauty-product-design-3.jpg",
-      "title": "Skin Product Ad",
+      "image": "/assets/uploads/32.jpg",
+      "title": "Event Poster",
       "category": "social"
     },
     {
       "featured": false,
-      "image": "/assets/uploads/cover.jpg",
+      "image": "/assets/uploads/hfd.jpg",
       "title": "Kids Book Illustrations",
       "category": "posters"
     }
@@ -141,6 +141,12 @@
     {
       "name": "Canva",
       "icon": "/assets/uploads/group-1.png"
+    }
+  ],
+  "stats": [
+    {
+      "number": "200+",
+      "label": "Designs Created"
     }
   ]
 }
