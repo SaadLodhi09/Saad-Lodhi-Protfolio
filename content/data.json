@@ -23,18 +23,18 @@
   ],
   "hero_photo": "/assets/uploads/layer-1-1-.png",
   "social": {
-    "fiverr_icon": "/assets/uploads/kmj.png",
-    "instagram_icon": "/assets/uploads/vm.png",
+    "fiverr_icon": "/assets/uploads/fi.png",
+    "instagram_icon": "/assets/uploads/ins.png",
     "facebook": "https://www.facebook.com/profile.php?id=100085949528596",
     "whatsapp_icon": "/assets/uploads/wa.png",
     "upwork": "https://www.upwork.com/freelancers/~01f2cad8c77c7a736d?mp_source=share",
-    "upwork_icon": "/assets/uploads/gfd.png",
+    "upwork_icon": "/assets/uploads/up.png",
     "fiverr": "https://www.fiverr.com/s/NNv4e7R",
     "whatsapp": "https://wa.me/923075412767",
-    "facebook_icon": "/assets/uploads/xdv.png",
+    "facebook_icon": "/assets/uploads/fb.png",
     "instagram": "https://www.instagram.com/sl.gfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "linkedin_icon": "/assets/uploads/sm_5b321c9756fc6.png",
-    "email_icon": "/assets/uploads/vds.png",
+    "linkedin_icon": "/assets/uploads/link.png",
+    "email_icon": "/assets/uploads/mail.png",
     "email": "saadlodhi2023@gmail.com",
     "linkedin": "https://www.linkedin.com/in/saad-lodhi-6a701224b/"
   },
@@ -159,6 +159,17 @@
     {
       "number": "200+",
       "label": "Designs Created"
+    }
+  ],
+  "certifications": [
+    {
+      "cert_no": "CERT 01",
+      "title": "Software Engineer Intern",
+      "provider": "HackerRank",
+      "details": "The bearer of this certificate has passed the HackerRank role certification test.",
+      "year": "2025",
+      "url": "https://www.hackerrank.com/certificates/6A2B26793D14",
+      "image": "/assets/uploads/hg.jpg"
     }
   ]
 }
