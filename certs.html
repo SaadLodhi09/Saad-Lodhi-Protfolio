@@ -103,7 +103,10 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
 .cert-meta-group .year{ font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; color:#f59e0b; letter-spacing:0.04em; }
 .cert-content .details{ color:var(--text-2); font-size:14px; line-height:1.7; margin-bottom:28px; text-align:justify !important; max-width:520px; }
 
+.cert-link-row{ display:flex; gap:20px; flex-wrap:wrap; align-items:center; }
 .cert-link{ font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.1em; color:var(--text); display:inline-flex; align-items:center; gap:6px; text-transform:uppercase; transition:color .25s, transform .25s; align-self:flex-start; }
+.cert-verify{ color:var(--text-2); }
+.cert-verify:hover{ color:var(--accent); }
 .cert-link:hover{ color:var(--accent); transform:translateX(4px); }
 
 .cert-media{ width:100%; aspect-ratio:4/3; border-radius:var(--r); overflow:hidden; border:1px solid var(--line); background:#12101b; box-shadow:0 12px 36px rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center; cursor:pointer; }
@@ -332,6 +335,7 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
         var title = c.title || '';
         var details = c.details || '';
         var imgUrl = c.image || '';
+        var verifyUrl = c.url || '';
         
         return '<div class="cert-item reveal" style="--d:' + (idx + 1) + '">' +
                  '<div class="cert-content">' +
@@ -342,7 +346,10 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
                      (year ? '<div class="year">' + year + '</div>' : '') +
                    '</div>' +
                    (details ? '<p class="details">' + details + '</p>' : '') +
-                   '<a class="cert-link" href="#">VIEW CERTIFICATE ↗</a>' +
+                   '<div class="cert-link-row">' +
+                     '<a class="cert-link" href="#">VIEW CERTIFICATE ↗</a>' +
+                     (verifyUrl ? '<a class="cert-link cert-verify" href="' + verifyUrl + '" target="_blank" rel="noopener">VERIFY ↗</a>' : '') +
+                   '</div>' +
                  '</div>' +
                  '<div class="cert-media">' +
                    (imgUrl ? '<img src="' + imgUrl + '" alt="' + title + '" loading="lazy" decoding="async">' : '') +
