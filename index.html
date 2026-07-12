@@ -1,986 +1,2417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>Saad Lodhi — Graphic Designer</title>
-<meta name="description" content="Saad Lodhi — Freelance graphic designer specializing in posters, social media creatives, digital art, pitch decks, and film posters.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ── Variables ── */
-:root {
-  --bg: #0b0a12;
-  --surface: #13111c;
-  --surface-2: #1a1726;
-  --accent: #8b5cf6;
-  --accent-dim: rgba(139,92,246,0.12);
-  --text: #e8e4ef;
-  --text-2: #b0aac0;
-  --muted: #6b6580;
-  --line: rgba(255,255,255,0.06);
-  --r: 12px;
-  --r-lg: 20px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <title>Saad Lodhi — Graphic Designer</title>
+  <meta name="description"
+    content="Saad Lodhi — Freelance graphic designer specializing in posters, social media creatives, digital art, pitch decks, and film posters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ── Variables ── */
+    :root {
+      --bg: #0b0a12;
+      --surface: #13111c;
+      --surface-2: #1a1726;
+      --accent: #8b5cf6;
+      --accent-dim: rgba(139, 92, 246, 0.12);
+      --text: #e8e4ef;
+      --text-2: #b0aac0;
+      --muted: #6b6580;
+      --line: rgba(255, 255, 255, 0.06);
+      --r: 12px;
+      --r-lg: 20px;
+    }
 
-/* ── Reset ── */
-*{ margin:0; padding:0; box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{ background:var(--bg); color:var(--text); font-family:'Montserrat',system-ui,sans-serif; font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; animation:pageIn .5s ease; }
-@keyframes pageIn{ from{opacity:0} to{opacity:1} }
-::selection{ background:var(--accent); color:var(--bg); }
-a{ color:inherit; text-decoration:none; }
-img{ max-width:100%; display:block; }
-button{ font-family:inherit; cursor:pointer; border:none; background:none; }
-h1,h2,h3,h4{ font-family:'Clash Display',sans-serif; font-weight:700; line-height:1.1; letter-spacing:0.02em; }
-p{ text-align:justify; }
-.accent{ color:var(--accent); }
-.wrap{ max-width:1180px; margin:0 auto; padding:0 20px; }
+    /* ── Reset ── */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* ── Scroll Progress ── */
-.scroll-progress{ position:fixed; top:0; left:0; height:2px; background:var(--accent); z-index:200; width:0; pointer-events:none; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ── Custom Cursor (desktop only) ── */
-@media(pointer:fine){
-  .cursor-dot{ position:fixed; width:6px; height:6px; background:var(--accent); border-radius:50%; pointer-events:none; z-index:10000; transform:translate(-50%,-50%); mix-blend-mode:difference; will-change:transform; }
-  .cursor-ring{ position:fixed; width:36px; height:36px; border:1.5px solid rgba(139,92,246,0.4); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); will-change:transform; transition:width .25s,height .25s,border-color .25s; }
-  .cursor-ring.hover{ width:60px; height:60px; border-color:rgba(139,92,246,0.2); }
-}
-@media(pointer:coarse){ .cursor-dot,.cursor-ring{ display:none !important; } }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      animation: pageIn .5s ease;
+    }
 
-/* ── Liquid Glass ── */
-.glass{
-  position:relative;
-  background:rgba(255,255,255,0.03);
-  backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,0.08);
-}
-.glass::before{
-  content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
-  background:linear-gradient(135deg, rgba(255,255,255,0.07) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.03) 100%);
-}
+    @keyframes pageIn {
+      from {
+        opacity: 0
+      }
 
-/* ── Nav ── */
-header{ position:fixed; top:0; left:0; right:0; z-index:100; }
-.nav-bar{ margin:12px 20px 0; border-radius:16px; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-@media(min-width:768px){ .nav-bar{ margin:16px 24px 0; padding:14px 28px; } }
-.logo{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:16px; letter-spacing:-0.01em; }
-.logo span{ color:var(--accent); }
-.nav-links{ display:none; gap:4px; align-items:center; }
-.nav-links a{ font-size:13px; font-weight:500; color:var(--muted); padding:7px 14px; border-radius:8px; transition:color .25s,background .25s; }
-.nav-links a:hover{ color:var(--text); }
-.nav-links a.active{ color:var(--text); background:rgba(255,255,255,0.06); }
-.status-badge{ display:none; align-items:center; gap:8px; padding:7px 16px; border-radius:999px; font-size:12px; font-weight:500; color:var(--text-2); cursor:pointer; transition:transform .3s, box-shadow .3s, border-color .3s, background .3s; }
-.status-badge:hover{ transform:scale(1.05); box-shadow:0 0 20px rgba(52,211,153,0.25); border-color:rgba(52,211,153,0.3); background:rgba(52,211,153,0.08); }
-.status-dot{ width:7px; height:7px; border-radius:50%; background:#34d399; flex-shrink:0; animation:pulse 2s ease infinite; }
-@keyframes pulse{ 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(52,211,153,0.4)} 50%{opacity:.7;box-shadow:0 0 0 6px rgba(52,211,153,0)} }
-.burger{ display:flex; flex-direction:column; gap:5px; padding:6px; z-index:110; }
-.burger span{ width:20px; height:1.5px; background:var(--text); display:block; transition:transform .3s,opacity .3s; }
-.burger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
-.burger.open span:nth-child(2){ opacity:0; }
-.burger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
-@media(min-width:768px){ .nav-links{display:flex;} .status-badge{display:flex;} .burger{display:none;} }
+      to {
+        opacity: 1
+      }
+    }
 
-/* ── Mobile Menu ── */
-.mobile-menu{ position:fixed; inset:0; background:rgba(11,10,18,0.97); z-index:105; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; transform:translateY(-100%); transition:transform .4s cubic-bezier(.4,0,.2,1); backdrop-filter:blur(20px); }
-.mobile-menu.open{ transform:translateY(0); }
-.mobile-menu a{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:28px; color:var(--text); transition:color .2s; }
-.mobile-menu a:hover{ color:var(--accent); }
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
 
-/* ── Hero ── */
-#home{ min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden; padding:100px 0 0; }
-.hero-ghost{ position:absolute; top:50%; left:50%; transform:translate(-50%,-55%); font-family:'Clash Display',sans-serif; font-weight:700; font-size:clamp(90px,20vw,280px); line-height:.85; text-transform:uppercase; color:rgba(255,255,255,0.025); pointer-events:none; user-select:none; white-space:nowrap; z-index:0; text-align:center; }
-.hero-arc{ position:absolute; border:1px solid rgba(139,92,246,0.06); border-radius:50%; pointer-events:none; }
-.hero-arc-1{ width:clamp(400px,55vw,750px); height:clamp(400px,55vw,750px); right:-20%; top:50%; transform:translateY(-50%); }
-.hero-arc-2{ width:clamp(300px,42vw,580px); height:clamp(300px,42vw,580px); right:-14%; top:50%; transform:translateY(-50%); }
-.hero-grid{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:32px; }
-.hero-copy{ order:2; max-width:520px; }
-.hero-badge{ display:none; }
-.section-tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:16px; }
-#heroEyebrow{ font-size:15px; font-weight:500; letter-spacing:0.18em; }
-.hero-copy h1{ font-size:clamp(52px,13vw,96px); margin-bottom:20px; line-height:0.95; }
-.hero-sub{ font-size:16px; color:var(--text-2); max-width:440px; line-height:1.7; margin:0 auto 28px; }
-.btn-row{ display:flex; flex-direction:column; gap:12px; width:100%; max-width:340px; margin:0 auto; }
-.btn{ font-weight:600; font-size:14px; padding:14px 24px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; gap:8px; transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s; }
-.btn-primary{ background:var(--accent); color:#fff; }
-.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(139,92,246,0.3); }
-.btn-outline{ border:1px solid rgba(255,255,255,0.12); color:var(--text); }
-.btn-outline:hover{ border-color:rgba(255,255,255,0.25); transform:translateY(-2px); }
-.hero-photo-area{ order:1; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:16px; }
-.hero-photo-glow{ position:absolute; width:150%; height:150%; top:50%; left:50%; transform:translate(-50%,-50%); background:radial-gradient(circle,rgba(139,92,246,0.3) 0%,rgba(139,92,246,0.08) 50%,transparent 70%); filter:blur(50px); pointer-events:none; z-index:0; }
-.hero-photo-wrap{ position:relative; width:clamp(220px,50vw,380px); aspect-ratio:auto; overflow:visible; background:none; border:none; z-index:1; display:flex; align-items:flex-end; justify-content:center; }
-.hero-cutout{ position:relative; width:100%; height:auto; object-fit:contain; z-index:2; filter:drop-shadow(0 15px 30px rgba(0,0,0,0.6)); }
-.hero-loader{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:4; }
-.loader-ring{ width:48px; height:48px; border:3px solid rgba(139,92,246,0.1); border-top-color:var(--accent); border-radius:50%; animation:spin .8s linear infinite; }
-@keyframes spin{ to{transform:rotate(360deg)} }
-.hero-loader.hidden{ opacity:0; transition:opacity .4s; pointer-events:none; }
-.hero-status{ order:3; }
-.hero-status .status-badge{ display:flex; border-radius:999px; padding:8px 18px; font-size:11px; }
-@media(min-width:768px){ .hero-status .status-badge{display:none;} }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* Hero Stats (inline below hero copy) */
-.hero-stats{ margin-top:32px; display:flex; gap:10px; flex-wrap:nowrap; }
-.stat{
-  flex: 1 1 0;
-  min-width: 0;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 14px 10px;
-  text-align: center;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12), 0 6px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, border-color 0.3s;
-}
-.stat:hover{ transform: translateY(-3px); border-color: rgba(139, 92, 246, 0.3); }
-.stat .num{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:22px; color:var(--text); margin-bottom:2px; }
-.stat .lbl{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:10px; letter-spacing:0.05em; color:var(--text-2); text-transform:uppercase; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-/* Hero Desktop */
-@media(min-width:768px){
-  #home{ padding:0; justify-content:flex-end; }
-  .hero-grid{ flex-direction:row; text-align:left; align-items:flex-end; gap:40px; padding:100px 0 0; }
-  .hero-copy{ order:1; flex:1.1; padding-bottom:48px; }
-  .hero-sub{ margin:0 0 28px; }
-  .btn-row{ flex-direction:row; max-width:none; margin:0; }
-  .hero-photo-area{ order:2; flex:0 0 auto; align-items:flex-end; justify-content:flex-end; }
-  .hero-photo-wrap{ width:clamp(380px,38vw,560px); }
-  .hero-status{ display:none; }
-  .hero-stats{ justify-content:flex-start; gap:10px; }
-  .stat .num{ font-size:24px; }
-  .stat .lbl{ font-size:11px; }
-}
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
 
-/* ── Divider ── */
-.divider{ width:100%; height:1px; background:var(--line); position:relative; }
-.divider::after{ content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:5px; height:5px; background:var(--accent); border-radius:50%; }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
 
-/* ── Section Common ── */
-section.padded{ padding:80px 0; }
-@media(min-width:768px){ section.padded{padding:120px 0;} }
-.section-head{ margin-bottom:40px; max-width:580px; }
-.section-head h2{ font-size:clamp(32px,8vw,52px); margin-top:12px; margin-bottom:0; }
-.section-head p{ color:var(--text-2); margin-top:14px; font-size:15px; line-height:1.7; }
-@media(min-width:768px){ .section-head{margin-bottom:56px;} }
+    p {
+      text-align: justify;
+    }
 
-/* ── Work Section ── */
+    .accent {
+      color: var(--accent);
+    }
 
-/* Slideshow / Showcase */
-.showcase{ position:relative; margin-bottom:56px; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; }
-.showcase-header{ display:flex; align-items:center; justify-content:space-between; padding:20px 24px; border-bottom:1px solid var(--line); }
-.slide-counter{ font-family:'Montserrat',sans-serif; font-weight:400; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:4px; }
-.slide-counter .current{ color:var(--text); font-weight:500; }
-.counter-sep{ color:var(--muted); }
-.showcase-arrows{ display:flex; gap:8px; }
-.slide-arrow{ width:36px; height:36px; border-radius:8px; border:1px solid var(--line); background:transparent; color:var(--text); display:flex; align-items:center; justify-content:center; font-size:16px; transition:background .2s,border-color .2s; }
-.slide-arrow:hover{ background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.12); }
-.slides-viewport{ overflow:hidden; touch-action:pan-y; }
-.slides{ display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1); width:100%; }
-.slide{ min-width:100%; display:flex; flex-direction:column; }
-.slide-media{ position:relative; width:100%; aspect-ratio:210/297; overflow:hidden; flex-shrink:0; background:var(--bg); border-radius:8px; }
-.slide-media .art{ position:absolute; inset:0; }
-.slide-media .art img{ width:100%; height:100%; object-fit:cover; display:block; }
-.slide-content{ padding:24px; }
-.slide-content .tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; display:block; }
-.slide-content h3{ font-size:clamp(22px,5vw,28px); margin-bottom:10px; font-weight:800; letter-spacing:0.02em; }
-.slide-content .subtitle{ font-size:14px; font-weight:500; color:var(--text); line-height:1.6; margin-bottom:8px; }
-.slide-content .details{ font-size:13px; color:var(--text-2); line-height:1.7; }
-.slide-dots{ display:flex; gap:6px; padding:0 24px 20px; }
-.slide-dots i{ width:24px; height:3px; border-radius:2px; background:rgba(255,255,255,0.1); cursor:pointer; transition:background .3s,width .3s; display:block; }
-.slide-dots i.active{ background:var(--accent); width:36px; }
-@media(min-width:768px){
-  .showcase-header{ padding:20px 32px; }
-  .slide{ flex-direction:row; }
-  .slide.reverse{ flex-direction:row-reverse; }
-  .slide-media{ width:38%; aspect-ratio:210/297; min-height:auto; }
-  .slide-content{ flex:1; padding:40px 40px 40px 48px; display:flex; flex-direction:column; justify-content:center; }
-  .slide.reverse .slide-content{ padding:40px 48px 40px 40px; text-align:right; }
-  .slide.reverse .slide-content p{ text-align:justify; margin-left:auto; margin-right:0; }
-  .slide-content h3{ font-size:clamp(24px,2.8vw,32px); }
-  .slide-content .subtitle{ font-size:16px; }
-  .slide-content .details{ font-size:14px; max-width:420px; }
-  .slide-dots{ padding:0 32px 24px; }
-}
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* Filters */
-.filters{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; }
-.filter-btn{ font-family:'Montserrat',sans-serif; font-weight:400; font-size:11px; letter-spacing:0.03em; padding:8px 16px; border-radius:8px; border:1px solid var(--line); color:var(--muted); background:transparent; transition:color .2s,border-color .2s,background .2s; }
-.filter-btn.active,.filter-btn:hover{ border-color:var(--accent); color:var(--text); background:var(--accent-dim); }
+    /* ── Scroll Progress ── */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+      z-index: 200;
+      width: 0;
+      pointer-events: none;
+    }
 
-/* Gallery */
-.gallery-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-.poster-card{ position:relative; aspect-ratio:2/3; border-radius:var(--r); overflow:hidden; border:1px solid var(--line); transition:transform .4s cubic-bezier(.4,0,.2,1),border-color .4s; }
-.poster-card .art{ position:absolute; inset:0; }
-.poster-card .art img{ width:100%; height:100%; object-fit:cover; }
-.poster-card .shade{ position:absolute; inset:0; background:linear-gradient(0deg,rgba(11,10,18,0.85) 0%,transparent 50%); opacity:0; transition:opacity .4s; }
-.poster-card .meta{ position:absolute; bottom:0; left:0; right:0; padding:16px; transform:translateY(8px); opacity:0; transition:transform .4s,opacity .4s; }
-.poster-card .meta span{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:9px; color:var(--accent); letter-spacing:0.08em; text-transform:uppercase; }
-.poster-card .meta h4{ font-family:'Clash Display',sans-serif; font-size:15px; margin-top:4px; font-weight:700; }
-.poster-card:hover{ transform:translateY(-4px); border-color:rgba(139,92,246,0.2); }
-.poster-card:hover .shade{ opacity:1; }
-.poster-card:hover .meta{ transform:translateY(0); opacity:1; }
-.poster-card.hide{ display:none; }
-@media(min-width:640px){ .gallery-grid{grid-template-columns:repeat(3,1fr);} }
-@media(min-width:1024px){ .gallery-grid{grid-template-columns:repeat(4,1fr); gap:18px;} .poster-card .meta h4{font-size:17px;} }
+    /* ── Custom Cursor (desktop only) ── */
+    @media(pointer:fine) {
+      .cursor-dot {
+        position: fixed;
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        will-change: transform;
+      }
 
-/* ── Skills ── */
-.skills-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
-.ticket{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:28px 24px; transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .3s; }
-.ticket:hover{ transform:translateY(-3px); border-color:rgba(139,92,246,0.2); }
-.ticket .genre{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:14px; }
-.ticket h3{ font-size:20px; margin-bottom:8px; letter-spacing:0.02em; }
-.ticket p{ color:var(--text-2); font-size:14px; line-height:1.65; }
-@media(min-width:640px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
-@media(min-width:1024px){ .skills-grid{grid-template-columns:repeat(3,1fr); gap:16px;} .ticket h3{font-size:22px;} }
+      .cursor-ring {
+        position: fixed;
+        width: 36px;
+        height: 36px;
+        border: 1.5px solid rgba(139, 92, 246, 0.4);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        will-change: transform;
+        transition: width .25s, height .25s, border-color .25s;
+      }
 
-/* ── Tools Marquee ── */
-.marquee-section{ width:100%; overflow:hidden; padding:80px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,0.015); }
-.marquee-box{ overflow:hidden; border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,0.02); padding:32px 0; mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-.marquee-track{ display:flex; gap:80px; align-items:center; white-space:nowrap; width:max-content; animation:marquee 30s linear infinite; will-change:transform; }
-.tool-chip{ display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.tool-icon-marquee{ width:88px; height:88px; border-radius:18px; display:flex; align-items:center; justify-content:center; font-family:'Clash Display',sans-serif; font-weight:700; font-size:24px; color:#fff; flex-shrink:0; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.45)); }
-.tool-icon-marquee img{ width:100%; height:100%; object-fit:contain; }
-.tool-icon-marquee.ps{ background:linear-gradient(135deg,#31a8ff,#0d3f73); }
-.tool-icon-marquee.ai{ background:linear-gradient(135deg,#ff9a3c,#c9560a); }
-.tool-icon-marquee.fg{ background:linear-gradient(135deg,#a259ff,#6c3cff); }
-.tool-icon-marquee.cv{ background:linear-gradient(135deg,#00c4cc,#7d2ae8); }
-@keyframes marquee{ from{transform:translate3d(0,0,0);} to{transform:translate3d(-50%,0,0);} }
+      .cursor-ring.hover {
+        width: 60px;
+        height: 60px;
+        border-color: rgba(139, 92, 246, 0.2);
+      }
+    }
 
-/* ── Pitch Deck ── */
-#pitchdeck .section-head{ margin-left:auto; margin-right:0; text-align:right; }
-#pitchdeck .section-head p{ text-align:right; }
-.pitch-slides{ display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1); width:100%; }
-.pitch-slide{ min-width:100%; display:flex; align-items:center; justify-content:center; height:300px; padding:0 6px; }
-.pitch-slide img{ max-height:100%; max-width:100%; object-fit:contain; border-radius:var(--r); display:block; }
-.pitch-placeholder{ color:var(--muted); font-family:'Montserrat',sans-serif; font-weight:400; font-size:11px; text-align:center; padding:20px; max-width:260px; line-height:1.6; }
-#pitchdeck .showcase{ background:none; border:none; border-radius:0; }
-#pitchdeck .showcase-header{ border-bottom:none; padding:0 0 16px; }
-#pitchdeck .slides-viewport{ border-radius:var(--r); }
-#pitchdeck .pitch-slide{ height:340px; }
-#pitchdeck .slide-dots{ padding:16px 0 0; justify-content:center; }
-@media(min-width:768px){ .pitch-slide{height:480px;} #pitchdeck .pitch-slide{height:520px;} }
+    @media(pointer:coarse) {
 
-/* ── About ── */
-.about-grid{ display:flex; flex-direction:column; gap:36px; align-items:center; text-align:center; }
-.about-photo{ width:100%; max-width:280px; aspect-ratio:1/1; border-radius:var(--r-lg); background:var(--surface); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
-.about-photo .initials{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:48px; color:var(--accent); }
-.about-photo img{ width:100%; height:100%; object-fit:cover; }
-.about-photo .location-badge{ position:absolute; bottom:12px; left:12px; display:flex; align-items:center; gap:6px; background:rgba(0,0,0,0.7); backdrop-filter:blur(10px); padding:6px 12px; border-radius:999px; font-size:11px; font-weight:500; z-index:2; }
-.about-photo .location-badge .loc-dot{ width:6px; height:6px; border-radius:50%; background:#ef4444; flex-shrink:0; }
-.about-copy p{ color:var(--text-2); font-size:15px; line-height:1.75; margin-bottom:16px; }
-.about-copy p strong{ color:var(--text); font-weight:600; }
-.about-meta{ display:flex; gap:32px; margin-top:24px; padding-top:20px; border-top:1px solid var(--line); justify-content:center; flex-wrap:wrap; }
-.about-meta-item .meta-label{ font-family:'Montserrat',sans-serif; font-weight:300; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
-.about-meta-item .meta-value{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:15px; color:var(--text); }
-.about-socials{ display:flex; gap:10px; margin-top:20px; justify-content:center; flex-wrap:wrap; }
-.about-socials .social-btn{ padding:10px 16px; font-size:12px; }
-@media(min-width:768px){
-  .about-grid{ flex-direction:row; align-items:flex-start; gap:60px; text-align:left; }
-  .about-photo{ max-width:300px; flex-shrink:0; }
-  .about-meta{ justify-content:flex-start; }
-  .about-socials{ justify-content:flex-start; }
-}
+      .cursor-dot,
+      .cursor-ring {
+        display: none !important;
+      }
+    }
 
-/* ── Contact ── */
-#contact{ text-align:center; }
-#contact .section-head{ margin:0 auto 40px; text-align:center; }
-#contactHeading{ font-size:clamp(22px,7vw,48px) !important; }
-.line-wrap{ display:inline-block; white-space:nowrap; }
-.social-grid{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; max-width:100%; margin:0 auto; padding:16px 0; }
-.social-btn{ display:flex; align-items:center; gap:8px; padding:11px 16px; border-radius:10px; border:1px solid var(--line); background:rgba(255,255,255,0.02); font-weight:600; font-size:13px; white-space:nowrap; flex-shrink:0; transition:transform .3s,border-color .3s,background .3s; }
-.social-btn svg{ width:18px; height:18px; stroke:var(--accent); flex-shrink:0; }
-.social-btn img{ width:18px; height:18px; object-fit:contain; flex-shrink:0; }
-.social-btn:hover{ border-color:rgba(139, 92, 246, 0.3); background:var(--accent-dim); transform:translateY(-2px); }
+    /* ── Liquid Glass ── */
+    .glass {
+      position: relative;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.03) 100%);
+    }
+
+    /* ── Nav ── */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    .nav-bar {
+      margin: 12px 20px 0;
+      border-radius: 16px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @media(min-width:768px) {
+      .nav-bar {
+        margin: 16px 24px 0;
+        padding: 14px 28px;
+      }
+    }
+
+    .logo {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: none;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 7px 14px;
+      border-radius: 8px;
+      transition: color .25s, background .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .status-badge {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: transform .3s, box-shadow .3s, border-color .3s, background .3s;
+    }
+
+    .status-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.25);
+      border-color: rgba(52, 211, 153, 0.3);
+      background: rgba(52, 211, 153, 0.08);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      flex-shrink: 0;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4)
+      }
+
+      50% {
+        opacity: .7;
+        box-shadow: 0 0 0 6px rgba(52, 211, 153, 0)
+      }
+    }
+
+    .burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      z-index: 110;
+    }
+
+    .burger span {
+      width: 20px;
+      height: 1.5px;
+      background: var(--text);
+      display: block;
+      transition: transform .3s, opacity .3s;
+    }
+
+    .burger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    @media(min-width:768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .status-badge {
+        display: flex;
+      }
+
+      .burger {
+        display: none;
+      }
+    }
+
+    /* ── Mobile Menu ── */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 10, 18, 0.97);
+      z-index: 105;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      transform: translateY(-100%);
+      transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+      backdrop-filter: blur(20px);
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+    }
+
+    .mobile-menu a {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--text);
+      transition: color .2s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+    }
+
+    /* ── Hero ── */
+    #home {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 0;
+    }
+
+    .hero-ghost {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: clamp(90px, 20vw, 280px);
+      line-height: .85;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.025);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      z-index: 0;
+      text-align: center;
+    }
+
+    .hero-arc {
+      position: absolute;
+      border: 1px solid rgba(139, 92, 246, 0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-arc-1 {
+      width: clamp(400px, 55vw, 750px);
+      height: clamp(400px, 55vw, 750px);
+      right: -20%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hero-arc-2 {
+      width: clamp(300px, 42vw, 580px);
+      height: clamp(300px, 42vw, 580px);
+      right: -14%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 32px;
+    }
+
+    .hero-copy {
+      order: 2;
+      max-width: 520px;
+    }
+
+    .hero-badge {
+      display: none;
+    }
+
+    .section-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f59e0b;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    #heroEyebrow {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(52px, 13vw, 96px);
+      margin-bottom: 20px;
+      line-height: 0.95;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-2);
+      max-width: 440px;
+      line-height: 1.7;
+      margin: 0 auto 28px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: transform .3s cubic-bezier(.4, 0, .2, 1), box-shadow .3s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .hero-photo-area {
+      order: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+    }
+
+    .hero-photo-glow {
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      width: clamp(220px, 50vw, 380px);
+      aspect-ratio: auto;
+      overflow: visible;
+      background: none;
+      border: none;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .hero-cutout {
+      position: relative;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      z-index: 2;
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+    }
+
+    .hero-loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+    }
+
+    .loader-ring {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(139, 92, 246, 0.1);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .hero-loader.hidden {
+      opacity: 0;
+      transition: opacity .4s;
+      pointer-events: none;
+    }
+
+    .hero-status {
+      order: 3;
+    }
+
+    .hero-status .status-badge {
+      display: flex;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 11px;
+    }
+
+    @media(min-width:768px) {
+      .hero-status .status-badge {
+        display: none;
+      }
+    }
+
+    /* Hero Stats (inline below hero copy) */
+    .hero-stats {
+      margin-top: 32px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+
+    .stat {
+      flex: 1 1 0;
+      min-width: 0;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 14px 10px;
+      text-align: center;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12), 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .stat:hover {
+      transform: translateY(-3px);
+      border-color: rgba(139, 92, 246, 0.3);
+    }
+
+    .stat .num {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .stat .lbl {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: var(--text-2);
+      text-transform: uppercase;
+    }
+
+    /* Hero Desktop */
+    @media(min-width:768px) {
+      #home {
+        padding: 0;
+        justify-content: flex-end;
+      }
+
+      .hero-grid {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-end;
+        gap: 40px;
+        padding: 100px 0 0;
+      }
+
+      .hero-copy {
+        order: 1;
+        flex: 1.1;
+        padding-bottom: 48px;
+      }
+
+      .hero-sub {
+        margin: 0 0 28px;
+      }
+
+      .btn-row {
+        flex-direction: row;
+        max-width: none;
+        margin: 0;
+      }
+
+      .hero-photo-area {
+        order: 2;
+        flex: 0 0 auto;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      .hero-photo-wrap {
+        width: clamp(380px, 38vw, 560px);
+      }
+
+      .hero-status {
+        display: none;
+      }
+
+      .hero-stats {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      .stat .num {
+        font-size: 24px;
+      }
+
+      .stat .lbl {
+        font-size: 11px;
+      }
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--line);
+      position: relative;
+    }
+
+    .divider::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* ── Section Common ── */
+    section.padded {
+      padding: 80px 0;
+    }
+
+    @media(min-width:768px) {
+      section.padded {
+        padding: 120px 0;
+      }
+    }
+
+    .section-head {
+      margin-bottom: 40px;
+      max-width: 580px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(32px, 8vw, 52px);
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    .section-head p {
+      color: var(--text-2);
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @media(min-width:768px) {
+      .section-head {
+        margin-bottom: 56px;
+      }
+    }
+
+    /* ── Work Section ── */
+
+    /* Slideshow / Showcase */
+    .showcase {
+      position: relative;
+      margin-bottom: 56px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+
+    .showcase-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .slide-counter {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .slide-counter .current {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .counter-sep {
+      color: var(--muted);
+    }
+
+    .showcase-arrows {
+      display: flex;
+      gap: 8px;
+    }
+
+    .slide-arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: background .2s, border-color .2s;
+    }
+
+    .slide-arrow:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .slides-viewport {
+      overflow: hidden;
+      touch-action: pan-y;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 210/297;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--bg);
+      border-radius: 8px;
+    }
+
+    .slide-media .art {
+      position: absolute;
+      inset: 0;
+    }
+
+    .slide-media .art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-content {
+      padding: 24px;
+    }
+
+    .slide-content .tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f59e0b;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .slide-content h3 {
+      font-size: clamp(22px, 5vw, 28px);
+      margin-bottom: 10px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .slide-content .subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .slide-content .details {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    .slide-dots {
+      display: flex;
+      gap: 6px;
+      padding: 0 24px 20px;
+    }
+
+    .slide-dots i {
+      width: 24px;
+      height: 3px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      transition: background .3s, width .3s;
+      display: block;
+    }
+
+    .slide-dots i.active {
+      background: var(--accent);
+      width: 36px;
+    }
+
+    @media(min-width:768px) {
+      .showcase-header {
+        padding: 20px 32px;
+      }
+
+      .slide {
+        flex-direction: row;
+      }
+
+      .slide.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .slide-media {
+        width: 38%;
+        aspect-ratio: 210/297;
+        min-height: auto;
+      }
+
+      .slide-content {
+        flex: 1;
+        padding: 40px 40px 40px 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .slide.reverse .slide-content {
+        padding: 40px 48px 40px 40px;
+        text-align: right;
+      }
+
+      .slide.reverse .slide-content p {
+        text-align: justify;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .slide-content h3 {
+        font-size: clamp(24px, 2.8vw, 32px);
+      }
+
+      .slide-content .subtitle {
+        font-size: 16px;
+      }
+
+      .slide-content .details {
+        font-size: 14px;
+        max-width: 420px;
+      }
+
+      .slide-dots {
+        padding: 0 32px 24px;
+      }
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: transparent;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: var(--accent-dim);
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .poster-card {
+      position: relative;
+      aspect-ratio: 2/3;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      transition: transform .4s cubic-bezier(.4, 0, .2, 1), border-color .4s;
+    }
+
+    .poster-card .art {
+      position: absolute;
+      inset: 0;
+    }
+
+    .poster-card .art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .poster-card .shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(11, 10, 18, 0.85) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    .poster-card .meta {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      transform: translateY(8px);
+      opacity: 0;
+      transition: transform .4s, opacity .4s;
+    }
+
+    .poster-card .meta span {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 9px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .poster-card .meta h4 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 15px;
+      margin-top: 4px;
+      font-weight: 700;
+    }
+
+    .poster-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(139, 92, 246, 0.2);
+    }
+
+    .poster-card:hover .shade {
+      opacity: 1;
+    }
+
+    .poster-card:hover .meta {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .poster-card.hide {
+      display: none;
+    }
+
+    @media(min-width:640px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(min-width:1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .poster-card .meta h4 {
+        font-size: 17px;
+      }
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .ticket {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 28px 24px;
+      transition: transform .3s cubic-bezier(.4, 0, .2, 1), border-color .3s;
+    }
+
+    .ticket:hover {
+      transform: translateY(-3px);
+      border-color: rgba(139, 92, 246, 0.2);
+    }
+
+    .ticket .genre {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .ticket h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .ticket p {
+      color: var(--text-2);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media(min-width:640px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(min-width:1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .ticket h3 {
+        font-size: 22px;
+      }
+    }
+
+    /* ── Tools Marquee ── */
+    .marquee-section {
+      width: 100%;
+      overflow: hidden;
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .marquee-box {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 32px 0;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 80px;
+      align-items: center;
+      white-space: nowrap;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+      will-change: transform;
+    }
+
+    .tool-chip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .tool-icon-marquee {
+      width: 88px;
+      height: 88px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+      flex-shrink: 0;
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
+    }
+
+    .tool-icon-marquee img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .tool-icon-marquee.ps {
+      background: linear-gradient(135deg, #31a8ff, #0d3f73);
+    }
+
+    .tool-icon-marquee.ai {
+      background: linear-gradient(135deg, #ff9a3c, #c9560a);
+    }
+
+    .tool-icon-marquee.fg {
+      background: linear-gradient(135deg, #a259ff, #6c3cff);
+    }
+
+    .tool-icon-marquee.cv {
+      background: linear-gradient(135deg, #00c4cc, #7d2ae8);
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    /* ── Pitch Deck ── */
+    #pitchdeck .section-head {
+      margin-left: auto;
+      margin-right: 0;
+      text-align: right;
+    }
+
+    #pitchdeck .section-head p {
+      text-align: right;
+    }
+
+    .pitch-slides {
+      display: flex;
+      transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+      width: 100%;
+    }
+
+    .pitch-slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      padding: 0 6px;
+    }
+
+    .pitch-slide img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: var(--r);
+      display: block;
+    }
+
+    .pitch-placeholder {
+      color: var(--muted);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      text-align: center;
+      padding: 20px;
+      max-width: 260px;
+      line-height: 1.6;
+    }
+
+    #pitchdeck .showcase {
+      background: none;
+      border: none;
+      border-radius: 0;
+    }
+
+    #pitchdeck .showcase-header {
+      border-bottom: none;
+      padding: 0 0 16px;
+    }
+
+    #pitchdeck .slides-viewport {
+      border-radius: var(--r);
+    }
+
+    #pitchdeck .pitch-slide {
+      height: 340px;
+    }
+
+    #pitchdeck .slide-dots {
+      padding: 16px 0 0;
+      justify-content: center;
+    }
+
+    @media(min-width:768px) {
+      .pitch-slide {
+        height: 480px;
+      }
+
+      #pitchdeck .pitch-slide {
+        height: 520px;
+      }
+    }
+
+    /* ── About ── */
+    .about-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 1/1;
+      border-radius: var(--r-lg);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-photo .initials {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      color: var(--accent);
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-photo .location-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 500;
+      z-index: 2;
+    }
+
+    .about-photo .location-badge .loc-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ef4444;
+      flex-shrink: 0;
+    }
+
+    .about-copy p {
+      color: var(--text-2);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .about-copy p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-meta {
+      display: flex;
+      gap: 32px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-meta-item .meta-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .about-meta-item .meta-value {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .about-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-socials .social-btn {
+      padding: 10px 16px;
+      font-size: 12px;
+    }
+
+    @media(min-width:768px) {
+      .about-grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+        text-align: left;
+      }
+
+      .about-photo {
+        max-width: 300px;
+        flex-shrink: 0;
+      }
+
+      .about-meta {
+        justify-content: flex-start;
+      }
+
+      .about-socials {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ── Contact ── */
+    #contact {
+      text-align: center;
+    }
+
+    #contact .section-head {
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    #contactHeading {
+      font-size: clamp(22px, 7vw, 48px) !important;
+    }
+
+    .line-wrap {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .social-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 16px 0;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+      font-weight: 600;
+      font-size: 13px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: transform .3s, border-color .3s, background .3s;
+    }
+
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .social-btn img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .social-btn:hover {
+      border-color: rgba(139, 92, 246, 0.3);
+      background: var(--accent-dim);
+      transform: translateY(-2px);
+    }
 
 
 
-/* ── Reveal Animation ── */
-.reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1); }
-.reveal.show{ opacity:1; transform:translateY(0); }
-.reveal[style*="--d"]{ transition-delay:calc(var(--d,0) * 80ms); }
+    /* ── Reveal Animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.4, 0, .2, 1), transform .7s cubic-bezier(.4, 0, .2, 1);
+    }
 
-/* ── Reduced Motion ── */
-@media(prefers-reduced-motion:reduce){ *{animation:none !important; transition-duration:0.01ms !important;} }
-</style>
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal[style*="--d"] {
+      transition-delay: calc(var(--d, 0) * 80ms);
+    }
+
+    /* ── Reduced Motion ── */
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Scroll Progress -->
-<div class="scroll-progress" id="scrollProgress"></div>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- Custom Cursor -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- Nav -->
-<header>
-  <nav class="nav-bar glass">
-    <a href="#home" class="logo">SL<span>.</span>GFX</a>
-    <div class="nav-links" id="navLinks">
-      <a href="#home" data-nav="home">Home</a>
-      <a href="#tools" data-nav="tools">Tools</a>
-      <a href="#work" data-nav="work">Work</a>
-      <a href="#skills" data-nav="skills">Skills</a>
-      <a href="#pitchdeck" data-nav="pitchdeck">Decks</a>
-      <a href="about.html" data-nav="about">About</a>
-      <a href="certs.html" data-nav="certs">Certs</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
-    </div>
-    <a href="contact.html" class="status-badge glass">
-      <span class="status-dot"></span>
-      Available for Work
-    </a>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
-  </nav>
-</header>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home">Home</a>
-  <a href="#tools">Tools</a>
-  <a href="#work">Work</a>
-  <a href="#skills">Skills</a>
-  <a href="#pitchdeck">Decks</a>
-  <a href="about.html">About</a>
-  <a href="certs.html">Certs</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-<!-- ════════ HERO ════════ -->
-<section id="home">
-  <div class="hero-ghost" aria-hidden="true">SAAD<br>LODHI</div>
-  <div class="hero-arc hero-arc-1" aria-hidden="true"></div>
-  <div class="hero-arc hero-arc-2" aria-hidden="true"></div>
-
-  <div class="wrap hero-grid">
-    <div class="hero-copy reveal">
-      <span class="hero-badge" id="heroBadge"></span>
-      <span class="section-tag" id="heroEyebrow">Graphic Designer</span>
-      <h1>SAAD<br><span class="accent">LODHI</span></h1>
-      <p class="hero-sub" id="heroSub">I design posters, social campaigns, and pitch decks that are built to stop the scroll — 5+ years turning ideas into visuals people actually remember.</p>
-      <div class="btn-row">
-        <a href="#work" class="btn btn-primary btn-magnetic">See My Work</a>
-        <a href="contact.html" class="btn btn-outline btn-magnetic">Let's Talk →</a>
+  <!-- Nav -->
+  <header>
+    <nav class="nav-bar glass">
+      <a href="#home" class="logo">SL<span>.</span>GFX</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#tools" data-nav="tools">Tools</a>
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#skills" data-nav="skills">Skills</a>
+        <a href="#pitchdeck" data-nav="pitchdeck">Decks</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="certs.html" data-nav="certs">Certs</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
       </div>
-      <div class="hero-stats" id="statsRow">
-        <div class="stat"><div class="num">5+</div><div class="lbl">YEARS EXP</div></div>
-        <div class="stat"><div class="num">6</div><div class="lbl">SPECIALTIES</div></div>
-        <div class="stat"><div class="num">120+</div><div class="lbl">CLIENTS</div></div>
-      </div>
-    </div>
-    <div class="hero-photo-area reveal" style="--d:2">
-      <div class="hero-photo-glow"></div>
-      <div class="hero-photo-wrap" id="heroPhotoWrap">
-        <div class="hero-loader" id="heroLoader">
-          <div class="loader-ring"></div>
-        </div>
-      </div>
-      <div class="hero-status">
-        <div class="status-badge glass">
-          <span class="status-dot"></span>
-          Available for Work
-        </div>
-      </div>
-    </div>
+      <a href="contact.html" class="status-badge glass">
+        <span class="status-dot"></span>
+        Available for Work
+      </a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#pitchdeck">Decks</a>
+    <a href="about.html">About</a>
+    <a href="certs.html">Certs</a>
+    <a href="contact.html">Contact</a>
   </div>
-</section>
 
-<!-- ════════ TOOLS ════════ -->
-<section id="tools" class="marquee-section">
-  <div class="wrap">
-    <div class="section-head reveal" style="text-align:center; margin:0 auto 48px;">
-      <h2 id="toolsHeading" style="text-align:center">MY <span class="accent">TOOLS</span></h2>
-      <p id="toolsSub" style="text-align:center">Tools I use to bring your vision to life.</p>
-    </div>
-    <div class="marquee-box">
-      <div class="marquee-track" id="marquee">
-        <div class="tool-chip"><div class="tool-icon-marquee ps">Ps</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee ai">Ai</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee fg">Fg</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee cv">Cv</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee ps">Ps</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee ai">Ai</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee fg">Fg</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee cv">Cv</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee ps">Ps</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee ai">Ai</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee fg">Fg</div></div>
-        <div class="tool-chip"><div class="tool-icon-marquee cv">Cv</div></div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- ════════ HERO ════════ -->
+  <section id="home">
+    <div class="hero-ghost" aria-hidden="true">SAAD<br>LODHI</div>
+    <div class="hero-arc hero-arc-1" aria-hidden="true"></div>
+    <div class="hero-arc hero-arc-2" aria-hidden="true"></div>
 
-<div class="divider"></div>
-
-<!-- ════════ WORK ════════ -->
-<section id="work" class="padded">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-tag" id="workEyebrow">Portfolio</span>
-      <h2 id="workHeading">Selected <span class="accent">Work</span></h2>
-      <p id="workSub">A mix of posters, campaigns, and decks — real projects, real clients.</p>
-    </div>
-
-    <div class="showcase reveal" style="--d:1">
-      <div class="showcase-header">
-        <div class="slide-counter"><span class="current" id="slideCurrent">01</span><span class="counter-sep"> / </span><span id="slideTotal">04</span></div>
-        <div class="showcase-arrows">
-          <button id="prevBtn" class="slide-arrow" aria-label="Previous slide">‹</button>
-          <button id="nextBtn" class="slide-arrow" aria-label="Next slide">›</button>
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <span class="hero-badge" id="heroBadge"></span>
+        <span class="section-tag" id="heroEyebrow">Graphic Designer</span>
+        <h1>SAAD<br><span class="accent">LODHI</span></h1>
+        <p class="hero-sub" id="heroSub">I design posters, social campaigns, and pitch decks that are built to stop the
+          scroll — 5+ years turning ideas into visuals people actually remember.</p>
+        <div class="btn-row">
+          <a href="#work" class="btn btn-primary btn-magnetic">See My Work</a>
+          <a href="contact.html" class="btn btn-outline btn-magnetic">Let's Talk →</a>
         </div>
-      </div>
-      <div class="slides-viewport" id="slidesViewport">
-        <div class="slides" id="slides">
-          <div class="slide">
-            <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#3a1a5c,#0a0a10 70%);"></div></div>
-            <div class="slide-content"><span class="tag">Film Poster</span><h3>Midnight Run</h3><p class="subtitle">Key art for an independent thriller release.</p><p class="details">Full poster set including teaser, theatrical, and social crop versions, built around a single striking hero image and restrained type treatment.</p></div>
+        <div class="hero-stats" id="statsRow">
+          <div class="stat">
+            <div class="num">5+</div>
+            <div class="lbl">YEARS EXP</div>
           </div>
-          <div class="slide reverse">
-            <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#7a1f8f,#1a0a2c 70%);"></div></div>
-            <div class="slide-content"><span class="tag">Event Poster</span><h3>Launch Day</h3><p class="subtitle">Product reveal event, campaign key visual.</p><p class="details">Designed for both print and digital placement, with a modular layout that adapted cleanly to multiple formats.</p></div>
+          <div class="stat">
+            <div class="num">6</div>
+            <div class="lbl">SPECIALTIES</div>
           </div>
-          <div class="slide">
-            <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#c34dff,#1a0a2c 75%);"></div></div>
-            <div class="slide-content"><span class="tag">Social Campaign</span><h3>Aurora Skincare</h3><p class="subtitle">A 6-part feed series for a product launch.</p><p class="details">Consistent visual system across the full series, balancing brand color language with clear product focus.</p></div>
-          </div>
-          <div class="slide reverse">
-            <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#5b2a9c,#0a0a10 70%);"></div></div>
-            <div class="slide-content"><span class="tag">Pitch Deck</span><h3>Northline Capital</h3><p class="subtitle">Investor deck for a seed-stage raise.</p><p class="details">22-slide narrative deck covering market, product, and financials.</p></div>
+          <div class="stat">
+            <div class="num">120+</div>
+            <div class="lbl">CLIENTS</div>
           </div>
         </div>
       </div>
-      <div class="slide-dots" id="dots"></div>
-    </div>
-
-    <div class="filters reveal" style="--d:2">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="posters">Posters</button>
-      <button class="filter-btn" data-filter="social">Social Media</button>
-      <button class="filter-btn" data-filter="decks">Pitch Decks</button>
-      <button class="filter-btn" data-filter="film">Film</button>
-    </div>
-
-    <div class="gallery-grid" id="gallery">
-      <div class="poster-card reveal" data-cat="film"><div class="art" style="background:linear-gradient(160deg,#3a1a5c,#0a0a10);"></div><div class="shade"></div><div class="meta"><span>Film</span><h4>Midnight Run</h4></div></div>
-      <div class="poster-card reveal" data-cat="posters" style="--d:1"><div class="art" style="background:linear-gradient(160deg,#7a1f8f,#150a20);"></div><div class="shade"></div><div class="meta"><span>Poster</span><h4>Launch Day</h4></div></div>
-      <div class="poster-card reveal" data-cat="social" style="--d:2"><div class="art" style="background:linear-gradient(160deg,#c34dff,#180a24);"></div><div class="shade"></div><div class="meta"><span>Social</span><h4>Aurora Skincare</h4></div></div>
-      <div class="poster-card reveal" data-cat="decks" style="--d:3"><div class="art" style="background:linear-gradient(160deg,#5b2a9c,#0a0a10);"></div><div class="shade"></div><div class="meta"><span>Deck</span><h4>Northline Capital</h4></div></div>
-      <div class="poster-card reveal" data-cat="posters" style="--d:4"><div class="art" style="background:linear-gradient(160deg,#8a2fd0,#0a0a10);"></div><div class="shade"></div><div class="meta"><span>Poster</span><h4>Solstice Fest</h4></div></div>
-      <div class="poster-card reveal" data-cat="social" style="--d:5"><div class="art" style="background:linear-gradient(160deg,#c94fff,#180a24);"></div><div class="shade"></div><div class="meta"><span>Social</span><h4>Nova Coffee Co.</h4></div></div>
-      <div class="poster-card reveal" data-cat="film" style="--d:6"><div class="art" style="background:linear-gradient(160deg,#4a1a80,#0a0a10);"></div><div class="shade"></div><div class="meta"><span>Film</span><h4>Glass Horizon</h4></div></div>
-      <div class="poster-card reveal" data-cat="decks" style="--d:7"><div class="art" style="background:linear-gradient(160deg,#6b2fae,#0a0a10);"></div><div class="shade"></div><div class="meta"><span>Deck</span><h4>Vantage Seed Round</h4></div></div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ════════ SKILLS ════════ -->
-<section id="skills" class="padded">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-tag" id="skillsEyebrow">What I Do</span>
-      <h2 id="skillsHeading">Six Specialties.<br><span class="accent">One Design Voice.</span></h2>
-      <p id="skillsSub">Every project below is built the same way — with clear hierarchy, strong type, and a look that matches what it's actually for.</p>
-    </div>
-    <div class="skills-grid" id="skillsGrid">
-      <div class="ticket reveal"><span class="genre">Cinematic</span><h3>Movie & Film Posters</h3><p>Key art and film posters with cinematic mood, composition, and typography.</p></div>
-      <div class="ticket reveal" style="--d:1"><span class="genre">Print & Digital</span><h3>Poster & Flyer Design</h3><p>Event flyers and posters built to grab attention at a glance, on a wall or a phone screen.</p></div>
-      <div class="ticket reveal" style="--d:2"><span class="genre">Social</span><h3>Social Media Creatives</h3><p>Scroll-stopping posts, stories, and ad creatives designed around how people actually browse.</p></div>
-      <div class="ticket reveal" style="--d:3"><span class="genre">Illustration</span><h3>Digital Art & Banners</h3><p>Custom banners and digital art tailored to a brand's own visual voice, not a generic template.</p></div>
-      <div class="ticket reveal" style="--d:4"><span class="genre">Live & Launch</span><h3>Event Posters</h3><p>Concert, launch, and event posters with real presence, from the feed to the front door.</p></div>
-      <div class="ticket reveal" style="--d:5"><span class="genre">Business</span><h3>Premium Pitch Decks</h3><p>Investor-ready decks where the design makes the story as strong as the numbers behind it.</p></div>
-    </div>
-  </div>
-</section>
-
-
-
-<div class="divider"></div>
-
-<!-- ════════ PITCH DECK ════════ -->
-<section id="pitchdeck" class="padded">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-tag" id="pitchEyebrow">Case Studies</span>
-      <h2 id="pitchHeading">Pitch Deck <span class="accent">Showcase</span></h2>
-      <p id="pitchSub">A closer look at deck slides — swipe or use the arrows.</p>
-    </div>
-    <div class="showcase reveal" style="--d:1" id="pitchSlideshow">
-      <div class="showcase-header">
-        <div class="slide-counter"><span class="current" id="pitchCurrentLabel">01</span><span class="counter-sep"> / </span><span id="pitchTotalLabel">01</span></div>
-        <div class="showcase-arrows">
-          <button id="pitchPrevBtn" class="slide-arrow" aria-label="Previous slide">‹</button>
-          <button id="pitchNextBtn" class="slide-arrow" aria-label="Next slide">›</button>
+      <div class="hero-photo-area reveal" style="--d:2">
+        <div class="hero-photo-glow"></div>
+        <div class="hero-photo-wrap" id="heroPhotoWrap">
+          <div class="hero-loader" id="heroLoader">
+            <div class="loader-ring"></div>
+          </div>
+        </div>
+        <div class="hero-status">
+          <div class="status-badge glass">
+            <span class="status-dot"></span>
+            Available for Work
+          </div>
         </div>
       </div>
-      <div class="slides-viewport" id="pitchSlidesViewport">
-        <div class="pitch-slides" id="pitchSlides">
-          <div class="pitch-slide"><div class="pitch-placeholder">Upload your pitch deck slides through /admin — they'll appear here.</div></div>
+    </div>
+  </section>
+
+  <!-- ════════ TOOLS ════════ -->
+  <section id="tools" class="marquee-section">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center; margin:0 auto 48px;">
+        <h2 id="toolsHeading" style="text-align:center">MY <span class="accent">TOOLS</span></h2>
+        <p id="toolsSub" style="text-align:center">Tools I use to bring your vision to life.</p>
+      </div>
+      <div class="marquee-box">
+        <div class="marquee-track" id="marquee">
+          <div class="tool-chip">
+            <div class="tool-icon-marquee ps">Ps</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee ai">Ai</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee fg">Fg</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee cv">Cv</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee ps">Ps</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee ai">Ai</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee fg">Fg</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee cv">Cv</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee ps">Ps</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee ai">Ai</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee fg">Fg</div>
+          </div>
+          <div class="tool-chip">
+            <div class="tool-icon-marquee cv">Cv</div>
+          </div>
         </div>
       </div>
-      <div class="slide-dots" id="pitchDots"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<!-- ════════ ABOUT ════════ -->
-<section id="about" class="padded">
-  <div class="wrap about-grid">
-    <div class="about-photo reveal" id="aboutPhoto">
-      <div class="initials">SL</div>
-      <div class="location-badge"><span class="loc-dot"></span>Okara, PK</div>
-    </div>
-    <div class="about-copy reveal" style="--d:1">
-      <span class="section-tag" id="aboutEyebrow">About Me</span>
-      <h2 id="aboutHeading" style="margin:12px 0 24px; font-size:clamp(30px,7vw,44px);">Hi, I'm <span class="accent">Saad.</span></h2>
-      <p id="bio1">I'm a graphic designer with <strong>5+ years of experience</strong> across poster design, social media content, digital art, and event branding. I've spent that time freelancing on Fiverr, working with clients who needed their brand to look sharper and get noticed faster.</p>
-      <p id="bio2">My approach is simple: every piece should have a <strong>clear focal point</strong>, <strong>confident typography</strong>, and a mood that fits exactly where it's going to live — whether that's a phone feed, a boardroom screen, or a cinema wall.</p>
-      <p id="bio3">I'm now taking on new freelance projects directly. If you need posters, campaign creatives, or a deck that makes people lean in, let's talk.</p>
-      <div class="about-meta">
-        <div class="about-meta-item"><div class="meta-label">FOCUS</div><div class="meta-value">Design</div></div>
-        <div class="about-meta-item"><div class="meta-label">LOCATION</div><div class="meta-value">Okara, PK</div></div>
-        <div class="about-meta-item"><div class="meta-label">OPEN TO</div><div class="meta-value">Remote</div></div>
+  <!-- ════════ WORK ════════ -->
+  <section id="work" class="padded">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag" id="workEyebrow">Portfolio</span>
+        <h2 id="workHeading">Selected <span class="accent">Work</span></h2>
+        <p id="workSub">A mix of posters, campaigns, and decks — real projects, real clients.</p>
       </div>
-      <div class="about-socials" id="aboutSocials">
-        <a class="social-btn" data-social="fiverr" href="https://www.fiverr.com/your-username" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9h8M6 13h5M6 17h3M14 4v16"/></svg>Fiverr</a>
-        <a class="social-btn" data-social="linkedin" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.5 1-2 2.2-2 1.3 0 1.8 1 1.8 2.5V16"/></svg>LinkedIn</a>
-        <a class="social-btn" data-social="email" href="mailto:you@example.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+
+      <div class="showcase reveal" style="--d:1">
+        <div class="showcase-header">
+          <div class="slide-counter"><span class="current" id="slideCurrent">01</span><span class="counter-sep"> /
+            </span><span id="slideTotal">04</span></div>
+          <div class="showcase-arrows">
+            <button id="prevBtn" class="slide-arrow" aria-label="Previous slide">‹</button>
+            <button id="nextBtn" class="slide-arrow" aria-label="Next slide">›</button>
+          </div>
+        </div>
+        <div class="slides-viewport" id="slidesViewport">
+          <div class="slides" id="slides">
+            <div class="slide">
+              <div class="slide-media">
+                <div class="art" style="background:linear-gradient(160deg,#3a1a5c,#0a0a10 70%);"></div>
+              </div>
+              <div class="slide-content"><span class="tag">Film Poster</span>
+                <h3>Midnight Run</h3>
+                <p class="subtitle">Key art for an independent thriller release.</p>
+                <p class="details">Full poster set including teaser, theatrical, and social crop versions, built around
+                  a single striking hero image and restrained type treatment.</p>
+              </div>
+            </div>
+            <div class="slide reverse">
+              <div class="slide-media">
+                <div class="art" style="background:linear-gradient(160deg,#7a1f8f,#1a0a2c 70%);"></div>
+              </div>
+              <div class="slide-content"><span class="tag">Event Poster</span>
+                <h3>Launch Day</h3>
+                <p class="subtitle">Product reveal event, campaign key visual.</p>
+                <p class="details">Designed for both print and digital placement, with a modular layout that adapted
+                  cleanly to multiple formats.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-media">
+                <div class="art" style="background:linear-gradient(160deg,#c34dff,#1a0a2c 75%);"></div>
+              </div>
+              <div class="slide-content"><span class="tag">Social Campaign</span>
+                <h3>Aurora Skincare</h3>
+                <p class="subtitle">A 6-part feed series for a product launch.</p>
+                <p class="details">Consistent visual system across the full series, balancing brand color language with
+                  clear product focus.</p>
+              </div>
+            </div>
+            <div class="slide reverse">
+              <div class="slide-media">
+                <div class="art" style="background:linear-gradient(160deg,#5b2a9c,#0a0a10 70%);"></div>
+              </div>
+              <div class="slide-content"><span class="tag">Pitch Deck</span>
+                <h3>Northline Capital</h3>
+                <p class="subtitle">Investor deck for a seed-stage raise.</p>
+                <p class="details">22-slide narrative deck covering market, product, and financials.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-dots" id="dots"></div>
+      </div>
+
+      <div class="filters reveal" style="--d:2">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="posters">Posters</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="decks">Pitch Decks</button>
+        <button class="filter-btn" data-filter="film">Film</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery">
+        <div class="poster-card reveal" data-cat="film">
+          <div class="art" style="background:linear-gradient(160deg,#3a1a5c,#0a0a10);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Film</span>
+            <h4>Midnight Run</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="posters" style="--d:1">
+          <div class="art" style="background:linear-gradient(160deg,#7a1f8f,#150a20);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Poster</span>
+            <h4>Launch Day</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="social" style="--d:2">
+          <div class="art" style="background:linear-gradient(160deg,#c34dff,#180a24);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Social</span>
+            <h4>Aurora Skincare</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="decks" style="--d:3">
+          <div class="art" style="background:linear-gradient(160deg,#5b2a9c,#0a0a10);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Deck</span>
+            <h4>Northline Capital</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="posters" style="--d:4">
+          <div class="art" style="background:linear-gradient(160deg,#8a2fd0,#0a0a10);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Poster</span>
+            <h4>Solstice Fest</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="social" style="--d:5">
+          <div class="art" style="background:linear-gradient(160deg,#c94fff,#180a24);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Social</span>
+            <h4>Nova Coffee Co.</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="film" style="--d:6">
+          <div class="art" style="background:linear-gradient(160deg,#4a1a80,#0a0a10);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Film</span>
+            <h4>Glass Horizon</h4>
+          </div>
+        </div>
+        <div class="poster-card reveal" data-cat="decks" style="--d:7">
+          <div class="art" style="background:linear-gradient(160deg,#6b2fae,#0a0a10);"></div>
+          <div class="shade"></div>
+          <div class="meta"><span>Deck</span>
+            <h4>Vantage Seed Round</h4>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<!-- ════════ CONTACT ════════ -->
-<section id="contact" class="padded">
-  <div class="wrap">
-    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
-      <span class="section-tag" id="contactEyebrow">Get In Touch</span>
-      <h2 id="contactHeading" style="text-align:center"><span class="line-wrap">Let's Make Something</span><br><span class="accent line-wrap">Worth Remembering.</span></h2>
-      <p id="contactSub" style="text-align:center">Have a project in mind? Reach out on whichever platform is easiest for you.</p>
+  <!-- ════════ SKILLS ════════ -->
+  <section id="skills" class="padded">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag" id="skillsEyebrow">What I Do</span>
+        <h2 id="skillsHeading">Six Specialties.<br><span class="accent">One Design Voice.</span></h2>
+        <p id="skillsSub">Every project below is built the same way — with clear hierarchy, strong type, and a look that
+          matches what it's actually for.</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="ticket reveal"><span class="genre">Cinematic</span>
+          <h3>Movie & Film Posters</h3>
+          <p>Key art and film posters with cinematic mood, composition, and typography.</p>
+        </div>
+        <div class="ticket reveal" style="--d:1"><span class="genre">Print & Digital</span>
+          <h3>Poster & Flyer Design</h3>
+          <p>Event flyers and posters built to grab attention at a glance, on a wall or a phone screen.</p>
+        </div>
+        <div class="ticket reveal" style="--d:2"><span class="genre">Social</span>
+          <h3>Social Media Creatives</h3>
+          <p>Scroll-stopping posts, stories, and ad creatives designed around how people actually browse.</p>
+        </div>
+        <div class="ticket reveal" style="--d:3"><span class="genre">Illustration</span>
+          <h3>Digital Art & Banners</h3>
+          <p>Custom banners and digital art tailored to a brand's own visual voice, not a generic template.</p>
+        </div>
+        <div class="ticket reveal" style="--d:4"><span class="genre">Live & Launch</span>
+          <h3>Event Posters</h3>
+          <p>Concert, launch, and event posters with real presence, from the feed to the front door.</p>
+        </div>
+        <div class="ticket reveal" style="--d:5"><span class="genre">Business</span>
+          <h3>Premium Pitch Decks</h3>
+          <p>Investor-ready decks where the design makes the story as strong as the numbers behind it.</p>
+        </div>
+      </div>
     </div>
-    <div class="social-grid reveal" style="--d:1">
-      <a class="social-btn" data-social="fiverr" href="https://www.fiverr.com/your-username" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9h8M6 13h5M6 17h3M14 4v16"/></svg>Fiverr</a>
-      <a class="social-btn" data-social="upwork" href="https://www.upwork.com/freelancers/your-profile" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9v4a3 3 0 0 0 6 0V9"/><path d="M12 13c0 2.5 1.5 4 3.5 4s3.5-1.8 3.5-4-1.5-4-3.5-4c-1 0-1.8.4-2.4 1"/></svg>Upwork</a>
-      <a class="social-btn" data-social="instagram" href="https://instagram.com/your-handle" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a>
-      <a class="social-btn" data-social="linkedin" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.5 1-2 2.2-2 1.3 0 1.8 1 1.8 2.5V16"/></svg>LinkedIn</a>
-      <a class="social-btn" data-social="facebook" href="https://facebook.com/your-page" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg>Facebook</a>
-      <a class="social-btn" data-social="whatsapp" href="https://wa.me/92xxxxxxxxxx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 9.5c0 3.5 2.5 6 6 6"/></svg>WhatsApp</a>
-      <a class="social-btn" data-social="email" href="mailto:you@example.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email Me</a>
+  </section>
+
+
+
+  <div class="divider"></div>
+
+  <!-- ════════ PITCH DECK ════════ -->
+  <section id="pitchdeck" class="padded">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag" id="pitchEyebrow">Case Studies</span>
+        <h2 id="pitchHeading">Pitch Deck <span class="accent">Showcase</span></h2>
+        <p id="pitchSub">A closer look at deck slides — swipe or use the arrows.</p>
+      </div>
+      <div class="showcase reveal" style="--d:1" id="pitchSlideshow">
+        <div class="showcase-header">
+          <div class="slide-counter"><span class="current" id="pitchCurrentLabel">01</span><span class="counter-sep"> /
+            </span><span id="pitchTotalLabel">01</span></div>
+          <div class="showcase-arrows">
+            <button id="pitchPrevBtn" class="slide-arrow" aria-label="Previous slide">‹</button>
+            <button id="pitchNextBtn" class="slide-arrow" aria-label="Next slide">›</button>
+          </div>
+        </div>
+        <div class="slides-viewport" id="pitchSlidesViewport">
+          <div class="pitch-slides" id="pitchSlides">
+            <div class="pitch-slide">
+              <div class="pitch-placeholder">Upload your pitch deck slides through /admin — they'll appear here.</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-dots" id="pitchDots"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════ ABOUT ════════ -->
+  <section id="about" class="padded">
+    <div class="wrap about-grid">
+      <div class="about-photo reveal" id="aboutPhoto">
+        <div class="initials">SL</div>
+        <div class="location-badge"><span class="loc-dot"></span>Okara, PK</div>
+      </div>
+      <div class="about-copy reveal" style="--d:1">
+        <span class="section-tag" id="aboutEyebrow">About Me</span>
+        <h2 id="aboutHeading" style="margin:12px 0 24px; font-size:clamp(30px,7vw,44px);">Hi, I'm <span
+            class="accent">Saad.</span></h2>
+        <p id="bio1">I'm a graphic designer with <strong>5+ years of experience</strong> across poster design, social
+          media content, digital art, and event branding. I've spent that time freelancing on Fiverr, working with
+          clients who needed their brand to look sharper and get noticed faster.</p>
+        <p id="bio2">My approach is simple: every piece should have a <strong>clear focal point</strong>,
+          <strong>confident typography</strong>, and a mood that fits exactly where it's going to live — whether that's
+          a phone feed, a boardroom screen, or a cinema wall.</p>
+        <p id="bio3">I'm now taking on new freelance projects directly. If you need posters, campaign creatives, or a
+          deck that makes people lean in, let's talk.</p>
+        <div class="about-meta">
+          <div class="about-meta-item">
+            <div class="meta-label">FOCUS</div>
+            <div class="meta-value">Design</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="meta-label">LOCATION</div>
+            <div class="meta-value">Okara, PK</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="meta-label">OPEN TO</div>
+            <div class="meta-value">Remote</div>
+          </div>
+        </div>
+        <div class="about-socials" id="aboutSocials">
+          <a class="social-btn" data-social="fiverr" href="https://www.fiverr.com/your-username" target="_blank"
+            rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M6 9h8M6 13h5M6 17h3M14 4v16" />
+            </svg>Fiverr</a>
+          <a class="social-btn" data-social="linkedin" href="https://linkedin.com/in/your-profile" target="_blank"
+            rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.5 1-2 2.2-2 1.3 0 1.8 1 1.8 2.5V16" />
+            </svg>LinkedIn</a>
+          <a class="social-btn" data-social="email" href="mailto:you@example.com"><svg viewBox="0 0 24 24" fill="none"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="M3 7l9 6 9-6" />
+            </svg>Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════ CONTACT ════════ -->
+  <section id="contact" class="padded">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+        <span class="section-tag" id="contactEyebrow">Get In Touch</span>
+        <h2 id="contactHeading" style="text-align:center"><span class="line-wrap">Let's Make Something</span><br><span
+            class="accent line-wrap">Worth Remembering.</span></h2>
+        <p id="contactSub" style="text-align:center">Have a project in mind? Reach out on whichever platform is easiest
+          for you.</p>
+      </div>
+      <div class="social-grid reveal" style="--d:1">
+        <a class="social-btn" data-social="fiverr" href="https://www.fiverr.com/your-username" target="_blank"
+          rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M6 9h8M6 13h5M6 17h3M14 4v16" />
+          </svg>Fiverr</a>
+        <a class="social-btn" data-social="upwork" href="https://www.upwork.com/freelancers/your-profile"
+          target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M6 9v4a3 3 0 0 0 6 0V9" />
+            <path d="M12 13c0 2.5 1.5 4 3.5 4s3.5-1.8 3.5-4-1.5-4-3.5-4c-1 0-1.8.4-2.4 1" />
+          </svg>Upwork</a>
+        <a class="social-btn" data-social="instagram" href="https://instagram.com/your-handle" target="_blank"
+          rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" />
+          </svg>Instagram</a>
+        <a class="social-btn" data-social="linkedin" href="https://linkedin.com/in/your-profile" target="_blank"
+          rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.5 1-2 2.2-2 1.3 0 1.8 1 1.8 2.5V16" />
+          </svg>LinkedIn</a>
+        <a class="social-btn" data-social="facebook" href="https://facebook.com/your-page" target="_blank"
+          rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z" />
+          </svg>Facebook</a>
+        <a class="social-btn" data-social="whatsapp" href="https://wa.me/92xxxxxxxxxx" target="_blank"
+          rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5z" />
+            <path d="M8.5 9.5c0 3.5 2.5 6 6 6" />
+          </svg>WhatsApp</a>
+        <a class="social-btn" data-social="email" href="mailto:you@example.com"><svg viewBox="0 0 24 24" fill="none"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="M3 7l9 6 9-6" />
+          </svg>Email Me</a>
+      </div>
+    </div>
+  </section>
 
 
 
-<!-- ═══════════════════════════════════════════════ -->
-<!-- SCRIPTS                                         -->
-<!-- ═══════════════════════════════════════════════ -->
-<script>
-(function(){
-  /* ── Scroll Progress ── */
-  var prog = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', function(){
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
-  }, {passive:true});
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      /* ── Scroll Progress ── */
+      var prog = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function () {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      }, { passive: true });
 
-  /* ── Custom Cursor ── */
-  var dot = document.getElementById('cursorDot');
-  var ring = document.getElementById('cursorRing');
-  if(dot && ring && window.matchMedia('(pointer:fine)').matches){
-    var mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',function(e){ mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
-    (function loop(){ rx+=(mx-rx)*0.15; ry+=(my-ry)*0.15; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
-    document.addEventListener('mouseover',function(e){
-      if(e.target.closest('a,button,.poster-card,.ticket,.tool-card,.slide-arrow,.filter-btn,.social-btn')) ring.classList.add('hover');
-    });
-    document.addEventListener('mouseout',function(e){
-      if(e.target.closest('a,button,.poster-card,.ticket,.tool-card,.slide-arrow,.filter-btn,.social-btn')) ring.classList.remove('hover');
-    });
-  }
+      /* ── Custom Cursor ── */
+      var dot = document.getElementById('cursorDot');
+      var ring = document.getElementById('cursorRing');
+      if (dot && ring && window.matchMedia('(pointer:fine)').matches) {
+        var mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
+        (function loop() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+        document.addEventListener('mouseover', function (e) {
+          if (e.target.closest('a,button,.poster-card,.ticket,.tool-card,.slide-arrow,.filter-btn,.social-btn')) ring.classList.add('hover');
+        });
+        document.addEventListener('mouseout', function (e) {
+          if (e.target.closest('a,button,.poster-card,.ticket,.tool-card,.slide-arrow,.filter-btn,.social-btn')) ring.classList.remove('hover');
+        });
+      }
 
-  /* ── Burger Menu ── */
-  var burger = document.getElementById('burger');
-  var mobileMenu = document.getElementById('mobileMenu');
-  burger.addEventListener('click', function(){ burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-  Array.prototype.forEach.call(mobileMenu.querySelectorAll('a'), function(a){
-    a.addEventListener('click', function(){ burger.classList.remove('open'); mobileMenu.classList.remove('open'); });
-  });
-
-  /* ── Scrollspy ── */
-  var navLinks = document.getElementById('navLinks');
-  var navAnchors = navLinks ? navLinks.querySelectorAll('a[data-nav]') : [];
-  var sectionIds = ['home','work','skills','tools','pitchdeck','about','contact'];
-  var sections = sectionIds.map(function(id){ return document.getElementById(id); }).filter(Boolean);
-  function setActiveNav(id){
-    navAnchors.forEach(function(a){ a.classList.toggle('active', a.dataset.nav === id); });
-  }
-  var spy = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){ if(entry.isIntersecting) setActiveNav(entry.target.id); });
-  }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
-  sections.forEach(function(s){ spy.observe(s); });
-  window.addEventListener('load', function(){ setActiveNav('home'); });
-
-  /* ── Scroll Reveal with Stagger ── */
-  var revealEls = document.querySelectorAll('.reveal');
-  var revealIO = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){ entry.target.classList.add('show'); revealIO.unobserve(entry.target); }
-    });
-  }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
-  revealEls.forEach(function(el){ revealIO.observe(el); });
-
-  /* ── Counter Animation ── */
-  function animateCounters(){
-    document.querySelectorAll('#statsRow .num').forEach(function(el){
-      if(el.dataset.counted) return;
-      el.dataset.counted='1';
-      var text = el.textContent.trim();
-      var match = text.match(/^(\d+)(.*)$/);
-      if(!match) return;
-      var target = parseInt(match[1]);
-      var suffix = match[2]||'';
-      var start = performance.now();
-      var duration = 1800;
-      (function step(now){
-        var p = Math.min((now-start)/duration,1);
-        var eased = 1-Math.pow(1-p,3);
-        el.textContent = Math.floor(eased*target)+suffix;
-        if(p<1) requestAnimationFrame(step);
-      })(start);
-    });
-  }
-  var statsObs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting) animateCounters(); });
-  },{threshold:0.3});
-  var statsEl = document.getElementById('statsRow');
-  if(statsEl) statsObs.observe(statsEl);
-
-  /* ── Magnetic Buttons ── */
-  if(window.matchMedia('(pointer:fine)').matches){
-    document.querySelectorAll('.btn-magnetic').forEach(function(btn){
-      btn.addEventListener('mousemove',function(e){
-        var r=btn.getBoundingClientRect();
-        var x=e.clientX-r.left-r.width/2;
-        var y=e.clientY-r.top-r.height/2;
-        btn.style.transform='translate('+x*0.2+'px,'+y*0.2+'px)';
+      /* ── Burger Menu ── */
+      var burger = document.getElementById('burger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      burger.addEventListener('click', function () { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+      Array.prototype.forEach.call(mobileMenu.querySelectorAll('a'), function (a) {
+        a.addEventListener('click', function () { burger.classList.remove('open'); mobileMenu.classList.remove('open'); });
       });
-      btn.addEventListener('mouseleave',function(){ btn.style.transform=''; });
-    });
-  }
 
-  /* ── Tilt on Gallery Cards ── */
-  if(window.matchMedia('(pointer:fine)').matches){
-    document.addEventListener('mousemove',function(e){
-      var card = e.target.closest('.poster-card');
-      if(!card) return;
-      var r=card.getBoundingClientRect();
-      var x=(e.clientX-r.left)/r.width-0.5;
-      var y=(e.clientY-r.top)/r.height-0.5;
-      card.style.transform='perspective(600px) rotateY('+x*6+'deg) rotateX('+-y*6+'deg) translateY(-4px)';
-    });
-    document.addEventListener('mouseout',function(e){
-      var card = e.target.closest('.poster-card');
-      if(card) card.style.transform='';
-    });
-  }
+      /* ── Scrollspy ── */
+      var navLinks = document.getElementById('navLinks');
+      var navAnchors = navLinks ? navLinks.querySelectorAll('a[data-nav]') : [];
+      var sectionIds = ['home', 'work', 'skills', 'tools', 'pitchdeck', 'about', 'contact'];
+      var sections = sectionIds.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+      function setActiveNav(id) {
+        navAnchors.forEach(function (a) { a.classList.toggle('active', a.dataset.nav === id); });
+      }
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) { if (entry.isIntersecting) setActiveNav(entry.target.id); });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sections.forEach(function (s) { spy.observe(s); });
+      window.addEventListener('load', function () { setActiveNav('home'); });
 
-  /* ── Main Slideshow ── */
-  var slidesEl = document.getElementById('slides');
-  var slides = slidesEl.children;
-  var dotsEl = document.getElementById('dots');
-  var current = 0;
-  function buildDots(){
-    dotsEl.innerHTML='';
-    for(var i=0;i<slides.length;i++){
-      var d=document.createElement('i');
-      if(i===0)d.classList.add('active');
-      (function(idx){d.addEventListener('click',function(){goTo(idx);});})(i);
-      dotsEl.appendChild(d);
-    }
-  }
-  buildDots();
-  function updateCounter(){
-    var c=document.getElementById('slideCurrent');
-    var t=document.getElementById('slideTotal');
-    if(c)c.textContent=String(current+1).padStart(2,'0');
-    if(t)t.textContent=String(slides.length).padStart(2,'0');
-  }
-  updateCounter();
-  function update(){
-    slidesEl.style.transform='translateX(-'+(current*100)+'%)';
-    Array.prototype.forEach.call(dotsEl.children,function(d,i){d.classList.toggle('active',i===current);});
-    updateCounter();
-  }
-  function goTo(i){current=(i+slides.length)%slides.length;update();}
-  document.getElementById('nextBtn').addEventListener('click',function(){goTo(current+1);});
-  document.getElementById('prevBtn').addEventListener('click',function(){goTo(current-1);});
-  var autoSlide=setInterval(function(){goTo(current+1);},5000);
-  var showc=document.querySelector('#work .showcase');
-  if(showc){
-    showc.addEventListener('mouseenter',function(){clearInterval(autoSlide);});
-    showc.addEventListener('mouseleave',function(){autoSlide=setInterval(function(){goTo(current+1);},5000);});
-  }
-  /* Touch swipe */
-  var touchSX=0;
-  var sv=document.getElementById('slidesViewport');
-  sv.addEventListener('touchstart',function(e){touchSX=e.changedTouches[0].screenX;clearInterval(autoSlide);},{passive:true});
-  sv.addEventListener('touchend',function(e){
-    var diff=touchSX-e.changedTouches[0].screenX;
-    if(Math.abs(diff)>40){if(diff>0)goTo(current+1);else goTo(current-1);}
-    autoSlide=setInterval(function(){goTo(current+1);},5000);
-  },{passive:true});
+      /* ── Scroll Reveal with Stagger ── */
+      var revealEls = document.querySelectorAll('.reveal');
+      var revealIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('show'); revealIO.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function (el) { revealIO.observe(el); });
 
-  /* ── Pitch Deck Slideshow ── */
-  var pitchSlidesEl=document.getElementById('pitchSlides');
-  var pitchSlideItems=pitchSlidesEl.children;
-  var pitchDotsEl=document.getElementById('pitchDots');
-  var pitchCurrent=0;
-  function buildPitchDots(){
-    pitchDotsEl.innerHTML='';
-    for(var i=0;i<pitchSlideItems.length;i++){
-      var d=document.createElement('i');
-      if(i===0)d.classList.add('active');
-      (function(idx){d.addEventListener('click',function(){pitchGoTo(idx);});})(i);
-      pitchDotsEl.appendChild(d);
-    }
-  }
-  buildPitchDots();
-  function pitchUpdateCounter(){
-    var c=document.getElementById('pitchCurrentLabel');
-    var t=document.getElementById('pitchTotalLabel');
-    if(c)c.textContent=String(pitchCurrent+1).padStart(2,'0');
-    if(t)t.textContent=String(pitchSlideItems.length).padStart(2,'0');
-  }
-  pitchUpdateCounter();
-  function pitchUpdate(){
-    pitchSlidesEl.style.transform='translateX(-'+(pitchCurrent*100)+'%)';
-    Array.prototype.forEach.call(pitchDotsEl.children,function(d,i){d.classList.toggle('active',i===pitchCurrent);});
-    pitchUpdateCounter();
-  }
-  function pitchGoTo(i){if(!pitchSlideItems.length)return;pitchCurrent=(i+pitchSlideItems.length)%pitchSlideItems.length;pitchUpdate();}
-  document.getElementById('pitchNextBtn').addEventListener('click',function(){pitchGoTo(pitchCurrent+1);});
-  document.getElementById('pitchPrevBtn').addEventListener('click',function(){pitchGoTo(pitchCurrent-1);});
-  var pitchAuto=setInterval(function(){pitchGoTo(pitchCurrent+1);},5000);
-  var pitchShowc=document.getElementById('pitchSlideshow');
-  pitchShowc.addEventListener('mouseenter',function(){clearInterval(pitchAuto);});
-  pitchShowc.addEventListener('mouseleave',function(){pitchAuto=setInterval(function(){pitchGoTo(pitchCurrent+1);},5000);});
-  var pitchTSX=0;
-  var psv=document.getElementById('pitchSlidesViewport');
-  psv.addEventListener('touchstart',function(e){pitchTSX=e.changedTouches[0].screenX;clearInterval(pitchAuto);},{passive:true});
-  psv.addEventListener('touchend',function(e){
-    var diff=pitchTSX-e.changedTouches[0].screenX;
-    if(Math.abs(diff)>40){if(diff>0)pitchGoTo(pitchCurrent+1);else pitchGoTo(pitchCurrent-1);}
-    pitchAuto=setInterval(function(){pitchGoTo(pitchCurrent+1);},5000);
-  },{passive:true});
+      /* ── Counter Animation ── */
+      function animateCounters() {
+        document.querySelectorAll('#statsRow .num').forEach(function (el) {
+          if (el.dataset.counted) return;
+          el.dataset.counted = '1';
+          var text = el.textContent.trim();
+          var match = text.match(/^(\d+)(.*)$/);
+          if (!match) return;
+          var target = parseInt(match[1]);
+          var suffix = match[2] || '';
+          var start = performance.now();
+          var duration = 1800;
+          (function step(now) {
+            var p = Math.min((now - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.floor(eased * target) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          })(start);
+        });
+      }
+      var statsObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) animateCounters(); });
+      }, { threshold: 0.3 });
+      var statsEl = document.getElementById('statsRow');
+      if (statsEl) statsObs.observe(statsEl);
 
-  /* ── Gallery Filters ── */
-  var filterBtns=document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(function(btn){
-    btn.addEventListener('click',function(){
-      filterBtns.forEach(function(b){b.classList.remove('active');});
-      btn.classList.add('active');
-      var f=btn.dataset.filter;
-      document.querySelectorAll('.poster-card').forEach(function(card){card.classList.toggle('hide',f!=='all'&&card.dataset.cat!==f);});
-    });
-  });
-
-})();
-</script>
-
-<!-- ══ DATA LOADING (from admin panel / Netlify CMS) ══ -->
-<script>
-  fetch('content/data.json').then(function(r){return r.json();}).then(function(data){
-
-    function applyText(id,value,hideEl){
-      if(value===undefined)return;
-      var el=document.getElementById(id);
-      if(!el)return;
-      var target=hideEl?el.closest(hideEl):el;
-      if(value===''){target.style.display='none';}
-      else{el.innerHTML=value;}
-    }
-
-    if(data.site_text){
-      var t=data.site_text;
-      applyText('heroBadge',t.hero_badge);
-      applyText('heroEyebrow',t.hero_eyebrow);
-      applyText('heroSub',t.hero_sub);
-      applyText('toolsHeading',t.tools_heading);
-      applyText('toolsSub',t.tools_sub);
-      applyText('skillsEyebrow',t.skills_eyebrow);
-      applyText('skillsHeading',t.skills_heading);
-      applyText('skillsSub',t.skills_sub);
-      applyText('workHeading',t.work_heading);
-      applyText('workSub',t.work_sub);
-      applyText('pitchEyebrow',t.pitch_eyebrow);
-      applyText('pitchHeading',t.pitch_heading);
-      applyText('pitchSub',t.pitch_sub);
-      applyText('aboutEyebrow',t.about_eyebrow);
-      applyText('aboutHeading',t.about_heading);
-      applyText('contactEyebrow',t.contact_eyebrow);
-      applyText('contactHeading',t.contact_heading);
-      applyText('contactSub',t.contact_sub);
-    }
-
-    if(data.hero_photo){
-      var loader=document.getElementById('heroLoader');
-      var heroWrap=document.getElementById('heroPhotoWrap');
-      var img=new Image();
-      img.src=data.hero_photo;
-      img.className='hero-cutout';
-      img.loading='eager';
-      img.decoding='async';
-      img.style.opacity='0';
-      img.style.transition='opacity .6s ease';
-      img.onload=function(){
-        if(loader){loader.classList.add('hidden');setTimeout(function(){loader.style.display='none';},400);}
-        img.style.opacity='1';
-      };
-      heroWrap.appendChild(img);
-    }
-
-    if(data.about_photo){
-      var ap=document.getElementById('aboutPhoto');
-      var initials=ap.querySelector('.initials');if(initials)initials.remove();
-      var photoImg=document.createElement('img');photoImg.src=data.about_photo;photoImg.style.cssText='width:100%;height:100%;object-fit:cover;border-radius:20px;';photoImg.loading='lazy';photoImg.decoding='async';
-      ap.insertBefore(photoImg,ap.firstChild);
-    }
-
-    if(data.bio1)document.getElementById('bio1').innerHTML=data.bio1;
-    if(data.bio2)document.getElementById('bio2').innerHTML=data.bio2;
-    if(data.bio3)document.getElementById('bio3').innerHTML=data.bio3;
-
-    if(data.social){
-      document.querySelectorAll('[data-social]').forEach(function(btn){
-        var key=btn.getAttribute('data-social');
-        if(data.social[key]) btn.href=key==='email'?('mailto:'+data.social[key].replace('mailto:','')):data.social[key];
-        var iconKey=key+'_icon';
-        if(data.social[iconKey]){
-          var svg=btn.querySelector('svg');
-          if(svg){var im=document.createElement('img');im.src=data.social[iconKey];im.style.cssText='width:18px;height:18px;object-fit:contain;flex-shrink:0;';svg.replaceWith(im);}
-        }
-      });
-    }
-
-    if(data.tools&&data.tools.length&&data.tools.some(function(t){return t.icon;})){
-      var withIcons=data.tools.filter(function(t){return t.icon;});
-      var marqueeEl=document.getElementById('marquee');
-      var oneSet=withIcons.map(function(t){
-        return '<div class="tool-chip"><div class="tool-icon-marquee" style="background:none;"><img src="'+t.icon+'" alt="'+(t.name||'')+'" loading="lazy" decoding="async"></div></div>';
-      }).join('');
-      var repeats=Math.max(6, Math.ceil(24 / withIcons.length));
-      var halfHtml='';
-      for(var r=0; r<repeats; r++){ halfHtml+=oneSet; }
-      marqueeEl.innerHTML=halfHtml+halfHtml;
-    }
-
-    if(data.skills&&data.skills.length){
-      var skillsGridEl=document.getElementById('skillsGrid');
-      skillsGridEl.innerHTML=data.skills.map(function(s){
-        return '<div class="ticket reveal show">'+(s.genre?'<span class="genre">'+s.genre+'</span>':'')+'<h3>'+(s.title||'')+'</h3>'+(s.description?'<p>'+s.description+'</p>':'')+'</div>';
-      }).join('');
-    }
-
-    if(data.stats&&data.stats.length){
-      var statsRowEl=document.getElementById('statsRow');
-      statsRowEl.innerHTML=data.stats.map(function(s){
-        return '<div class="stat"><div class="num">'+(s.number||'')+'</div><div class="lbl">'+(s.label||'').toUpperCase()+'</div></div>';
-      }).join('');
-      /* Re-trigger counter animation for fresh stats */
-      setTimeout(function(){
-        document.querySelectorAll('#statsRow .num').forEach(function(el){delete el.dataset.counted;});
-        var io2=new IntersectionObserver(function(entries){
-          entries.forEach(function(e){
-            if(e.isIntersecting){
-              document.querySelectorAll('#statsRow .num').forEach(function(el){
-                if(el.dataset.counted)return; el.dataset.counted='1';
-                var text=el.textContent.trim();var m=text.match(/^(\d+)(.*)$/);if(!m)return;
-                var tgt=parseInt(m[1]);var sfx=m[2]||'';var st=performance.now();
-                (function step(now){var p=Math.min((now-st)/1800,1);var ea=1-Math.pow(1-p,3);el.textContent=Math.floor(ea*tgt)+sfx;if(p<1)requestAnimationFrame(step);})(st);
-              });
-              io2.disconnect();
-            }
+      /* ── Magnetic Buttons ── */
+      if (window.matchMedia('(pointer:fine)').matches) {
+        document.querySelectorAll('.btn-magnetic').forEach(function (btn) {
+          btn.addEventListener('mousemove', function (e) {
+            var r = btn.getBoundingClientRect();
+            var x = e.clientX - r.left - r.width / 2;
+            var y = e.clientY - r.top - r.height / 2;
+            btn.style.transform = 'translate(' + x * 0.2 + 'px,' + y * 0.2 + 'px)';
           });
-        },{threshold:0.3});
-        io2.observe(statsRowEl);
-      },200);
-    }
-
-    if(data.pitch_decks&&data.pitch_decks.length&&data.pitch_decks.some(function(p){return p.image;})){
-      var deckImgs=data.pitch_decks.filter(function(p){return p.image;});
-      var pse=document.getElementById('pitchSlides');
-      pse.innerHTML=deckImgs.map(function(p){
-        return '<div class="pitch-slide"><img src="'+p.image+'" alt="'+(p.title||'')+'" loading="lazy" decoding="async"></div>';
-      }).join('');
-      var psi=pse.children;var pc2=0;
-      var pdEl=document.getElementById('pitchDots');
-      pdEl.innerHTML='';
-      for(var i=0;i<psi.length;i++){
-        var d=document.createElement('i');if(i===0)d.classList.add('active');
-        (function(idx){d.addEventListener('click',function(){pc2=(idx+psi.length)%psi.length;pUpd();});})(i);
-        pdEl.appendChild(d);
+          btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+        });
       }
-      function pUpd(){
-        pse.style.transform='translateX(-'+(pc2*100)+'%)';
-        Array.prototype.forEach.call(pdEl.children,function(d,j){d.classList.toggle('active',j===pc2);});
-        var cl=document.getElementById('pitchCurrentLabel');var tl=document.getElementById('pitchTotalLabel');
-        if(cl)cl.textContent=String(pc2+1).padStart(2,'0');if(tl)tl.textContent=String(psi.length).padStart(2,'0');
+
+      /* ── Tilt on Gallery Cards ── */
+      if (window.matchMedia('(pointer:fine)').matches) {
+        document.addEventListener('mousemove', function (e) {
+          var card = e.target.closest('.poster-card');
+          if (!card) return;
+          var r = card.getBoundingClientRect();
+          var x = (e.clientX - r.left) / r.width - 0.5;
+          var y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(600px) rotateY(' + x * 6 + 'deg) rotateX(' + -y * 6 + 'deg) translateY(-4px)';
+        });
+        document.addEventListener('mouseout', function (e) {
+          var card = e.target.closest('.poster-card');
+          if (card) card.style.transform = '';
+        });
       }
-      pUpd();
-      document.getElementById('pitchNextBtn').onclick=function(){pc2=(pc2+1)%psi.length;pUpd();};
-      document.getElementById('pitchPrevBtn').onclick=function(){pc2=(pc2-1+psi.length)%psi.length;pUpd();};
-    }
 
-    if(data.projects&&data.projects.length&&data.projects.some(function(p){return p.image;})){
-      var withImages=data.projects.filter(function(p){return p.image;});
-      var catLabel={posters:'Poster',social:'Social',decks:'Deck',film:'Film'};
-
-      var featured=withImages.filter(function(p){return p.featured;});
-      if(featured.length){
-        var sl2=document.getElementById('slides');
-        sl2.innerHTML=featured.map(function(p, idx){
-          var isReverse = (idx === 1 || idx === 3);
-          return '<div class="slide' + (isReverse ? ' reverse' : '') + '"><div class="slide-media"><div class="art"><img src="'+p.image+'" alt="'+p.title+'" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div></div><div class="slide-content"><span class="tag">'+(catLabel[p.category]||'')+'</span><h3>'+p.title+'</h3>'+(p.subtitle?'<p class="subtitle">'+p.subtitle+'</p>':'')+(p.details?'<p class="details">'+p.details+'</p>':'')+'</div></div>';
-        }).join('');
-        var dt2=document.getElementById('dots');
-        dt2.innerHTML='';
-        for(var i=0;i<featured.length;i++){
-          var dot=document.createElement('i');if(i===0)dot.classList.add('active');
-          (function(idx){dot.addEventListener('click',function(){
-            current2=(idx+featured.length)%featured.length;
-            sl2.style.transform='translateX(-'+(current2*100)+'%)';
-            Array.prototype.forEach.call(dt2.children,function(d,j){d.classList.toggle('active',j===current2);});
-            var c=document.getElementById('slideCurrent');var t=document.getElementById('slideTotal');
-            if(c)c.textContent=String(current2+1).padStart(2,'0');if(t)t.textContent=String(featured.length).padStart(2,'0');
-          });})(i);
-          dt2.appendChild(dot);
+      /* ── Main Slideshow ── */
+      var slidesEl = document.getElementById('slides');
+      var slides = slidesEl.children;
+      var dotsEl = document.getElementById('dots');
+      var current = 0;
+      function buildDots() {
+        dotsEl.innerHTML = '';
+        for (var i = 0; i < slides.length; i++) {
+          var d = document.createElement('i');
+          if (i === 0) d.classList.add('active');
+          (function (idx) { d.addEventListener('click', function () { goTo(idx); }); })(i);
+          dotsEl.appendChild(d);
         }
-        var current2=0;
-        var ct=document.getElementById('slideTotal');if(ct)ct.textContent=String(featured.length).padStart(2,'0');
-        document.getElementById('nextBtn').onclick=function(){current2=(current2+1)%featured.length;sl2.style.transform='translateX(-'+(current2*100)+'%)';Array.prototype.forEach.call(dt2.children,function(d,j){d.classList.toggle('active',j===current2);});var c=document.getElementById('slideCurrent');if(c)c.textContent=String(current2+1).padStart(2,'0');};
-        document.getElementById('prevBtn').onclick=function(){current2=(current2-1+featured.length)%featured.length;sl2.style.transform='translateX(-'+(current2*100)+'%)';Array.prototype.forEach.call(dt2.children,function(d,j){d.classList.toggle('active',j===current2);});var c=document.getElementById('slideCurrent');if(c)c.textContent=String(current2+1).padStart(2,'0');};
+      }
+      buildDots();
+      function updateCounter() {
+        var c = document.getElementById('slideCurrent');
+        var t = document.getElementById('slideTotal');
+        if (c) c.textContent = String(current + 1).padStart(2, '0');
+        if (t) t.textContent = String(slides.length).padStart(2, '0');
+      }
+      updateCounter();
+      function update() {
+        slidesEl.style.transform = 'translateX(-' + (current * 100) + '%)';
+        Array.prototype.forEach.call(dotsEl.children, function (d, i) { d.classList.toggle('active', i === current); });
+        updateCounter();
+      }
+      function goTo(i) { current = (i + slides.length) % slides.length; update(); }
+      document.getElementById('nextBtn').addEventListener('click', function () { goTo(current + 1); });
+      document.getElementById('prevBtn').addEventListener('click', function () { goTo(current - 1); });
+      var autoSlide = setInterval(function () { goTo(current + 1); }, 5000);
+      var showc = document.querySelector('#work .showcase');
+      if (showc) {
+        showc.addEventListener('mouseenter', function () { clearInterval(autoSlide); });
+        showc.addEventListener('mouseleave', function () { autoSlide = setInterval(function () { goTo(current + 1); }, 5000); });
+      }
+      /* Touch swipe */
+      var touchSX = 0;
+      var sv = document.getElementById('slidesViewport');
+      sv.addEventListener('touchstart', function (e) { touchSX = e.changedTouches[0].screenX; clearInterval(autoSlide); }, { passive: true });
+      sv.addEventListener('touchend', function (e) {
+        var diff = touchSX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 40) { if (diff > 0) goTo(current + 1); else goTo(current - 1); }
+        autoSlide = setInterval(function () { goTo(current + 1); }, 5000);
+      }, { passive: true });
+
+      /* ── Pitch Deck Slideshow ── */
+      var pitchSlidesEl = document.getElementById('pitchSlides');
+      var pitchSlideItems = pitchSlidesEl.children;
+      var pitchDotsEl = document.getElementById('pitchDots');
+      var pitchCurrent = 0;
+      function buildPitchDots() {
+        pitchDotsEl.innerHTML = '';
+        for (var i = 0; i < pitchSlideItems.length; i++) {
+          var d = document.createElement('i');
+          if (i === 0) d.classList.add('active');
+          (function (idx) { d.addEventListener('click', function () { pitchGoTo(idx); }); })(i);
+          pitchDotsEl.appendChild(d);
+        }
+      }
+      buildPitchDots();
+      function pitchUpdateCounter() {
+        var c = document.getElementById('pitchCurrentLabel');
+        var t = document.getElementById('pitchTotalLabel');
+        if (c) c.textContent = String(pitchCurrent + 1).padStart(2, '0');
+        if (t) t.textContent = String(pitchSlideItems.length).padStart(2, '0');
+      }
+      pitchUpdateCounter();
+      function pitchUpdate() {
+        pitchSlidesEl.style.transform = 'translateX(-' + (pitchCurrent * 100) + '%)';
+        Array.prototype.forEach.call(pitchDotsEl.children, function (d, i) { d.classList.toggle('active', i === pitchCurrent); });
+        pitchUpdateCounter();
+      }
+      function pitchGoTo(i) { if (!pitchSlideItems.length) return; pitchCurrent = (i + pitchSlideItems.length) % pitchSlideItems.length; pitchUpdate(); }
+      document.getElementById('pitchNextBtn').addEventListener('click', function () { pitchGoTo(pitchCurrent + 1); });
+      document.getElementById('pitchPrevBtn').addEventListener('click', function () { pitchGoTo(pitchCurrent - 1); });
+      var pitchAuto = setInterval(function () { pitchGoTo(pitchCurrent + 1); }, 5000);
+      var pitchShowc = document.getElementById('pitchSlideshow');
+      pitchShowc.addEventListener('mouseenter', function () { clearInterval(pitchAuto); });
+      pitchShowc.addEventListener('mouseleave', function () { pitchAuto = setInterval(function () { pitchGoTo(pitchCurrent + 1); }, 5000); });
+      var pitchTSX = 0;
+      var psv = document.getElementById('pitchSlidesViewport');
+      psv.addEventListener('touchstart', function (e) { pitchTSX = e.changedTouches[0].screenX; clearInterval(pitchAuto); }, { passive: true });
+      psv.addEventListener('touchend', function (e) {
+        var diff = pitchTSX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 40) { if (diff > 0) pitchGoTo(pitchCurrent + 1); else pitchGoTo(pitchCurrent - 1); }
+        pitchAuto = setInterval(function () { pitchGoTo(pitchCurrent + 1); }, 5000);
+      }, { passive: true });
+
+      /* ── Gallery Filters ── */
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var f = btn.dataset.filter;
+          document.querySelectorAll('.poster-card').forEach(function (card) { card.classList.toggle('hide', f !== 'all' && card.dataset.cat !== f); });
+        });
+      });
+
+    })();
+  </script>
+
+  <!-- ══ DATA LOADING (from admin panel / Netlify CMS) ══ -->
+  <script>
+    fetch('content/data.json').then(function (r) { return r.json(); }).then(function (data) {
+
+      function applyText(id, value, hideEl) {
+        if (value === undefined) return;
+        var el = document.getElementById(id);
+        if (!el) return;
+        var target = hideEl ? el.closest(hideEl) : el;
+        if (value === '') { target.style.display = 'none'; }
+        else { el.innerHTML = value; }
       }
 
-      var galleryEl=document.getElementById('gallery');
-      galleryEl.innerHTML=withImages.map(function(p,idx){
-        return '<div class="poster-card reveal" data-cat="'+p.category+'" style="--d:'+idx+'"><div class="art"><img src="'+p.image+'" alt="'+p.title+'" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="shade"></div><div class="meta"><span>'+(catLabel[p.category]||'')+'</span><h4>'+p.title+'</h4></div></div>';
-      }).join('');
-      /* Observe new gallery cards for reveal */
-      var rio=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');rio.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('#gallery .reveal').forEach(function(el){rio.observe(el);});
-    }
+      if (data.site_text) {
+        var t = data.site_text;
+        applyText('heroBadge', t.hero_badge);
+        applyText('heroEyebrow', t.hero_eyebrow);
+        applyText('heroSub', t.hero_sub);
+        applyText('toolsHeading', t.tools_heading);
+        applyText('toolsSub', t.tools_sub);
+        applyText('skillsEyebrow', t.skills_eyebrow);
+        applyText('skillsHeading', t.skills_heading);
+        applyText('skillsSub', t.skills_sub);
+        applyText('workHeading', t.work_heading);
+        applyText('workSub', t.work_sub);
+        applyText('pitchEyebrow', t.pitch_eyebrow);
+        applyText('pitchHeading', t.pitch_heading);
+        applyText('pitchSub', t.pitch_sub);
+        applyText('aboutEyebrow', t.about_eyebrow);
+        applyText('aboutHeading', t.about_heading);
+        applyText('contactEyebrow', t.contact_eyebrow);
+        applyText('contactHeading', t.contact_heading);
+        applyText('contactSub', t.contact_sub);
+      }
 
-  }).catch(function(){/* no data.json yet — placeholders stay */});
-</script>
+      if (data.hero_photo) {
+        var loader = document.getElementById('heroLoader');
+        var heroWrap = document.getElementById('heroPhotoWrap');
+        var img = new Image();
+        img.src = data.hero_photo;
+        img.className = 'hero-cutout';
+        img.loading = 'eager';
+        img.decoding = 'async';
+        img.style.opacity = '0';
+        img.style.transition = 'opacity .6s ease';
+        img.onload = function () {
+          if (loader) { loader.classList.add('hidden'); setTimeout(function () { loader.style.display = 'none'; }, 400); }
+          img.style.opacity = '1';
+        };
+        heroWrap.appendChild(img);
+      }
+
+      if (data.about_photo) {
+        var ap = document.getElementById('aboutPhoto');
+        var initials = ap.querySelector('.initials'); if (initials) initials.remove();
+        var photoImg = document.createElement('img'); photoImg.src = data.about_photo; photoImg.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:20px;'; photoImg.loading = 'lazy'; photoImg.decoding = 'async';
+        ap.insertBefore(photoImg, ap.firstChild);
+      }
+
+      if (data.bio1) document.getElementById('bio1').innerHTML = data.bio1;
+      if (data.bio2) document.getElementById('bio2').innerHTML = data.bio2;
+      if (data.bio3) document.getElementById('bio3').innerHTML = data.bio3;
+
+      if (data.social) {
+        document.querySelectorAll('[data-social]').forEach(function (btn) {
+          var key = btn.getAttribute('data-social');
+          if (data.social[key]) btn.href = key === 'email' ? ('mailto:' + data.social[key].replace('mailto:', '')) : data.social[key];
+          var iconKey = key + '_icon';
+          if (data.social[iconKey]) {
+            var svg = btn.querySelector('svg');
+            if (svg) { var im = document.createElement('img'); im.src = data.social[iconKey]; im.style.cssText = 'width:18px;height:18px;object-fit:contain;flex-shrink:0;'; svg.replaceWith(im); }
+          }
+        });
+      }
+
+      if (data.tools && data.tools.length && data.tools.some(function (t) { return t.icon; })) {
+        var withIcons = data.tools.filter(function (t) { return t.icon; });
+        var marqueeEl = document.getElementById('marquee');
+        var oneSet = withIcons.map(function (t) {
+          return '<div class="tool-chip"><div class="tool-icon-marquee" style="background:none;"><img src="' + t.icon + '" alt="' + (t.name || '') + '" loading="lazy" decoding="async"></div></div>';
+        }).join('');
+        var repeats = Math.max(6, Math.ceil(24 / withIcons.length));
+        var halfHtml = '';
+        for (var r = 0; r < repeats; r++) { halfHtml += oneSet; }
+        marqueeEl.innerHTML = halfHtml + halfHtml;
+      }
+
+      if (data.skills && data.skills.length) {
+        var skillsGridEl = document.getElementById('skillsGrid');
+        skillsGridEl.innerHTML = data.skills.map(function (s) {
+          return '<div class="ticket reveal show">' + (s.genre ? '<span class="genre">' + s.genre + '</span>' : '') + '<h3>' + (s.title || '') + '</h3>' + (s.description ? '<p>' + s.description + '</p>' : '') + '</div>';
+        }).join('');
+      }
+
+      if (data.stats && data.stats.length) {
+        var statsRowEl = document.getElementById('statsRow');
+        statsRowEl.innerHTML = data.stats.map(function (s) {
+          return '<div class="stat"><div class="num">' + (s.number || '') + '</div><div class="lbl">' + (s.label || '').toUpperCase() + '</div></div>';
+        }).join('');
+        /* Re-trigger counter animation for fresh stats */
+        setTimeout(function () {
+          document.querySelectorAll('#statsRow .num').forEach(function (el) { delete el.dataset.counted; });
+          var io2 = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                document.querySelectorAll('#statsRow .num').forEach(function (el) {
+                  if (el.dataset.counted) return; el.dataset.counted = '1';
+                  var text = el.textContent.trim(); var m = text.match(/^(\d+)(.*)$/); if (!m) return;
+                  var tgt = parseInt(m[1]); var sfx = m[2] || ''; var st = performance.now();
+                  (function step(now) { var p = Math.min((now - st) / 1800, 1); var ea = 1 - Math.pow(1 - p, 3); el.textContent = Math.floor(ea * tgt) + sfx; if (p < 1) requestAnimationFrame(step); })(st);
+                });
+                io2.disconnect();
+              }
+            });
+          }, { threshold: 0.3 });
+          io2.observe(statsRowEl);
+        }, 200);
+      }
+
+      if (data.pitch_decks && data.pitch_decks.length && data.pitch_decks.some(function (p) { return p.image; })) {
+        var deckImgs = data.pitch_decks.filter(function (p) { return p.image; });
+        var pse = document.getElementById('pitchSlides');
+        pse.innerHTML = deckImgs.map(function (p) {
+          return '<div class="pitch-slide"><img src="' + p.image + '" alt="' + (p.title || '') + '" loading="lazy" decoding="async"></div>';
+        }).join('');
+        var psi = pse.children; var pc2 = 0;
+        var pdEl = document.getElementById('pitchDots');
+        pdEl.innerHTML = '';
+        for (var i = 0; i < psi.length; i++) {
+          var d = document.createElement('i'); if (i === 0) d.classList.add('active');
+          (function (idx) { d.addEventListener('click', function () { pc2 = (idx + psi.length) % psi.length; pUpd(); }); })(i);
+          pdEl.appendChild(d);
+        }
+        function pUpd() {
+          pse.style.transform = 'translateX(-' + (pc2 * 100) + '%)';
+          Array.prototype.forEach.call(pdEl.children, function (d, j) { d.classList.toggle('active', j === pc2); });
+          var cl = document.getElementById('pitchCurrentLabel'); var tl = document.getElementById('pitchTotalLabel');
+          if (cl) cl.textContent = String(pc2 + 1).padStart(2, '0'); if (tl) tl.textContent = String(psi.length).padStart(2, '0');
+        }
+        pUpd();
+        document.getElementById('pitchNextBtn').onclick = function () { pc2 = (pc2 + 1) % psi.length; pUpd(); };
+        document.getElementById('pitchPrevBtn').onclick = function () { pc2 = (pc2 - 1 + psi.length) % psi.length; pUpd(); };
+      }
+
+      if (data.projects && data.projects.length && data.projects.some(function (p) { return p.image; })) {
+        var withImages = data.projects.filter(function (p) { return p.image; });
+        var catLabel = { posters: 'Poster', social: 'Social', decks: 'Deck', film: 'Film' };
+
+        var featured = withImages.filter(function (p) { return p.featured; });
+        if (featured.length) {
+          var sl2 = document.getElementById('slides');
+          sl2.innerHTML = featured.map(function (p, idx) {
+            var isReverse = (idx === 1 || idx === 3);
+            return '<div class="slide' + (isReverse ? ' reverse' : '') + '"><div class="slide-media"><div class="art"><img src="' + p.image + '" alt="' + p.title + '" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div></div><div class="slide-content"><span class="tag">' + (catLabel[p.category] || '') + '</span><h3>' + p.title + '</h3>' + (p.subtitle ? '<p class="subtitle">' + p.subtitle + '</p>' : '') + (p.details ? '<p class="details">' + p.details + '</p>' : '') + '</div></div>';
+          }).join('');
+          var dt2 = document.getElementById('dots');
+          dt2.innerHTML = '';
+          for (var i = 0; i < featured.length; i++) {
+            var dot = document.createElement('i'); if (i === 0) dot.classList.add('active');
+            (function (idx) {
+              dot.addEventListener('click', function () {
+                current2 = (idx + featured.length) % featured.length;
+                sl2.style.transform = 'translateX(-' + (current2 * 100) + '%)';
+                Array.prototype.forEach.call(dt2.children, function (d, j) { d.classList.toggle('active', j === current2); });
+                var c = document.getElementById('slideCurrent'); var t = document.getElementById('slideTotal');
+                if (c) c.textContent = String(current2 + 1).padStart(2, '0'); if (t) t.textContent = String(featured.length).padStart(2, '0');
+              });
+            })(i);
+            dt2.appendChild(dot);
+          }
+          var current2 = 0;
+          var ct = document.getElementById('slideTotal'); if (ct) ct.textContent = String(featured.length).padStart(2, '0');
+          document.getElementById('nextBtn').onclick = function () { current2 = (current2 + 1) % featured.length; sl2.style.transform = 'translateX(-' + (current2 * 100) + '%)'; Array.prototype.forEach.call(dt2.children, function (d, j) { d.classList.toggle('active', j === current2); }); var c = document.getElementById('slideCurrent'); if (c) c.textContent = String(current2 + 1).padStart(2, '0'); };
+          document.getElementById('prevBtn').onclick = function () { current2 = (current2 - 1 + featured.length) % featured.length; sl2.style.transform = 'translateX(-' + (current2 * 100) + '%)'; Array.prototype.forEach.call(dt2.children, function (d, j) { d.classList.toggle('active', j === current2); }); var c = document.getElementById('slideCurrent'); if (c) c.textContent = String(current2 + 1).padStart(2, '0'); };
+        }
+
+        var galleryEl = document.getElementById('gallery');
+        galleryEl.innerHTML = withImages.map(function (p, idx) {
+          return '<div class="poster-card reveal" data-cat="' + p.category + '" style="--d:' + idx + '"><div class="art"><img src="' + p.image + '" alt="' + p.title + '" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="shade"></div><div class="meta"><span>' + (catLabel[p.category] || '') + '</span><h4>' + p.title + '</h4></div></div>';
+        }).join('');
+        /* Observe new gallery cards for reveal */
+        var rio = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('show'); rio.unobserve(e.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('#gallery .reveal').forEach(function (el) { rio.observe(el); });
+      }
+
+    }).catch(function () {/* no data.json yet — placeholders stay */ });
+  </script>
 
 </body>
+
 </html>

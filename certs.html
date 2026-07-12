@@ -81,8 +81,8 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
 .back-btn svg{ width:18px; height:18px; }
 
 /* ── Section Tags ── */
-.section-tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:inline-flex; align-items:center; gap:10px; margin-bottom:16px; }
-.section-tag::before{ content:''; width:24px; height:2px; background:var(--accent); display:inline-block; }
+.section-tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#f59e0b; display:inline-flex; align-items:center; gap:10px; margin-bottom:16px; }
+.section-tag::before{ content:''; width:24px; height:2px; background:#f59e0b; display:inline-block; }
 
 /* ── Certifications Page ── */
 .certs-page{ padding:120px 0 80px; position:relative; overflow:hidden; }
@@ -92,6 +92,75 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
 .certs-header p{ color:var(--text-2); font-size:15px; max-width:600px; margin:0; line-height:1.7; text-align:left; }
 
 .certs-list{ display:flex; flex-direction:column; gap:96px; margin-top:40px; position:relative; z-index:1; }
+
+/* ── Certification Filters ── */
+.cert-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: -12px;
+  margin-bottom: 48px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  position: relative;
+  z-index: 5;
+}
+
+.cert-filter-btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.cert-filter-btn:hover {
+  color: var(--text);
+}
+
+.cert-filter-btn.active {
+  color: #f59e0b;
+}
+
+.cert-filter-btn .btn-text {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.cert-filter-btn.active .btn-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f59e0b;
+}
+
+.cert-filter-btn:not(:last-child)::after {
+  content: '|';
+  margin-left: 14px;
+  margin-right: 14px;
+  color: rgba(255, 255, 255, 0.15);
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.cert-item.hide {
+  display: none !important;
+}
 
 .cert-item{ display:flex; flex-direction:column; gap:32px; background:none; border:none; border-radius:0; padding:0; overflow:visible; }
 
@@ -217,9 +286,13 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
     <a href="index.html" class="back-btn reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Portfolio</a>
     
     <div class="certs-header reveal" style="--d:1">
+      <span class="section-tag">CREDENTIALS</span>
       <h1>Certifications</h1>
-      <p>Blending creative instinct with certified technical mastery.</p>
+      <p>Continuous learning is my competitive advantage.</p>
     </div>
+
+    <!-- Category Filter Row -->
+    <div class="cert-filters reveal" style="--d:2" id="certFilters"></div>
     
     <div class="certs-list" id="certsList">
       <!-- Loaded dynamically from data.json -->
@@ -332,8 +405,9 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
         var title = c.title || '';
         var details = c.details || '';
         var imgUrl = c.image || '';
+        var cat = c.category || '';
         
-        return '<div class="cert-item reveal" style="--d:' + (idx + 1) + '">' +
+        return '<div class="cert-item reveal" data-cat="' + cat + '" style="--d:' + (idx + 1) + '">' +
                  '<div class="cert-content">' +
                    '<span class="section-tag">' + certNo + '</span>' +
                    '<h2>' + title + '</h2>' +
@@ -349,6 +423,76 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
                  '</div>' +
                '</div>';
       }).join('');
+
+      /* Render Category Filter Row */
+      var filterContainer = document.getElementById('certFilters');
+      if(filterContainer){
+        // Gather unique categories from data
+        var presentCats = {};
+        data.certifications.forEach(function(c){
+          if(c.category) {
+            presentCats[c.category] = true;
+          }
+        });
+
+        // Predefined categories requested by user
+        var displayCategories = [
+          { key: 'all', label: 'ALL' },
+          { key: 'business', label: 'BUSINESS' },
+          { key: 'artificial_intelligence', label: 'ARTIFICIAL INTELLIGENCE' },
+          { key: 'design_editing', label: 'DESIGN AND EDITING' },
+          { key: 'cyber_security', label: 'CYBER SECURITY' }
+        ];
+
+        // Append any custom category from the JSON that isn't in our predefined list
+        var standardKeys = {
+          'all': true,
+          'business': true,
+          'artificial_intelligence': true,
+          'design_editing': true,
+          'cyber_security': true
+        };
+
+        for(var catKey in presentCats){
+          if(presentCats.hasOwnProperty(catKey) && !standardKeys[catKey] && catKey){
+            var formattedLabel = catKey.replace(/[_-]/g, ' ').toUpperCase();
+            displayCategories.push({ key: catKey, label: formattedLabel });
+          }
+        }
+
+        // Render buttons
+        filterContainer.innerHTML = displayCategories.map(function(cat){
+          return '<button class="cert-filter-btn' + (cat.key === 'all' ? ' active' : '') + '" data-filter="' + cat.key + '">' +
+                   '<span class="btn-text">' + cat.label + '</span>' +
+                 '</button>';
+        }).join('');
+
+        // Attach click handlers to filter buttons
+        var filterBtns = filterContainer.querySelectorAll('.cert-filter-btn');
+        filterBtns.forEach(function(btn){
+          btn.addEventListener('click', function(e){
+            e.preventDefault();
+            filterBtns.forEach(function(b){ b.classList.remove('active'); });
+            btn.classList.add('active');
+            
+            var selectedFilter = btn.getAttribute('data-filter');
+            var certItems = certsGrid.querySelectorAll('.cert-item');
+            
+            certItems.forEach(function(item){
+              var certCat = item.getAttribute('data-cat') || '';
+              if(selectedFilter === 'all' || certCat === selectedFilter){
+                item.classList.remove('hide');
+                setTimeout(function(){
+                  item.classList.add('show');
+                }, 50);
+              } else {
+                item.classList.add('hide');
+                item.classList.remove('show');
+              }
+            });
+          });
+        });
+      }
       
       /* Re-trigger observer for new dynamic elements */
       var dynamicObs = new IntersectionObserver(function(entries){
