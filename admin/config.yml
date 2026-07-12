@@ -131,3 +131,11 @@ collections:
               - { label: "Year Earned (e.g. 2025)", name: "year", widget: "string" }
               - { label: "Verification URL / Link", name: "url", widget: "string", required: false }
               - { label: "Certificate Image (scanned preview)", name: "image", widget: "image" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "BUSINESS", value: "business" }
+                  - { label: "ARTIFICIAL INTELLIGENCE", value: "artificial_intelligence" }
+                  - { label: "DESIGN AND EDITING", value: "design_editing" }
+                  - { label: "CYBER SECURITY", value: "cyber_security" }
