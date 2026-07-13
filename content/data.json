@@ -23,79 +23,21 @@
   ],
   "hero_photo": "/assets/uploads/layer-1-1-.png",
   "social": {
-    "fiverr_icon": "/assets/uploads/pjp.png",
-    "instagram_icon": "/assets/uploads/slmlm.png",
+    "fiverr_icon": "/assets/uploads/fi.png",
+    "instagram_icon": "/assets/uploads/ins.png",
     "facebook": "https://www.facebook.com/profile.php?id=100085949528596",
-    "whatsapp_icon": "/assets/uploads/ckv-m.png",
+    "whatsapp_icon": "/assets/uploads/wa.png",
     "upwork": "https://www.upwork.com/freelancers/~01f2cad8c77c7a736d?mp_source=share",
-    "upwork_icon": "/assets/uploads/jdvn.png",
+    "upwork_icon": "/assets/uploads/up.png",
     "fiverr": "https://www.fiverr.com/s/NNv4e7R",
     "whatsapp": "https://wa.me/923075412767",
-    "facebook_icon": "/assets/uploads/dbf.png",
+    "facebook_icon": "/assets/uploads/fb.png",
     "instagram": "https://www.instagram.com/sl.gfx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "linkedin_icon": "/assets/uploads/vssv.png",
-    "email_icon": "/assets/uploads/neteh.png",
+    "linkedin_icon": "/assets/uploads/link.png",
+    "email_icon": "/assets/uploads/mail.png",
     "email": "saadlodhi2023@gmail.com",
     "linkedin": "https://www.linkedin.com/in/saad-lodhi-6a701224b/"
   },
-  "certifications": [
-    {
-      "cert_no": "CERT 01",
-      "title": "Social Media Marketing",
-      "provider": "HP LIFE / HP Foundation",
-      "details": "Gained foundational skills in digital advertising and campaign creation across major social media platforms. Covered the strategy behind building effective social media marketing campaigns and the technical steps to design, structure, and launch targeted social media advertisements to reach specific audience demographics.",
-      "year": "2026",
-      "url": "",
-      "image": "/assets/uploads/social-media-marketing.jpg",
-      "category": "business"
-    },
-    {
-      "cert_no": "CERT 02",
-      "title": "Advanced Prompt Engineering",
-      "provider": "Simplilearn SkillUp",
-      "details": "Mastered advanced techniques for designing, optimizing, and structuring prompts to maximize the performance of Large Language Models (LLMs). Covered strategic prompt patterns, contextual formatting, and iterative refinement to elicit precise, high-quality, and context-aware AI outputs for complex workflows.",
-      "year": "2026",
-      "url": "",
-      "image": "/assets/uploads/advanced-prompt-engineering.jpg",
-      "category": "artificial_intelligence"
-    },
-    {
-      "cert_no": "CERT 03",
-      "title": "Introduction to Generative AI",
-      "provider": "Google Cloud",
-      "details": "Explored the core fundamentals of Generative AI, including how it differs from traditional machine learning methods. Covered the basics of large language models (LLMs), deep learning concepts, and how Google Cloud tools are utilized to develop and deploy creative AI solutions.",
-      "year": "2026",
-      "image": "/assets/uploads/introduction-to-generative-ai.jpg",
-      "category": "artificial_intelligence"
-    },
-    {
-      "cert_no": "CERT 04",
-      "title": "Introduction to Critical Infrastructure Protection",
-      "provider": "OPSWAT Academy",
-      "details": "Introduced the core fundamentals of Critical Infrastructure Protection (CIP) and industrial cybersecurity. Covered the security standards and operational requirements needed to safeguard essential high-value systems, mitigate risks, and defend critical networks against evolving digital threats.",
-      "year": "2026",
-      "image": "/assets/uploads/social-media-marketing.jpg.jpg",
-      "category": "cyber_security"
-    },
-    {
-      "cert_no": "CERT 05",
-      "title": "Business Analysis Basics",
-      "provider": "Simplilearn SkillUp",
-      "details": "Covered the foundational principles of business analysis, focusing on understanding business needs, identifying strategic solutions, and bridging the gap between stakeholders and technical teams to drive project success.",
-      "year": "2026",
-      "image": "/assets/uploads/business-analysis-basics.jpg",
-      "category": "business"
-    },
-    {
-      "cert_no": "CERT 06",
-      "title": "Introduction to Web Development with ChatGPT",
-      "provider": "Simplilearn SkillUp",
-      "details": "Explored the integration of AI-assisted workflows into modern frontend development. Covered the fundamentals of building web applications using HTML, CSS, and JavaScript while leveraging ChatGPT to accelerate code generation, optimize debugging, and streamline the design-to-development pipeline.",
-      "year": "2026",
-      "image": "/assets/uploads/simplilearn-certificate.jpg.jpg",
-      "category": "design_editing"
-    }
-  ],
   "projects": [
     {
       "title": "Epilytix Brand Identity",
@@ -203,11 +145,11 @@
   ],
   "stats": [
     {
-      "number": "05+",
+      "number": "5+",
       "label": "YEARS EXPERIENCE"
     },
     {
-      "number": "06",
+      "number": "6",
       "label": "CORE SPECIALITIES"
     },
     {
@@ -217,6 +159,28 @@
     {
       "number": "200+",
       "label": "Designs Created"
+    }
+  ],
+  "certifications": [
+    {
+      "cert_no": "CERT 01",
+      "title": "Software Engineer Intern",
+      "provider": "HackerRank",
+      "details": "The bearer of this certificate has passed the HackerRank role certification test.",
+      "year": "2025",
+      "url": "https://www.hackerrank.com/certificates/6A2B26793D14",
+      "image": "/assets/uploads/hg.jpg",
+      "category": "design_editing"
+    },
+    {
+      "cert_no": "CERT 02",
+      "title": "Business Analyst Foundation",
+      "provider": "Google",
+      "details": "Introduction to business analysis processes, tools, and visual models.",
+      "year": "2024",
+      "url": "https://example.com/cert-business",
+      "image": "/assets/uploads/hg.jpg",
+      "category": "business"
     }
   ]
 }
