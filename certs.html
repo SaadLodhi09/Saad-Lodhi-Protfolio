@@ -1,520 +1,998 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>Certifications — Saad Lodhi</title>
-<link rel="icon" type="image/png" href="assets/uploads/favicon.png">
-<meta name="description" content="Saad Lodhi's certifications, credentials, and professional accomplishments.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #0b0a12;
-  --surface: #13111c;
-  --surface-2: #1a1726;
-  --accent: #8b5cf6;
-  --accent-dim: rgba(139,92,246,0.12);
-  --text: #e8e4ef;
-  --text-2: #b0aac0;
-  --muted: #6b6580;
-  --line: rgba(255,255,255,0.06);
-  --r: 12px;
-  --r-lg: 20px;
-}
-*{ margin:0; padding:0; box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{ background:var(--bg); color:var(--text); font-family:'Montserrat',system-ui,sans-serif; font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; animation:pageIn .5s ease; }
-@keyframes pageIn{ from{opacity:0} to{opacity:1} }
-::selection{ background:var(--accent); color:var(--bg); }
-a{ color:inherit; text-decoration:none; }
-img{ max-width:100%; display:block; }
-button{ font-family:inherit; cursor:pointer; border:none; background:none; }
-h1,h2,h3,h4{ font-family:'Clash Display',sans-serif; font-weight:700; line-height:1.1; letter-spacing:0.02em; }
-p{ text-align:justify; }
-.accent{ color:var(--accent); }
-.wrap{ max-width:1180px; margin:0 auto; padding:0 20px; width:100%; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <title>Certifications — Saad Lodhi</title>
+  <link rel="icon" type="image/png" href="assets/uploads/favicon.png">
+  <meta name="description" content="Saad Lodhi's certifications, credentials, and professional accomplishments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0a12;
+      --surface: #13111c;
+      --surface-2: #1a1726;
+      --accent: #8b5cf6;
+      --accent-dim: rgba(139, 92, 246, 0.12);
+      --text: #e8e4ef;
+      --text-2: #b0aac0;
+      --muted: #6b6580;
+      --line: rgba(255, 255, 255, 0.06);
+      --r: 12px;
+      --r-lg: 20px;
+    }
 
-/* ── Custom Cursor (desktop only) ── */
-@media(pointer:fine){
-  html, body { cursor: url('assets/uploads/custom-cursor-32.png') 16 0, auto; }
-  .cursor-dot{ position:fixed; width:6px; height:6px; background:var(--accent); border-radius:50%; pointer-events:none; z-index:10000; transform:translate(-50%,-50%); mix-blend-mode:difference; will-change:transform; }
-  .cursor-ring{ position:fixed; width:36px; height:36px; border:1.5px solid rgba(139,92,246,0.4); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); will-change:transform; transition:width .25s,height .25s,border-color .25s; }
-  .cursor-ring.hover{ width:60px; height:60px; border-color:rgba(139,92,246,0.2); }
-}
-@media(pointer:coarse){ .cursor-dot,.cursor-ring{ display:none !important; } }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* ── Glass ── */
-.glass{ position:relative; background:rgba(255,255,255,0.03); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.08); }
-.glass::before{ content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background:linear-gradient(135deg, rgba(255,255,255,0.07) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.03) 100%); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ── Nav ── */
-header{ position:fixed; top:0; left:0; right:0; z-index:100; }
-.nav-bar{ margin:12px 20px 0; border-radius:16px; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-@media(min-width:768px){ .nav-bar{ margin:16px 24px 0; padding:14px 28px; } }
-.logo{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; }
-.logo span{ color:var(--accent); }
-.nav-links{ display:none; gap:4px; align-items:center; }
-.nav-links a{ font-size:13px; font-weight:500; color:var(--muted); padding:7px 14px; border-radius:8px; transition:color .25s,background .25s; }
-.nav-links a:hover{ color:var(--text); }
-.nav-links a.active{ color:var(--text); background:rgba(255,255,255,0.06); }
-.status-badge{ display:none; align-items:center; gap:8px; padding:7px 16px; border-radius:999px; font-size:12px; font-weight:500; color:var(--text-2); cursor:pointer; transition:transform .3s, box-shadow .3s, border-color .3s, background .3s; }
-.status-badge:hover{ transform:scale(1.05); box-shadow:0 0 20px rgba(52,211,153,0.25); border-color:rgba(52,211,153,0.3); background:rgba(52,211,153,0.08); }
-.status-dot{ width:7px; height:7px; border-radius:50%; background:#34d399; flex-shrink:0; animation:pulse 2s ease infinite; }
-@keyframes pulse{ 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(52,211,153,0.4)} 50%{opacity:.7;box-shadow:0 0 0 6px rgba(52,211,153,0)} }
-.burger{ display:flex; flex-direction:column; gap:5px; padding:6px; z-index:110; cursor:pointer; }
-.burger span{ width:20px; height:1.5px; background:var(--text); display:block; transition:transform .3s,opacity .3s; }
-.burger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
-.burger.open span:nth-child(2){ opacity:0; }
-.burger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
-@media(min-width:768px){ .nav-links{display:flex;} .status-badge{display:flex;} .burger{display:none;} }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      animation: pageIn .5s ease;
+    }
 
-/* Mobile Menu */
-.mobile-menu{ position:fixed; inset:0; background:rgba(11,10,18,0.97); z-index:105; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; transform:translateY(-100%); transition:transform .4s cubic-bezier(.4,0,.2,1); backdrop-filter:blur(20px); }
-.mobile-menu.open{ transform:translateY(0); }
-.mobile-menu a{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:28px; color:var(--text); transition:color .2s; }
-.mobile-menu a:hover{ color:var(--accent); }
+    @keyframes pageIn {
+      from {
+        opacity: 0
+      }
 
-/* Back button */
-.back-btn{ display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:500; color:var(--text-2); transition:color .3s; margin-bottom:32px; }
-.back-btn:hover{ color:var(--accent); }
-.back-btn svg{ width:18px; height:18px; }
+      to {
+        opacity: 1
+      }
+    }
 
-/* ── Section Tags ── */
-.section-tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#f59e0b; display:inline-flex; align-items:center; gap:10px; margin-bottom:16px; }
-.section-tag::before{ content:''; width:24px; height:2px; background:#f59e0b; display:inline-block; }
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
 
-/* ── Certifications Page ── */
-.certs-page{ padding:120px 0 80px; position:relative; overflow:hidden; }
-.certs-glow{ position:absolute; width:600px; height:600px; top:30%; left:50%; transform:translate(-50%,-50%); background:radial-gradient(circle, rgba(139,92,246,0.1) 0%, rgba(139,92,246,0.02) 50%, transparent 70%); filter:blur(80px); pointer-events:none; }
-.certs-header{ text-align:left; margin-bottom:48px; position:relative; z-index:1; }
-.certs-header h1{ font-size:clamp(28px,6vw,42px); margin-bottom:12px; }
-.certs-header p{ color:var(--text-2); font-size:15px; max-width:600px; margin:0; line-height:1.7; text-align:left; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.certs-list{ display:flex; flex-direction:column; gap:96px; margin-top:40px; position:relative; z-index:1; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-/* ── Certification Filters ── */
-.cert-filters {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: -12px;
-  margin-bottom: 48px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  position: relative;
-  z-index: 5;
-}
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
 
-.cert-filter-btn {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  letter-spacing: inherit;
-  text-transform: inherit;
-  color: var(--muted);
-  background: none;
-  border: none;
-  padding: 6px 0;
-  display: inline-flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
 
-.cert-filter-btn:hover {
-  color: var(--text);
-}
+    p {
+      text-align: justify;
+    }
 
-.cert-filter-btn.active {
-  color: #f59e0b;
-}
+    .accent {
+      color: var(--accent);
+    }
 
-.cert-filter-btn .btn-text {
-  position: relative;
-  padding-bottom: 4px;
-}
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
 
-.cert-filter-btn.active .btn-text::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #f59e0b;
-}
+    /* ── Custom Cursor (desktop only) ── */
+    @media(pointer:fine) {
 
-.cert-filter-btn:not(:last-child)::after {
-  content: '|';
-  margin-left: 14px;
-  margin-right: 14px;
-  color: rgba(255, 255, 255, 0.15);
-  font-weight: 300;
-  pointer-events: none;
-}
+      html,
+      body {
+        cursor: url('assets/uploads/custom-cursor-32.png') 16 0, auto;
+      }
 
-.cert-item.hide {
-  display: none !important;
-}
+      .cursor-dot {
+        position: fixed;
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        will-change: transform;
+      }
 
-.cert-item{ display:flex; flex-direction:column; gap:32px; background:none; border:none; border-radius:0; padding:0; overflow:visible; }
+      .cursor-ring {
+        position: fixed;
+        width: 36px;
+        height: 36px;
+        border: 1.5px solid rgba(139, 92, 246, 0.4);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        will-change: transform;
+        transition: width .25s, height .25s, border-color .25s;
+      }
 
-.cert-content{ display:flex; flex-direction:column; justify-content:center; }
-.cert-content .section-tag{ font-size:11px; letter-spacing:0.12em; margin-bottom:10px; }
-.cert-content h2{ font-size:clamp(24px,4vw,34px); margin-bottom:8px; font-weight:700; color:var(--text); letter-spacing:0.02em; }
-.cert-meta-group{ display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
-.cert-meta-group .provider{ font-size:15px; font-weight:500; color:var(--text-2); }
-.cert-meta-group .year{ font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; color:#f59e0b; letter-spacing:0.04em; }
-.cert-content .details{ color:var(--text-2); font-size:14px; line-height:1.7; margin-bottom:28px; text-align:justify !important; max-width:520px; }
+      .cursor-ring.hover {
+        width: 60px;
+        height: 60px;
+        border-color: rgba(139, 92, 246, 0.2);
+      }
+    }
 
-.cert-link{ font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.1em; color:var(--text); display:inline-flex; align-items:center; gap:6px; text-transform:uppercase; transition:color .25s, transform .25s; align-self:flex-start; }
-.cert-link:hover{ color:var(--accent); transform:translateX(4px); }
+    @media(pointer:coarse) {
 
-.cert-media{ width:100%; aspect-ratio:4/3; border-radius:var(--r); overflow:hidden; border:1px solid var(--line); background:#12101b; box-shadow:0 12px 36px rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center; cursor:pointer; }
-.cert-media img{ width:100%; height:100%; object-fit:contain; }
+      .cursor-dot,
+      .cursor-ring {
+        display: none !important;
+      }
+    }
 
-@media(min-width:768px){
-  .cert-item{ flex-direction:row; padding:0; gap:64px; align-items:center; }
-  .cert-item:nth-child(even){ flex-direction:row-reverse; }
-  .cert-content{ flex:1.1; }
-  .cert-media{ flex:0.9; aspect-ratio:1.4; max-height:360px; }
-}
+    /* ── Glass ── */
+    .glass {
+      position: relative;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-/* ── Lightbox Modal ── */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background: rgba(11, 10, 18, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.lightbox.open {
-  display: flex;
-  opacity: 1;
-}
-.lightbox-img {
-  max-width: 90%;
-  max-height: 85%;
-  object-fit: contain;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-}
-.lightbox.open .lightbox-img {
-  transform: scale(1);
-}
-.lightbox-close {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  color: var(--text);
-  font-size: 40px;
-  font-weight: 300;
-  cursor: pointer;
-  transition: color 0.2s;
-  user-select: none;
-}
-.lightbox-close:hover {
-  color: var(--accent);
-}
+    .glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.03) 100%);
+    }
 
-/* ── Reveal ── */
-.reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
-.reveal.show{ opacity:1; transform:translateY(0); }
-.reveal[style*="--d"]{ transition-delay:calc(var(--d,0) * 80ms); }
+    /* ── Nav ── */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
 
-@keyframes pageIn{ from{opacity:0} to{opacity:1} }
-</style>
+    .nav-bar {
+      margin: 12px 20px 0;
+      border-radius: 16px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @media(min-width:768px) {
+      .nav-bar {
+        margin: 16px 24px 0;
+        padding: 14px 28px;
+      }
+    }
+
+    .logo {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: none;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 7px 14px;
+      border-radius: 8px;
+      transition: color .25s, background .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .status-badge {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: transform .3s, box-shadow .3s, border-color .3s, background .3s;
+    }
+
+    .status-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.25);
+      border-color: rgba(52, 211, 153, 0.3);
+      background: rgba(52, 211, 153, 0.08);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      flex-shrink: 0;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4)
+      }
+
+      50% {
+        opacity: .7;
+        box-shadow: 0 0 0 6px rgba(52, 211, 153, 0)
+      }
+    }
+
+    .burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      z-index: 110;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 20px;
+      height: 1.5px;
+      background: var(--text);
+      display: block;
+      transition: transform .3s, opacity .3s;
+    }
+
+    .burger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    @media(min-width:768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .status-badge {
+        display: flex;
+      }
+
+      .burger {
+        display: none;
+      }
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 10, 18, 0.97);
+      z-index: 105;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      transform: translateY(-100%);
+      transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+      backdrop-filter: blur(20px);
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+    }
+
+    .mobile-menu a {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--text);
+      transition: color .2s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: color .3s;
+      margin-bottom: 32px;
+    }
+
+    .back-btn:hover {
+      color: var(--accent);
+    }
+
+    .back-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ── Section Tags ── */
+    .section-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f59e0b;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: #f59e0b;
+      display: inline-block;
+    }
+
+    /* ── Certifications Page ── */
+    .certs-page {
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .certs-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0.02) 50%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .certs-header {
+      text-align: left;
+      margin-bottom: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .certs-header h1 {
+      font-size: clamp(28px, 6vw, 42px);
+      margin-bottom: 12px;
+    }
+
+    .certs-header p {
+      color: var(--text-2);
+      font-size: 15px;
+      max-width: 600px;
+      margin: 0;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .certs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 96px;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Certification Filters ── */
+    .cert-filters {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: -12px;
+      margin-bottom: 48px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      position: relative;
+      z-index: 5;
+    }
+
+    .cert-filter-btn {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      color: var(--muted);
+      background: none;
+      border: none;
+      padding: 6px 0;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .cert-filter-btn:hover {
+      color: var(--text);
+    }
+
+    .cert-filter-btn.active {
+      color: #f59e0b;
+    }
+
+    .cert-filter-btn .btn-text {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .cert-filter-btn.active .btn-text::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #f59e0b;
+    }
+
+    .cert-filter-btn:not(:last-child)::after {
+      content: '|';
+      margin-left: 14px;
+      margin-right: 14px;
+      color: rgba(255, 255, 255, 0.15);
+      font-weight: 300;
+      pointer-events: none;
+    }
+
+    .cert-item.hide {
+      display: none !important;
+    }
+
+    .cert-item {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      overflow: visible;
+    }
+
+    .cert-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cert-content .section-tag {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .cert-content h2 {
+      font-size: clamp(24px, 4vw, 34px);
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .cert-meta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .cert-meta-group .provider {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-2);
+    }
+
+    .cert-meta-group .year {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: #f59e0b;
+      letter-spacing: 0.04em;
+    }
+
+    .cert-content .details {
+      color: var(--text-2);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      text-align: justify !important;
+      max-width: 520px;
+    }
+
+    .cert-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      transition: color .25s, transform .25s;
+      align-self: flex-start;
+    }
+
+    .cert-link:hover {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .cert-media {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #12101b;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .cert-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media(min-width:768px) {
+      .cert-item {
+        flex-direction: row;
+        padding: 0;
+        gap: 64px;
+        align-items: center;
+      }
+
+      .cert-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .cert-content {
+        flex: 1.1;
+      }
+
+      .cert-media {
+        flex: 0.9;
+        aspect-ratio: 1.4;
+        max-height: 360px;
+      }
+    }
+
+    /* ── Lightbox Modal ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      background: rgba(11, 10, 18, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 85%;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .lightbox.open .lightbox-img {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      color: var(--text);
+      font-size: 40px;
+      font-weight: 300;
+      cursor: pointer;
+      transition: color 0.2s;
+      user-select: none;
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent);
+    }
+
+    /* ── Reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.4, 0, .2, 1), transform .7s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal[style*="--d"] {
+      transition-delay: calc(var(--d, 0) * 80ms);
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- Nav -->
-<header>
-  <nav class="nav-bar glass">
-    <a href="index.html" class="logo">SL<span>.</span>GFX</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#tools">Tools</a>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#skills">Skills</a>
-      <a href="index.html#pitchdeck">Decks</a>
-      <a href="about.html">About</a>
-      <a href="certs.html" class="active">Certs</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <a href="contact.html" class="status-badge glass">
-      <span class="status-dot"></span>
-      Available for Work
-    </a>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
-  </nav>
-</header>
+  <!-- Nav -->
+  <header>
+    <nav class="nav-bar glass">
+      <a href="index.html" class="logo">SL<span>.</span>GFX</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#pitchdeck">Decks</a>
+        <a href="about.html">About</a>
+        <a href="certs.html" class="active">Certs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="status-badge glass">
+        <span class="status-dot"></span>
+        Available for Work
+      </a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="index.html#tools">Tools</a>
-  <a href="index.html#work">Work</a>
-  <a href="index.html#skills">Skills</a>
-  <a href="index.html#pitchdeck">Decks</a>
-  <a href="about.html">About</a>
-  <a href="certs.html" class="active">Certs</a>
-  <a href="contact.html">Contact</a>
-</div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#tools">Tools</a>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#pitchdeck">Decks</a>
+    <a href="about.html">About</a>
+    <a href="certs.html" class="active">Certs</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-<!-- Certs Page Content -->
-<main class="certs-page">
-  <div class="certs-glow"></div>
-  <div class="wrap">
-    <a href="index.html" class="back-btn reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Portfolio</a>
-    
-    <div class="certs-header reveal" style="--d:1">
-      <span class="section-tag">CREDENTIALS</span>
-      <h1>Certifications</h1>
-      <p>Continuous learning is my competitive advantage.</p>
-    </div>
+  <!-- Certs Page Content -->
+  <main class="certs-page">
+    <div class="certs-glow"></div>
+    <div class="wrap">
+      <a href="index.html" class="back-btn reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5" />
+          <path d="M12 19l-7-7 7-7" />
+        </svg>Back to Portfolio</a>
 
-    <!-- Category Filter Row -->
-    <div class="cert-filters reveal" style="--d:2" id="certFilters"></div>
-    
-    <div class="certs-list" id="certsList">
-      <!-- Loaded dynamically from data.json -->
-      <div class="cert-item reveal" style="--d:2">
-        <div class="cert-content">
-          <span class="section-tag">CERT 01</span>
-          <h2>Software Engineer Intern</h2>
-          <div class="cert-meta-group">
-            <div class="provider">HackerRank</div>
-            <div class="year">2025</div>
+      <div class="certs-header reveal" style="--d:1">
+        <span class="section-tag">CREDENTIALS</span>
+        <h1>Certifications</h1>
+        <p>Continuous learning is my competitive advantage.</p>
+      </div>
+
+      <!-- Category Filter Row -->
+      <div class="cert-filters reveal" style="--d:2" id="certFilters"></div>
+
+      <div class="certs-list" id="certsList">
+        <!-- Loaded dynamically from data.json -->
+        <div class="cert-item reveal" style="--d:2">
+          <div class="cert-content">
+            <span class="section-tag">CERT 01</span>
+            <h2>Software Engineer Intern</h2>
+            <div class="cert-meta-group">
+              <div class="provider">HackerRank</div>
+              <div class="year">2025</div>
+            </div>
+            <p class="details">The bearer of this certificate has passed the HackerRank role certification test.</p>
+            <a class="cert-link" href="#">VIEW CERTIFICATE ↗</a>
           </div>
-          <p class="details">The bearer of this certificate has passed the HackerRank role certification test.</p>
-          <a class="cert-link" href="#">VIEW CERTIFICATE ↗</a>
-        </div>
-        <div class="cert-media">
-          <!-- Placeholder until loaded -->
-          <div style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Loading certificate preview...</div>
+          <div class="cert-media">
+            <!-- Placeholder until loaded -->
+            <div style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Loading
+              certificate preview...</div>
+          </div>
         </div>
       </div>
     </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Certificate Full View">
   </div>
-</main>
 
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightboxModal">
-  <span class="lightbox-close" id="lightboxClose">&times;</span>
-  <img class="lightbox-img" id="lightboxImg" src="" alt="Certificate Full View">
-</div>
+  <script>
+    (function () {
+      /* Reveal on scroll */
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
 
-<script>
-(function(){
-  /* Reveal on scroll */
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); }});
-  }, {threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
-
-  /* Custom Cursor */
-  var dot = document.getElementById('cursorDot');
-  var ring = document.getElementById('cursorRing');
-  if(dot && ring && window.matchMedia('(pointer:fine)').matches){
-    var mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',function(e){ mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
-    (function loop(){ rx+=(mx-rx)*0.15; ry+=(my-ry)*0.15; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
-    document.addEventListener('mouseover',function(e){
-      if(e.target.closest('a,button,.cert-item,.back-btn')) ring.classList.add('hover');
-    });
-    document.addEventListener('mouseout',function(e){
-      if(e.target.closest('a,button,.cert-item,.back-btn')) ring.classList.remove('hover');
-    });
-  }
-
-  /* Burger menu */
-  var burger=document.getElementById('burger');
-  var mobileMenu=document.getElementById('mobileMenu');
-  if(burger&&mobileMenu){
-    burger.addEventListener('click',function(){
-      burger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';
-    });
-    mobileMenu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',function(){
-        burger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow='';
-      });
-    });
-  }
-
-  /* Lightbox Functions */
-  var lightbox = document.getElementById('lightboxModal');
-  var lightboxImg = document.getElementById('lightboxImg');
-  var lightboxClose = document.getElementById('lightboxClose');
-  
-  function openLightbox(src) {
-    if(!lightbox || !lightboxImg) return;
-    lightboxImg.src = src;
-    lightbox.style.display = 'flex';
-    setTimeout(function(){
-      lightbox.classList.add('open');
-    }, 10);
-    document.body.style.overflow = 'hidden';
-  }
-  
-  function closeLightbox() {
-    if(!lightbox) return;
-    lightbox.classList.remove('open');
-    setTimeout(function(){
-      lightbox.style.display = 'none';
-    }, 300);
-    document.body.style.overflow = '';
-  }
-  
-  if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-  if(lightbox) {
-    lightbox.addEventListener('click', function(e){
-      if(e.target === lightbox || e.target === lightboxClose) closeLightbox();
-    });
-  }
-
-  /* Load data.json for dynamic certifications */
-  fetch('content/data.json').then(function(r){ return r.json(); }).then(function(data){
-    if(data.certifications && data.certifications.length){
-      var certsGrid = document.getElementById('certsList');
-      certsGrid.innerHTML = data.certifications.map(function(c, idx){
-        var certNo = c.cert_no || ('CERT ' + String(idx + 1).padStart(2, '0'));
-        var year = c.year || '';
-        var provider = c.provider || '';
-        var title = c.title || '';
-        var details = c.details || '';
-        var imgUrl = c.image || '';
-        var cat = c.category || '';
-        
-        return '<div class="cert-item reveal" data-cat="' + cat + '" style="--d:' + (idx + 1) + '">' +
-                 '<div class="cert-content">' +
-                   '<span class="section-tag">' + certNo + '</span>' +
-                   '<h2>' + title + '</h2>' +
-                   '<div class="cert-meta-group">' +
-                     '<div class="provider">' + provider + '</div>' +
-                     (year ? '<div class="year">' + year + '</div>' : '') +
-                   '</div>' +
-                   (details ? '<p class="details">' + details + '</p>' : '') +
-                   '<a class="cert-link" href="#">VIEW CERTIFICATE ↗</a>' +
-                 '</div>' +
-                 '<div class="cert-media">' +
-                   (imgUrl ? '<img src="' + imgUrl + '" alt="' + title + '" loading="lazy" decoding="async">' : '') +
-                 '</div>' +
-               '</div>';
-      }).join('');
-
-      /* Render Category Filter Row */
-      var filterContainer = document.getElementById('certFilters');
-      if(filterContainer){
-        // Gather unique categories from data
-        var presentCats = {};
-        data.certifications.forEach(function(c){
-          if(c.category) {
-            presentCats[c.category] = true;
-          }
+      /* Custom Cursor */
+      var dot = document.getElementById('cursorDot');
+      var ring = document.getElementById('cursorRing');
+      if (dot && ring && window.matchMedia('(pointer:fine)').matches) {
+        var mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
+        (function loop() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+        document.addEventListener('mouseover', function (e) {
+          if (e.target.closest('a,button,.cert-item,.back-btn')) ring.classList.add('hover');
         });
+        document.addEventListener('mouseout', function (e) {
+          if (e.target.closest('a,button,.cert-item,.back-btn')) ring.classList.remove('hover');
+        });
+      }
 
-        // Predefined categories requested by user
-        var displayCategories = [
-          { key: 'all', label: 'ALL' },
-          { key: 'business', label: 'BUSINESS' },
-          { key: 'artificial_intelligence', label: 'ARTIFICIAL INTELLIGENCE' },
-          { key: 'design_editing', label: 'DESIGN AND EDITING' },
-          { key: 'cyber_security', label: 'CYBER SECURITY' }
-        ];
-
-        // Append any custom category from the JSON that isn't in our predefined list
-        var standardKeys = {
-          'all': true,
-          'business': true,
-          'artificial_intelligence': true,
-          'design_editing': true,
-          'cyber_security': true
-        };
-
-        for(var catKey in presentCats){
-          if(presentCats.hasOwnProperty(catKey) && !standardKeys[catKey] && catKey){
-            var formattedLabel = catKey.replace(/[_-]/g, ' ').toUpperCase();
-            displayCategories.push({ key: catKey, label: formattedLabel });
-          }
-        }
-
-        // Render buttons
-        filterContainer.innerHTML = displayCategories.map(function(cat){
-          return '<button class="cert-filter-btn' + (cat.key === 'all' ? ' active' : '') + '" data-filter="' + cat.key + '">' +
-                   '<span class="btn-text">' + cat.label + '</span>' +
-                 '</button>';
-        }).join('');
-
-        // Attach click handlers to filter buttons
-        var filterBtns = filterContainer.querySelectorAll('.cert-filter-btn');
-        filterBtns.forEach(function(btn){
-          btn.addEventListener('click', function(e){
-            e.preventDefault();
-            filterBtns.forEach(function(b){ b.classList.remove('active'); });
-            btn.classList.add('active');
-            
-            var selectedFilter = btn.getAttribute('data-filter');
-            var certItems = certsGrid.querySelectorAll('.cert-item');
-            
-            certItems.forEach(function(item){
-              var certCat = item.getAttribute('data-cat') || '';
-              if(selectedFilter === 'all' || certCat === selectedFilter){
-                item.classList.remove('hide');
-                setTimeout(function(){
-                  item.classList.add('show');
-                }, 50);
-              } else {
-                item.classList.add('hide');
-                item.classList.remove('show');
-              }
-            });
+      /* Burger menu */
+      var burger = document.getElementById('burger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      if (burger && mobileMenu) {
+        burger.addEventListener('click', function () {
+          burger.classList.toggle('open');
+          mobileMenu.classList.toggle('open');
+          document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+        mobileMenu.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            burger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
           });
         });
       }
-      
-      /* Re-trigger observer for new dynamic elements */
-      var dynamicObs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); dynamicObs.unobserve(e.target); }});
-      }, {threshold:0.12});
-      document.querySelectorAll('.certs-list .reveal').forEach(function(el){ dynamicObs.observe(el); });
 
-      /* Attach lightbox click events */
-      document.querySelectorAll('.cert-link, .cert-media').forEach(function(el){
-        el.addEventListener('click', function(e){
-          e.preventDefault();
-          var img = el.closest('.cert-item').querySelector('.cert-media img');
-          if(img && img.src) {
-            openLightbox(img.src);
-          }
+      /* Lightbox Functions */
+      var lightbox = document.getElementById('lightboxModal');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxClose = document.getElementById('lightboxClose');
+
+      function openLightbox(src) {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightbox.style.display = 'flex';
+        setTimeout(function () {
+          lightbox.classList.add('open');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('open');
+        setTimeout(function () {
+          lightbox.style.display = 'none';
+        }, 300);
+        document.body.style.overflow = '';
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox || e.target === lightboxClose) closeLightbox();
         });
-      });
-    }
-  }).catch(function(){});
-})();
-</script>
+      }
+
+      /* Load data.json for dynamic certifications */
+      fetch('content/data.json').then(function (r) { return r.json(); }).then(function (data) {
+        if (data.certifications && data.certifications.length) {
+          var certsGrid = document.getElementById('certsList');
+          certsGrid.innerHTML = data.certifications.map(function (c, idx) {
+            var certNo = c.cert_no || ('CERT ' + String(idx + 1).padStart(2, '0'));
+            var year = c.year || '';
+            var provider = c.provider || '';
+            var title = c.title || '';
+            var details = c.details || '';
+            var imgUrl = c.image || '';
+            var cat = c.category || '';
+
+            return '<div class="cert-item reveal" data-cat="' + cat + '" style="--d:' + (idx + 1) + '">' +
+              '<div class="cert-content">' +
+              '<span class="section-tag">' + certNo + '</span>' +
+              '<h2>' + title + '</h2>' +
+              '<div class="cert-meta-group">' +
+              '<div class="provider">' + provider + '</div>' +
+              (year ? '<div class="year">' + year + '</div>' : '') +
+              '</div>' +
+              (details ? '<p class="details">' + details + '</p>' : '') +
+              '<a class="cert-link" href="#">VIEW CERTIFICATE ↗</a>' +
+              '</div>' +
+              '<div class="cert-media">' +
+              (imgUrl ? '<img src="' + imgUrl + '" alt="' + title + '" loading="lazy" decoding="async">' : '') +
+              '</div>' +
+              '</div>';
+          }).join('');
+
+          /* Render Category Filter Row */
+          var filterContainer = document.getElementById('certFilters');
+          if (filterContainer) {
+            // Gather unique categories from data
+            var presentCats = {};
+            data.certifications.forEach(function (c) {
+              if (c.category) {
+                presentCats[c.category] = true;
+              }
+            });
+
+            // Predefined categories requested by user
+            var displayCategories = [
+              { key: 'all', label: 'ALL' },
+              { key: 'business', label: 'BUSINESS' },
+              { key: 'artificial_intelligence', label: 'ARTIFICIAL INTELLIGENCE' },
+              { key: 'design_editing', label: 'DESIGN AND EDITING' },
+              { key: 'cyber_security', label: 'CYBER SECURITY' }
+            ];
+
+            // Append any custom category from the JSON that isn't in our predefined list
+            var standardKeys = {
+              'all': true,
+              'business': true,
+              'artificial_intelligence': true,
+              'design_editing': true,
+              'cyber_security': true
+            };
+
+            for (var catKey in presentCats) {
+              if (presentCats.hasOwnProperty(catKey) && !standardKeys[catKey] && catKey) {
+                var formattedLabel = catKey.replace(/[_-]/g, ' ').toUpperCase();
+                displayCategories.push({ key: catKey, label: formattedLabel });
+              }
+            }
+
+            // Render buttons
+            filterContainer.innerHTML = displayCategories.map(function (cat) {
+              return '<button class="cert-filter-btn' + (cat.key === 'all' ? ' active' : '') + '" data-filter="' + cat.key + '">' +
+                '<span class="btn-text">' + cat.label + '</span>' +
+                '</button>';
+            }).join('');
+
+            // Attach click handlers to filter buttons
+            var filterBtns = filterContainer.querySelectorAll('.cert-filter-btn');
+            filterBtns.forEach(function (btn) {
+              btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+
+                var selectedFilter = btn.getAttribute('data-filter');
+                var certItems = certsGrid.querySelectorAll('.cert-item');
+
+                certItems.forEach(function (item) {
+                  var certCat = item.getAttribute('data-cat') || '';
+                  if (selectedFilter === 'all' || certCat === selectedFilter) {
+                    item.classList.remove('hide');
+                    setTimeout(function () {
+                      item.classList.add('show');
+                    }, 50);
+                  } else {
+                    item.classList.add('hide');
+                    item.classList.remove('show');
+                  }
+                });
+              });
+            });
+          }
+
+          /* Re-trigger observer for new dynamic elements */
+          var dynamicObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('show'); dynamicObs.unobserve(e.target); } });
+          }, { threshold: 0.12 });
+          document.querySelectorAll('.certs-list .reveal').forEach(function (el) { dynamicObs.observe(el); });
+
+          /* Attach lightbox click events */
+          document.querySelectorAll('.cert-link, .cert-media').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+              e.preventDefault();
+              var img = el.closest('.cert-item').querySelector('.cert-media img');
+              if (img && img.src) {
+                openLightbox(img.src);
+              }
+            });
+          });
+        }
+      }).catch(function () { });
+    })();
+  </script>
 </body>
+
 </html>
